@@ -9,6 +9,7 @@
 import type { Album } from './types.ts';
 import { photosOf } from './types.ts';
 import historical from './historical.ts';
+import campus from './campus.ts';
 import reunion2006 from './reunion2006.ts';
 import reunion2013 from './reunion2013.ts';
 import reunion2014 from './reunion2014.ts';
@@ -20,6 +21,7 @@ export { photosOf } from './types.ts';
 
 export const albums: Album[] = [
   historical,
+  campus,
   reunion2006,
   reunion2013,
   reunion2014,

@@ -17,7 +17,7 @@ import { albums, photoCount } from '../data/albums';
         <div class="album-meta">
           <span class="album-title">{album.title}</span>
           <span class="album-summary">{album.summary}</span>
-          <span class="album-count">{photoCount(album)} photos</span>
+          <span class="album-count">{photoCount(album)} {photoCount(album) === 1 ? 'photo' : 'photos'}</span>
         </div>
       </a>
     ))}
