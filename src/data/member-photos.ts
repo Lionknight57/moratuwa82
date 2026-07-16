@@ -44,6 +44,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Kanishka Abeynayake', sourceFile: 'KanishkaA.jpg', publicId: 'member/kanishka-abeynayake' },
   { name: 'Kuma Sumathipala', sourceFile: 'kuma.jpg', publicId: 'member/kuma-sumathipala' },
   { name: 'Lakshman Joseph', sourceFile: 'Lucky.jpg', publicId: 'member/lakshman-joseph' },
+  { name: 'Lalani Kuruppu (Pigera)', sourceFile: 'Lalani_from_materials.jpg', publicId: 'member/lalani-kuruppu' },
   { name: 'Lalith Munasinghe', sourceFile: 'munasinghe.jpg', publicId: 'member/lalith-munasinghe' },
   { name: 'Lekamge Ariyadasa', sourceFile: 'L Ariyadasa.jpg', publicId: 'member/lekamge-ariyadasa' },
   { name: 'Lionel Fernando', sourceFile: 'Lionel Fernando.jpg', publicId: 'member/lionel-fernando' },
@@ -57,6 +58,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Nimal Gunarathne', sourceFile: 'NimalG.jpg', publicId: 'member/nimal-gunarathne' },
   { name: 'Nimal Pushpakumara', sourceFile: 'Nimal1.jpg', publicId: 'member/nimal-pushpakumara' },
   { name: 'Nonis', sourceFile: 'Nonis.jpg', publicId: 'member/nonis' },
+  { name: 'Padma Samarakoon', sourceFile: 'Padma_from_materials.jpg', publicId: 'member/padma-samarakoon' },
   { name: 'Piyadasa Amaratunga', sourceFile: 'Piyadasa.jpg', publicId: 'member/piyadasa-amaratunga' },
   { name: 'Prabath de Silva', sourceFile: 'Prabhath.JPG', publicId: 'member/prabath-de-silva' },
   { name: 'Pradeepa Fernando (Wijesiriwardene)', sourceFile: 'Pradeepa.jpg', publicId: 'member/pradeepa-fernando' },
@@ -66,6 +68,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Priyantha Mendis', sourceFile: 'Priyan Mendis.jpg', publicId: 'member/priyantha-mendis' },
   { name: 'Priyantha Perera', sourceFile: 'Priyantha Perera.jpg', publicId: 'member/priyantha-perera' },
   { name: 'Rahula Attalage', sourceFile: 'rahula.jpg', publicId: 'member/rahula-attalage' },
+  { name: 'Rajaram', sourceFile: 'Rajaram_from_materials.jpg', publicId: 'member/rajaram' },
   { name: 'Ranil Nedurana', sourceFile: 'Nedurana.jpg', publicId: 'member/ranil-nedurana' },
   { name: 'Ranjith Jayawardene', sourceFile: 'RanjithJ.jpg', publicId: 'member/ranjith-jayawardene' },
   { name: 'Ranjith Salgado', sourceFile: 'Salgado.jpg', publicId: 'member/ranjith-salgado' },
@@ -100,6 +103,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Vijithaweera Wickramasinghe', sourceFile: 'wicky.jpg', publicId: 'member/vijithaweera-wickramasinghe' },
   { name: 'Vinotharajah', sourceFile: 'Vinotharaj.jpg', publicId: 'member/vinotharajah' },
   { name: 'Wimal Galappaththi', sourceFile: 'Wimal Galappatti.jpg', publicId: 'member/wimal-galappaththi' },
+  { name: 'Wimaleswaren', sourceFile: 'Wimaleswaren_from_materials.jpg', publicId: 'member/wimaleswaren' },
   { name: 'Yogeswaren', sourceFile: 'yogesh.jpg', publicId: 'member/yogeswaren' },
 ];
 
