@@ -1,0 +1,87 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "Moratuwa '82 batch — reunion photos and news" } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/" class="brand">Moratuwa&nbsp;’82</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/reunion-2027/">Reunion 2027</a>
+        <a href="/news/">News</a>
+        <a href="/gallery/">Gallery</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>Moratuwa ’82 batch &middot; {year}</p>
+    </footer>
+
+    <style is:global>
+      :root {
+        --bg: #fbfaf7;
+        --fg: #1f2933;
+        --muted: #6b7280;
+        --accent: #7a1f2b;
+        --card: #ffffff;
+        --border: #e6e2da;
+        --maxw: 1040px;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #14161a;
+          --fg: #e6e6e6;
+          --muted: #9aa4b2;
+          --accent: #e0929c;
+          --card: #1c1f24;
+          --border: #2a2e35;
+        }
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      main { max-width: var(--maxw); margin: 0 auto; padding: 2rem 1.25rem; }
+      a { color: var(--accent); }
+      img { max-width: 100%; height: auto; display: block; }
+
+      .site-header {
+        display: flex; align-items: center; justify-content: space-between;
+        flex-wrap: wrap; gap: 0.75rem;
+        max-width: var(--maxw); margin: 0 auto; padding: 1rem 1.25rem;
+      }
+      .brand { font-weight: 700; font-size: 1.25rem; text-decoration: none; color: var(--fg); }
+      .site-header nav { display: flex; gap: 1.25rem; }
+      .site-header nav a { text-decoration: none; color: var(--muted); }
+      .site-header nav a:hover { color: var(--accent); }
+
+      .site-footer {
+        border-top: 1px solid var(--border);
+        color: var(--muted); text-align: center;
+        padding: 2rem 1rem; margin-top: 3rem; font-size: 0.9rem;
+      }
+    </style>
+  </body>
+</html>

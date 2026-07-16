@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CldImage from '../../components/CldImage.astro';
+import { cldUrl } from '../../lib/cloudinary';
+import { title, intro, closing, sections } from '../../data/albums/historical';
+
+// Alt text: the caption's first line reads as a description; the rest is a
+// name list that would be noise in a screen reader's image announcement.
+const altFor = (caption: string, sectionTitle?: string) =>
+  caption.split('\n')[0] || sectionTitle || title;
+---
+
+<BaseLayout title={`${title} — Moratuwa ’82`} description="Photographs from our years at Katubedda.">
+  <p class="crumb"><a href="/gallery/">← Gallery</a></p>
+  <h1>{title}</h1>
+  <p class="intro">{intro}</p>
+
+  {sections.map((section) => (
+    <section class="album-section">
+      {section.title && <h2>{section.title}</h2>}
+      <div class="grid">
+        {section.photos.map((photo) => (
+          <figure>
+            <a href={cldUrl(photo.publicId, { width: 1600, crop: 'fit' })}>
+              <CldImage
+                publicId={photo.publicId}
+                alt={altFor(photo.caption, section.title)}
+                width={600}
+                height={450}
+                sizes="(max-width: 700px) 100vw, 300px"
+              />
+            </a>
+            {photo.caption && <figcaption>{photo.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <p class="closing">{closing}</p>
+
+  <style>
+    h1 { border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    .crumb { margin: 0 0 0.5rem; font-size: 0.9rem; }
+    .intro { color: var(--muted); }
+    .album-section { margin-top: 2.5rem; }
+    .album-section h2 { font-size: 1.05rem; color: var(--fg); margin: 0 0 0.75rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    figure { margin: 0; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    figcaption { padding: 0.6rem 0.75rem; color: var(--muted); font-size: 0.85rem; white-space: pre-line; }
+    .closing { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); }
+  </style>
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import { cldUrl, cldSrcSet } from '../lib/cloudinary';
+
+export interface Props {
+  publicId: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+}
+
+const {
+  publicId,
+  alt,
+  width = 800,
+  height,
+  sizes = '(max-width: 700px) 100vw, 800px',
+  loading = 'lazy',
+} = Astro.props;
+---
+
+<img
+  src={cldUrl(publicId, { width, height })}
+  srcset={cldSrcSet(publicId)}
+  sizes={sizes}
+  alt={alt}
+  width={width}
+  height={height}
+  loading={loading}
+  decoding="async"
+/>

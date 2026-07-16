@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/repo/LionknightWeb/LionknightWeb/Areas/Moratuwa82Reunion/Views/Katubedda/**)",
+      "Bash(ls -la \"C:/repo/LionknightWeb/LionknightWeb/Moratuwa82Reunion/Historical\" 2>/dev/null || echo \"NOT FOUND\")",
+      "Read(//c/repo/LionknightWeb/LionknightWeb/Moratuwa82Reunion/Historical/**)",
+      "Bash(find \"C:/repo/LionknightWeb/LionknightWeb/Areas/Moratuwa82Reunion\" -iname \"*GalleryPhotoPartial*\" -o -iname \"*PictureTemplate*\" -o -iname \"_GalleryLayout*\" | head)",
+      "Read(//c/repo/LionknightWeb/LionknightWeb/Areas/Moratuwa82Reunion/**)",
+      "Read(//c/repo/LionknightWeb/LionknightWeb/Areas/Moratuwa82Reunion/Views/Shared/**)",
+      "Read(//c/repo/LionknightWeb/LionknightWeb/Areas/Moratuwa82Reunion/Models/**)"
+    ]
+  }
+}

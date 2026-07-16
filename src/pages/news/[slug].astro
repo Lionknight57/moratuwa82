@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CldImage from '../../components/CldImage.astro';
+
+// Pre-render one page per news item at build time.
+export async function getStaticPaths() {
+  const news = await getCollection('news', ({ data }) => !data.draft);
+  return news.map((item) => ({
+    params: { slug: item.slug },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await item.render();
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<BaseLayout title={`${item.data.title} — Moratuwa ’82`} description={item.data.summary}>
+  <article>
+    <a class="back" href="/news/">&larr; All news</a>
+    <h1>{item.data.title}</h1>
+    <p class="date">{fmt(item.data.date)}</p>
+
+    {item.data.heroImage && (
+      <div class="hero-img">
+        <CldImage publicId={item.data.heroImage} alt={item.data.title} width={1040} loading="eager" />
+      </div>
+    )}
+
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+
+  <style>
+    .back { text-decoration: none; color: var(--muted); font-size: 0.9rem; }
+    h1 { margin: 0.5rem 0 0.25rem; }
+    .date { color: var(--muted); margin: 0 0 1.5rem; }
+    .hero-img { margin: 0 0 1.5rem; border-radius: 10px; overflow: hidden; }
+    .prose :global(h2) { margin-top: 2rem; }
+    .prose :global(img) { border-radius: 10px; margin: 1.5rem 0; }
+    .prose :global(ul) { padding-left: 1.25rem; }
+  </style>
+</BaseLayout>

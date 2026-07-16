@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  event,
+  itinerary,
+  nearby,
+  atVenue,
+  roomTypes,
+  extras,
+  extrasTotal,
+  perPerson,
+  totalPax,
+  grandTotal,
+  sponsorshipsLkr,
+  discountPerPerson,
+  netPerPerson,
+  costsAsOf,
+  updates,
+} from '../data/reunion';
+
+const rs = (n: number) => `Rs ${n.toLocaleString('en-US')}`;
+---
+
+<BaseLayout
+  title={`${event.title} — Moratuwa ’82`}
+  description={`${event.mainDate} at ${event.venue}. Itinerary, costs and committee updates.`}
+>
+  <header class="head">
+    <p class="eyebrow">{event.mainDate}</p>
+    <h1>{event.title}</h1>
+    <p class="subtitle">{event.subtitle}</p>
+  </header>
+
+  <dl class="facts">
+    <div><dt>Dates</dt><dd>{event.span}</dd></div>
+    <div><dt>Venue</dt><dd>{event.venue}</dd></div>
+    <div><dt>Stay</dt><dd>{event.nights}</dd></div>
+    <div><dt>Expected</dt><dd>{totalPax} participants</dd></div>
+  </dl>
+
+  <section>
+    <h2>The plan</h2>
+    <p>{event.departure} We stay the nights of 12 and 13 June, celebrate the anniversary on 13 June, and leave after breakfast on 14 June.</p>
+    <div class="two-up">
+      <div>
+        <h3>At the hotel</h3>
+        <ul>{atVenue.map((a) => <li>{a}</li>)}</ul>
+      </div>
+      <div>
+        <h3>Nearby</h3>
+        <ul>{nearby.map((a) => <li>{a}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Itinerary</h2>
+    {itinerary.map((day) => (
+      <div class="day">
+        <div class="day-head">
+          <span class="day-date">{day.date}</span>
+          <span class="day-weekday">{day.weekday}</span>
+        </div>
+        <ul>{day.items.map((i) => <li>{i}</li>)}</ul>
+      </div>
+    ))}
+  </section>
+
+  <section>
+    <h2>Costs</h2>
+    <p class="note">Estimated as of {costsAsOf}, and not yet final. Figures below are per person.</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            {roomTypes.map((r) => <th class="num">{r.label}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Accommodation — two nights, full board</td>
+            {roomTypes.map((r) => <td class="num">{rs(r.accommodation)}</td>)}
+          </tr>
+          {extras.map((e) => (
+            <tr>
+              <td>{e.label}{e.optional && <span class="tag">optional</span>}</td>
+              {roomTypes.map(() => <td class="num">{rs(e.amount)}</td>)}
+            </tr>
+          ))}
+          <tr class="total">
+            <td>Total per person</td>
+            {roomTypes.map((r) => <td class="num">{rs(perPerson(r))}</td>)}
+          </tr>
+          <tr>
+            <td>Less sponsorship, shared equally</td>
+            {roomTypes.map(() => <td class="num minus">−{rs(discountPerPerson)}</td>)}
+          </tr>
+          <tr class="total net">
+            <td>You pay</td>
+            {roomTypes.map((r) => <td class="num">{rs(netPerPerson(r))}</td>)}
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">
+      The totals include the optional T-shirt at {rs(3000)}. Skip it and each figure drops by that much,
+      to {roomTypes.map((r, i) => (
+        <>{i > 0 && ' and '}<strong>{rs(netPerPerson(r) - 3000)}</strong>{' '}({r.label.toLowerCase()})</>
+      ))}.
+    </p>
+
+    <div class="rollup">
+      <div><span class="k">Grand total, {totalPax} participants</span><span class="v">{rs(grandTotal)}</span></div>
+      <div><span class="k">Sponsorships confirmed</span><span class="v">{rs(sponsorshipsLkr)}</span></div>
+      <div><span class="k">Sponsorship per person</span><span class="v">{rs(discountPerPerson)}</span></div>
+    </div>
+
+    <ul class="room-notes">
+      {roomTypes.map((r) => <li><strong>{r.label}:</strong> {r.detail}</li>)}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Committee updates</h2>
+    <p class="note">Most recent first. Kept as a record — the confirmation deadlines below have passed.</p>
+    {updates.map((u) => (
+      <div class="update">
+        <div class="update-date">{u.date ?? 'Earlier'}</div>
+        <ul>{u.body.map((b) => <li>{b}</li>)}</ul>
+      </div>
+    ))}
+  </section>
+
+  <style>
+    .head { padding: 1rem 0 0.5rem; }
+    .eyebrow { color: var(--accent); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; margin: 0 0 0.35rem; }
+    h1 { margin: 0 0 0.4rem; font-size: clamp(1.9rem, 5vw, 2.6rem); }
+    .subtitle { color: var(--muted); margin: 0; }
+
+    .facts {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1px; margin: 2rem 0 0; padding: 1px;
+      background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    }
+    .facts > div { background: var(--card); padding: 0.85rem 1rem; }
+    .facts dt { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .facts dd { margin: 0.2rem 0 0; font-weight: 600; }
+
+    section { margin-top: 3rem; }
+    h2 { border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; font-size: 1.3rem; }
+    h3 { font-size: 0.95rem; margin: 0 0 0.4rem; }
+    .note { color: var(--muted); font-size: 0.9rem; }
+
+    .two-up { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+    .two-up ul { margin: 0; padding-left: 1.1rem; color: var(--muted); }
+
+    .day { border-left: 2px solid var(--border); padding: 0 0 0 1rem; margin: 1.25rem 0; }
+    .day-head { display: flex; gap: 0.6rem; align-items: baseline; flex-wrap: wrap; }
+    .day-date { font-weight: 700; }
+    .day-weekday { color: var(--muted); font-size: 0.85rem; }
+    .day ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+    .day li { margin: 0.25rem 0; }
+
+    .table-scroll { overflow-x: auto; margin: 1rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--border); }
+    th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--muted); }
+    .num { text-align: right; white-space: nowrap; }
+    tr.total td { font-weight: 700; border-top: 2px solid var(--border); }
+    tr.net td { color: var(--accent); font-size: 1.05rem; }
+    .minus { color: var(--muted); }
+    .tag { margin-left: 0.4rem; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0.05rem 0.3rem; }
+
+    .rollup { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .rollup > div { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 0.85rem 1rem; }
+    .rollup .k { display: block; color: var(--muted); font-size: 0.8rem; }
+    .rollup .v { display: block; font-weight: 700; font-size: 1.1rem; margin-top: 0.2rem; }
+
+    .room-notes { color: var(--muted); font-size: 0.9rem; padding-left: 1.1rem; }
+
+    .update { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border); }
+    .update-date { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+    .update ul { margin: 0; padding-left: 1.1rem; }
+    .update li { margin: 0.25rem 0; }
+    @media (max-width: 560px) {
+      .update { grid-template-columns: 1fr; gap: 0.35rem; }
+    }
+  </style>
+</BaseLayout>
