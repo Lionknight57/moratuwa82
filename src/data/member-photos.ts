@@ -70,6 +70,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Ranjith Jayawardene', sourceFile: 'RanjithJ.jpg', publicId: 'member/ranjith-jayawardene' },
   { name: 'Ranjith Salgado', sourceFile: 'Salgado.jpg', publicId: 'member/ranjith-salgado' },
   { name: 'Ranjith Wijegunasekera', sourceFile: 'Wijegunasekara.jpg', publicId: 'member/ranjith-wijegunasekera' },
+  { name: 'Renuka Wasantha Attanayake', sourceFile: 'Attanayake.png', publicId: 'member/renuka-wasantha-attanayake' },
   { name: 'Rohitha Fernando', sourceFile: 'rohithaf.jpg', publicId: 'member/rohitha-fernando' },
   { name: 'Rohitha Swarna', sourceFile: 'Rohitha Swarna.jpg', publicId: 'member/rohitha-swarna' },
   { name: 'Ruwan Weerasekera', sourceFile: 'Ruwan.jpg', publicId: 'member/ruwan-weerasekera' },
