@@ -62,7 +62,6 @@ const roster: Discipline[] = [
     members: [
       { name: 'Piyadasa Amaratunga' },
       { name: 'Shanmuhgalingam Bhuvendralingam' },
-      { name: 'Janath Chandrasekera' },
       { name: 'Ariyapala Fernando' },
       { name: 'Lionel Fernando' },
       { name: 'Pradeepa Fernando (Wijesiriwardene)' },
@@ -72,7 +71,6 @@ const roster: Discipline[] = [
       { name: 'Milroy Gunawardene' },
       { name: 'Hemamali Gajadeera' },
       { name: 'Keerthi Gnanaprakasam' },
-      { name: 'Kathiyoges' },
       { name: 'Sumi Prabakharan (Maheshwaran)' },
       { name: 'Siri Dissanayake' },
       { name: 'Sarath Jayawardene' },
@@ -114,8 +112,10 @@ const roster: Discipline[] = [
       { name: 'Nihal Hettiarachchi' },
       { name: 'Ranjith Jayawardene' },
       { name: 'Nalin Pahalawatte' },
+      { name: 'Sandaruwan Perera' },
       { name: 'Udaya Ranawaka' },
-      { name: 'H.J. Warnakulasuriya' },
+      { name: 'Uthpala Siriwardene' },
+      { name: 'Jayalath Warnakulasuriya' },
       { name: 'Priya Werahera' },
       { name: 'Vijithaweera Wickramasinghe' },
       { name: 'Kingsley Wijenayake' },
@@ -162,6 +162,7 @@ const roster: Discipline[] = [
       { name: 'Kalinga Amarasinghe' },
       { name: 'S Amithajothi' },
       { name: 'Rahula Attalage' },
+      { name: 'Janath Chandrasekera' },
       { name: 'Prabath de Silva' },
       { name: 'Stanley Fernando', note: 'deceased' },
       { name: 'Nimal Gunarathne' },
@@ -185,6 +186,7 @@ const roster: Discipline[] = [
       { name: 'Dudley Atapattu' },
       { name: 'Abdul Buruhanudeen', note: 'deceased' },
       { name: 'A R Dayananda' },
+      { name: 'Egodawela' },
       { name: 'Sunil Fonseka' },
       // Two different people who share a surname. Confirmed by Kanishka — not a
       // duplicate to be merged.
@@ -199,6 +201,8 @@ const roster: Discipline[] = [
       { name: 'Kuma Sumathipala' },
       { name: 'Dhanapala Weerasuriya' },
       { name: 'Victor Wickramasinghe', note: 'deceased' },
+      { name: 'Wimaleswaren' },
+      { name: 'Yogeswaren' },
     ],
   },
   {
