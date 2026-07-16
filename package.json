@@ -11,6 +11,7 @@
     "preview": "npm run build && wrangler dev",
     "astro": "astro",
     "upload": "node --env-file=.env scripts/upload-album.ts",
+    "upload-photos": "node --env-file=.env scripts/upload-photos.ts",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types"
   },

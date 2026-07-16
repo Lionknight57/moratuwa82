@@ -1,0 +1,106 @@
+// Individual member portraits, matched to names in members.ts.
+//
+// Curated by hand from the old site's portrait folder
+// (LionknightWeb/Moratuwa82Reunion/*.jpg), whose filenames are abbreviations
+// ("Bhuwen.jpg", "udayaR.jpg"). Every `name` here must exactly match a name in
+// members.ts. `sourceFile` is the portrait on disk; `publicId` is where it
+// lives on Cloudinary. Upload with: npm run upload-photos.
+//
+// Some matches are inferred from an abbreviation and should be verified against
+// the face on the live page — grep this file's git history / the chat for the
+// "verify" notes. Portraits nobody could place are NOT here; see the site chat.
+
+export type MemberPhoto = { name: string; sourceFile: string; publicId: string };
+
+export const memberPhotos: MemberPhoto[] = [
+  { name: 'Abdul Buruhanudeen', sourceFile: 'bhdeen.jpg', publicId: 'member/abdul-buruhanudeen' },
+  { name: 'Abeysinghe Bandara', sourceFile: 'Abeysinghe.jpg', publicId: 'member/abeysinghe-bandara' },
+  { name: 'Ajith Wijenayake', sourceFile: 'Aith_W.jpg', publicId: 'member/ajith-wijenayake' },
+  { name: 'Ananda Rajakaruna', sourceFile: 'Rajakaruna.jpg', publicId: 'member/ananda-rajakaruna' },
+  { name: 'Anura Nanayakkara', sourceFile: 'AnuraN.jpg', publicId: 'member/anura-nanayakkara' },
+  { name: 'Ariyadasa Abeywickrama', sourceFile: 'A L A Ariyadasa.jpg', publicId: 'member/ariyadasa-abeywickrama' },
+  { name: 'Ariyapala Fernando', sourceFile: 'Fernando Ari.JPG', publicId: 'member/ariyapala-fernando' },
+  { name: 'Chandra Galappaththi', sourceFile: 'Galappaththi.jpg', publicId: 'member/chandra-galappaththi' },
+  { name: 'D.M. Ranasinghe', sourceFile: 'Ranasinghe.jpg', publicId: 'member/d-m-ranasinghe' },
+  { name: 'Daya Rupasinghe', sourceFile: 'Rupasinghe.jpg', publicId: 'member/daya-rupasinghe' },
+  { name: 'Dayapani Patrick Piyasena', sourceFile: 'piyasena.jpg', publicId: 'member/dayapani-patrick-piyasena' },
+  { name: 'Deepa Liyanagama (Sederage)', sourceFile: 'Deepa_L.jpg', publicId: 'member/deepa-liyanagama' },
+  { name: 'Denzil Lokuliyana', sourceFile: 'Denzil.jpg', publicId: 'member/denzil-lokuliyana' },
+  { name: 'Dhamadasa Wijenayake', sourceFile: 'Darmadasa.jpg', publicId: 'member/dhamadasa-wijenayake' },
+  { name: 'Dhanapala Weerasuriya', sourceFile: 'DhanW.jpg', publicId: 'member/dhanapala-weerasuriya' },
+  { name: 'Don Dayananda Rodrigo', sourceFile: 'DonRod.jpg', publicId: 'member/don-dayananda-rodrigo' },
+  { name: 'Dudley Atapattu', sourceFile: 'Atapattu.jpg', publicId: 'member/dudley-atapattu' },
+  { name: 'Erica Silva', sourceFile: 'Erica.jpg', publicId: 'member/erica-silva' },
+  { name: 'Gamini Karunarathne', sourceFile: 'Gamini Karu.jpg', publicId: 'member/gamini-karunarathne' },
+  { name: 'Gamini Ranaweera', sourceFile: 'RANAWEERA.jpg', publicId: 'member/gamini-ranaweera' },
+  { name: 'Harischandra Liyanagamage', sourceFile: 'Liyanagamage.jpg', publicId: 'member/harischandra-liyanagamage' },
+  { name: 'Hemal Wijayratne', sourceFile: 'HemalW.jpg', publicId: 'member/hemal-wijayratne' },
+  { name: 'Hemamali Gajadeera', sourceFile: 'Hemamali.jpg', publicId: 'member/hemamali-gajadeera' },
+  { name: 'Janath Chandrasekera', sourceFile: 'JanathC.jpg', publicId: 'member/janath-chandrasekera' },
+  { name: 'Jayalath Warnakulasuriya', sourceFile: 'Warnakulasuriya.jpg', publicId: 'member/jayalath-warnakulasuriya' },
+  { name: 'Jayantha Gunathilake', sourceFile: 'Jayantha Gunathilake.jpg', publicId: 'member/jayantha-gunathilake' },
+  { name: 'Jinasiri Samarakoon', sourceFile: 'Jinasiri.jpg', publicId: 'member/jinasiri-samarakoon' },
+  { name: 'Kalinga Amarasinghe', sourceFile: 'Amarasingha.jpg', publicId: 'member/kalinga-amarasinghe' },
+  { name: 'Kanishka Abeynayake', sourceFile: 'KanishkaA.jpg', publicId: 'member/kanishka-abeynayake' },
+  { name: 'Kuma Sumathipala', sourceFile: 'kuma.jpg', publicId: 'member/kuma-sumathipala' },
+  { name: 'Lakshman Joseph', sourceFile: 'Lucky.jpg', publicId: 'member/lakshman-joseph' },
+  { name: 'Lalith Munasinghe', sourceFile: 'munasinghe.jpg', publicId: 'member/lalith-munasinghe' },
+  { name: 'Lekamge Ariyadasa', sourceFile: 'L Ariyadasa.jpg', publicId: 'member/lekamge-ariyadasa' },
+  { name: 'Lionel Fernando', sourceFile: 'Lionel Fernando.jpg', publicId: 'member/lionel-fernando' },
+  { name: 'Manjula Wickramaratne', sourceFile: 'Manjula.jpg', publicId: 'member/manjula-wickramaratne' },
+  { name: 'Manora Caldera (Ratnapala)', sourceFile: 'Manora.JPG', publicId: 'member/manora-caldera' },
+  { name: 'Milroy Gunawardene', sourceFile: 'Milroy.jpg', publicId: 'member/milroy-gunawardene' },
+  { name: 'Mohan Silva', sourceFile: 'MohanD.jpg', publicId: 'member/mohan-silva' },
+  { name: 'Nalin Pahalawatte', sourceFile: 'NalinP.jpg', publicId: 'member/nalin-pahalawatte' },
+  { name: 'Nihal Hettiarachchi', sourceFile: 'Hettiarachchi.jpg', publicId: 'member/nihal-hettiarachchi' },
+  { name: 'Nihal Vitharana', sourceFile: 'Vitharana.jpg', publicId: 'member/nihal-vitharana' },
+  { name: 'Nimal Gunarathne', sourceFile: 'NimalG.jpg', publicId: 'member/nimal-gunarathne' },
+  { name: 'Nimal Pushpakumara', sourceFile: 'Nimal1.jpg', publicId: 'member/nimal-pushpakumara' },
+  { name: 'Nonis', sourceFile: 'Nonis.jpg', publicId: 'member/nonis' },
+  { name: 'Piyadasa Amaratunga', sourceFile: 'Piyadasa.jpg', publicId: 'member/piyadasa-amaratunga' },
+  { name: 'Prabath de Silva', sourceFile: 'Prabhath.JPG', publicId: 'member/prabath-de-silva' },
+  { name: 'Pradeepa Fernando (Wijesiriwardene)', sourceFile: 'Pradeepa.jpg', publicId: 'member/pradeepa-fernando' },
+  { name: 'Premini Gunawardene', sourceFile: 'Premini.jpg', publicId: 'member/premini-gunawardene' },
+  { name: 'Priya Werahera', sourceFile: 'Werahara.jpg', publicId: 'member/priya-werahera' },
+  { name: 'Priyantha Goonarathne', sourceFile: 'PriyanthaG.jpg', publicId: 'member/priyantha-goonarathne' },
+  { name: 'Priyantha Mendis', sourceFile: 'Priyan Mendis.jpg', publicId: 'member/priyantha-mendis' },
+  { name: 'Priyantha Perera', sourceFile: 'Priyantha Perera.jpg', publicId: 'member/priyantha-perera' },
+  { name: 'Rahula Attalage', sourceFile: 'rahula.jpg', publicId: 'member/rahula-attalage' },
+  { name: 'Ranil Nedurana', sourceFile: 'Nedurana.jpg', publicId: 'member/ranil-nedurana' },
+  { name: 'Ranjith Jayawardene', sourceFile: 'RanjithJ.jpg', publicId: 'member/ranjith-jayawardene' },
+  { name: 'Ranjith Salgado', sourceFile: 'Salgado.jpg', publicId: 'member/ranjith-salgado' },
+  { name: 'Ranjith Wijegunasekera', sourceFile: 'Wijegunasekara.jpg', publicId: 'member/ranjith-wijegunasekera' },
+  { name: 'Rohitha Fernando', sourceFile: 'rohithaf.jpg', publicId: 'member/rohitha-fernando' },
+  { name: 'Rohitha Swarna', sourceFile: 'Rohitha Swarna.jpg', publicId: 'member/rohitha-swarna' },
+  { name: 'Ruwan Weerasekera', sourceFile: 'Ruwan.jpg', publicId: 'member/ruwan-weerasekera' },
+  { name: 'S Amithajothi', sourceFile: 'Amithrajothy.jpg', publicId: 'member/s-amithajothi' },
+  { name: 'Sarath Ranatunge', sourceFile: 'Sarath Ranatnga.jpg', publicId: 'member/sarath-ranatunge' },
+  { name: 'Senaka Wijesinghe', sourceFile: 'Senaka.jpg', publicId: 'member/senaka-wijesinghe' },
+  { name: 'Shanmugalingam Bhuvendralingam', sourceFile: 'Bhuwen.jpg', publicId: 'member/shanmugalingam-bhuvendralingam' },
+  { name: 'Shanmuganathan', sourceFile: 'Shanmuganathan.jpg', publicId: 'member/shanmuganathan' },
+  { name: 'Siri Dissanayake', sourceFile: 'Dissanayake.jpg', publicId: 'member/siri-dissanayake' },
+  { name: 'Sivasakthy', sourceFile: 'sivasakthy.jpg', publicId: 'member/sivasakthy' },
+  { name: 'Sriyani Karunatilleke', sourceFile: 'sriyani.jpg', publicId: 'member/sriyani-karunatilleke' },
+  { name: 'Sumi Prabakharan (Maheshwaran)', sourceFile: 'Sumi Prabhakaran.jpg', publicId: 'member/sumi-prabakharan' },
+  { name: 'Sumitha Sumanaweera', sourceFile: 'Sumanaweera.jpg', publicId: 'member/sumitha-sumanaweera' },
+  { name: 'Sundararaju', sourceFile: 'sundararaju.jpg', publicId: 'member/sundararaju' },
+  { name: 'Sunil Fonseka', sourceFile: 'Sunil fonseka.jpg', publicId: 'member/sunil-fonseka' },
+  { name: 'Sunil Hapuarachchi', sourceFile: 'Hapuarachchi.jpg', publicId: 'member/sunil-hapuarachchi' },
+  { name: 'Sunil Mendis', sourceFile: 'SunilM.jpg', publicId: 'member/sunil-mendis' },
+  { name: 'Sunil Ratnayake', sourceFile: 'SunilShantha.jpg', publicId: 'member/sunil-ratnayake' },
+  { name: 'Tamara Ginige (Senanayake)', sourceFile: 'Thamara.jpg', publicId: 'member/tamara-ginige' },
+  { name: 'Tissa Samaratunga', sourceFile: 'TissaS.jpg', publicId: 'member/tissa-samaratunga' },
+  { name: 'Udaya Annakkage', sourceFile: 'UdayaA.jpg', publicId: 'member/udaya-annakkage' },
+  { name: 'Udaya Ranawaka', sourceFile: 'udayaR.jpg', publicId: 'member/udaya-ranawaka' },
+  { name: 'Vasantha Liyanage', sourceFile: 'Vasa.jpg', publicId: 'member/vasantha-liyanage' },
+  { name: 'Victor Wickramasinghe', sourceFile: 'Victor Wicky.jpg', publicId: 'member/victor-wickramasinghe' },
+  { name: 'Vijithaweera Wickramasinghe', sourceFile: 'wicky.jpg', publicId: 'member/vijithaweera-wickramasinghe' },
+  { name: 'Vinotharajah', sourceFile: 'Vinotharaj.jpg', publicId: 'member/vinotharajah' },
+  { name: 'Wimal Galappaththi', sourceFile: 'Wimal Galappatti.jpg', publicId: 'member/wimal-galappaththi' },
+  { name: 'Yogeswaren', sourceFile: 'yogesh.jpg', publicId: 'member/yogeswaren' },
+];
+
+/** name -> portrait publicId, for the members page to look up. */
+export const photoByName: Record<string, string> = Object.fromEntries(
+  memberPhotos.map((p) => [p.name, p.publicId]),
+);

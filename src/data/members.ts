@@ -143,6 +143,7 @@ const roster: Discipline[] = [
       { name: 'Joachim Joseph' },
       { name: 'Lakshman Joseph' },
       { name: 'Gamini Karunarathne' },
+      { name: 'Manora Caldera (Ratnapala)' },
       { name: 'Deepa Liyanagama (Sederage)' },
       { name: 'Vasantha Liyanage' },
       { name: 'Priyantha Perera' },

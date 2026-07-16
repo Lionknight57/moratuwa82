@@ -89,6 +89,19 @@ network:
 npm run upload -- <slug> --dry-run
 ```
 
+## Member portraits
+
+`src/data/member-photos.ts` maps a member name to a Cloudinary portrait
+(`member/<slug>`); the members page looks up by name and falls back to a
+monogram. Every `name` must match members.ts exactly — a name-normalising step
+in the roster (sort, dedupe) means a stale name here silently shows a monogram
+instead of erroring, so regenerate/validate after renaming a member. Upload with
+`npm run upload-photos`. Portraits come from the LionknightWeb
+`Moratuwa82Reunion` root, whose filenames are abbreviations (`Bhuwen.jpg`,
+`udayaR.jpg`) — several matches were inferred and confirmed by Kanishka against
+the face on the page. **Never invent a face-to-name link; if a portrait can't be
+placed with confidence, leave it out and ask.**
+
 ## Derived numbers — don't hardcode
 
 `src/data/reunion.ts` holds the 50th Anniversary line items. Every total, the

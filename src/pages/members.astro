@@ -1,6 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { disciplines, totalMembers, contactEmail } from '../data/members';
+import { photoByName } from '../data/member-photos';
+import { cldUrl } from '../lib/cloudinary';
+
+// Initials for the fallback avatar when a member has no portrait.
+const initials = (name: string) =>
+  name
+    .replace(/\([^)]*\)/g, '')
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((w) => w[0])
+    .slice(0, 2)
+    .join('')
+    .toUpperCase();
 ---
 
 <BaseLayout
@@ -40,6 +53,18 @@ import { disciplines, totalMembers, contactEmail } from '../data/members';
         <ul class="members">
           {d.members.map((m) => (
             <li>
+              {photoByName[m.name] ? (
+                <img
+                  class="avatar"
+                  src={cldUrl(photoByName[m.name], { width: 96, height: 96, crop: 'thumb' })}
+                  alt={m.name}
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                />
+              ) : (
+                <span class="avatar avatar-fallback" aria-hidden="true">{initials(m.name)}</span>
+              )}
               <span class="m-name">{m.name}</span>
               {m.note && <span class="m-note">{m.note}</span>}
             </li>
@@ -73,7 +98,19 @@ import { disciplines, totalMembers, contactEmail } from '../data/members';
     .count { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
 
     .members { list-style: none; padding: 0; margin: 0.75rem 0 0; }
-    .members li { padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+    .members li {
+      display: flex; align-items: center; gap: 0.7rem;
+      padding: 0.4rem 0; border-bottom: 1px solid var(--border);
+    }
+    .avatar {
+      flex: 0 0 auto; width: 48px; height: 48px; border-radius: 50%;
+      object-fit: cover; background: var(--bg);
+    }
+    .avatar-fallback {
+      display: inline-flex; align-items: center; justify-content: center;
+      border: 1px solid var(--border); color: var(--muted);
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em;
+    }
     .m-name { font-weight: 600; }
     .m-note { color: var(--muted); font-size: 0.9rem; margin-left: 0.5rem; }
 
