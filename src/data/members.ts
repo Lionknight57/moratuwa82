@@ -153,6 +153,7 @@ const roster: Discipline[] = [
       { name: 'Vijitha Ratnayake (Dodampe Gamage)' },
       { name: 'Sarath Ranatunge' },
       { name: 'Daya Rupasinghe' },
+      { name: 'Thavarajah' },
       { name: 'Tissa Samaratunga' },
       { name: 'Vijith Seneviratne' },
       { name: 'Erica Silva' },
