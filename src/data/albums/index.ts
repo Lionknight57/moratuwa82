@@ -10,11 +10,12 @@ import type { Album } from './types.ts';
 import { photosOf } from './types.ts';
 import historical from './historical.ts';
 import reunion2006 from './reunion2006.ts';
+import reunion2016 from './reunion2016.ts';
 
 export type { Album, AlbumPhoto, AlbumSection } from './types.ts';
 export { photosOf } from './types.ts';
 
-export const albums: Album[] = [reunion2006, historical];
+export const albums: Album[] = [reunion2016, reunion2006, historical];
 
 export const albumBySlug = (slug: string): Album | undefined =>
   albums.find((a) => a.slug === slug);
