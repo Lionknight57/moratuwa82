@@ -197,6 +197,7 @@ const roster: Discipline[] = [
       { name: 'Wimal Galappaththi' },
       { name: 'Lalani Kuruppu (Pigera)' },
       { name: 'Dayapani Patrick Piyasena' },
+      { name: 'Rajaram', note: 'deceased' },
       { name: 'Rambanda', note: 'deceased' },
       { name: 'Don Dayananda Rodrigo' },
       { name: 'Padma Samarakoon' },
