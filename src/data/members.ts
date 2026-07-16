@@ -113,6 +113,7 @@ const roster: Discipline[] = [
       { name: 'Sunil Hapuarachchi' },
       { name: 'Nihal Hettiarachchi' },
       { name: 'Ranjith Jayawardene' },
+      { name: 'Kusumalatha' },
       { name: 'Nalin Pahalawatte' },
       { name: 'Sandaruwan Perera' },
       { name: 'Udaya Ranawaka' },
@@ -196,6 +197,7 @@ const roster: Discipline[] = [
       // Not the same person as Wimal Galappaththi in Mechanical. Confirmed by
       // Kanishka — two people who share a surname, not a duplicate to be merged.
       { name: 'Chandra Galappaththi' },
+      { name: 'Gnana' },
       { name: 'Lalani Kuruppu (Pigera)' },
       { name: 'Dayapani Patrick Piyasena' },
       { name: 'Rajaram', note: 'deceased' },
