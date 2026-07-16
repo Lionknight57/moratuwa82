@@ -61,7 +61,7 @@ const roster: Discipline[] = [
     label: 'Civil',
     members: [
       { name: 'Piyadasa Amaratunga' },
-      { name: 'Shanmuhgalingam Bhuvendralingam' },
+      { name: 'Shanmugalingam Bhuvendralingam' },
       { name: 'Ariyapala Fernando' },
       { name: 'Lionel Fernando' },
       { name: 'Pradeepa Fernando (Wijesiriwardene)' },
@@ -167,6 +167,8 @@ const roster: Discipline[] = [
       { name: 'Janath Chandrasekera' },
       { name: 'Prabath de Silva' },
       { name: 'Stanley Fernando', note: 'deceased' },
+      // Not the same person as Chandra Galappaththi in Materials / Chemical.
+      { name: 'Wimal Galappaththi' },
       { name: 'Nimal Gunarathne' },
       { name: 'Jayantha Gunathilake' },
       { name: 'Harischandra Liyanagamage' },
@@ -191,10 +193,9 @@ const roster: Discipline[] = [
       { name: 'A R Dayananda' },
       { name: 'Egodawela' },
       { name: 'Sunil Fonseka' },
-      // Two different people who share a surname. Confirmed by Kanishka — not a
-      // duplicate to be merged.
+      // Not the same person as Wimal Galappaththi in Mechanical. Confirmed by
+      // Kanishka — two people who share a surname, not a duplicate to be merged.
       { name: 'Chandra Galappaththi' },
-      { name: 'Wimal Galappaththi' },
       { name: 'Lalani Kuruppu (Pigera)' },
       { name: 'Dayapani Patrick Piyasena' },
       { name: 'Rajaram', note: 'deceased' },
