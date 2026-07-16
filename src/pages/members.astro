@@ -24,9 +24,11 @@ import { disciplines, totalMembers, contactEmail } from '../data/members';
     </p>
   </div>
 
-  {totalMembers === 0 && (
-    <p class="empty-all">The names are going up now — check back shortly.</p>
-  )}
+  <p class="tally">
+    {totalMembers === 0
+      ? 'The names are going up now — check back shortly.'
+      : `${totalMembers} names so far.`}
+  </p>
 
   {disciplines.map((d) => (
     <section class="discipline">
@@ -60,7 +62,7 @@ import { disciplines, totalMembers, contactEmail } from '../data/members';
     .notice p { margin: 0; }
     .notice .ask { margin-top: 0.75rem; color: var(--muted); }
 
-    .empty-all { color: var(--muted); }
+    .tally { color: var(--muted); }
 
     .discipline { margin-top: 2rem; }
     .d-head {

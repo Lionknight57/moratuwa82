@@ -10,12 +10,20 @@
 // people filed under the wrong discipline. Corrections from batchmates beat
 // anything remembered here.
 //
-// `note` is optional and shows after the name, for anything worth recording
-// (specialisation, "overseas", a maiden name people would recognise).
+// Names are recorded verbatim, including the second surname some members are
+// listed under in brackets — that is how they were supplied and it isn't for us
+// to decide which name someone goes by. `note` carries anything that isn't part
+// of the name, currently only "deceased".
+//
+// ORDER DOESN'T MATTER HERE. Each section is sorted by surname on the way out,
+// so add people wherever it's convenient. Set `sortAs` on anyone the surname
+// rule gets wrong.
 
 export type Member = {
   name: string;
   note?: string;
+  /** Override the surname used for sorting, when the rule below guesses wrong. */
+  sortAs?: string;
 };
 
 export type Discipline = {
@@ -26,12 +34,187 @@ export type Discipline = {
 
 export const contactEmail = 'ken.abeynayake@gmail.com';
 
-export const disciplines: Discipline[] = [
-  { id: 'civil', label: 'Civil', members: [] },
-  { id: 'electrical', label: 'Electrical', members: [] },
-  { id: 'electronic', label: 'Electronic', members: [] },
-  { id: 'mechanical', label: 'Mechanical', members: [] },
-  { id: 'materials-chemical', label: 'Materials / Chemical', members: [] },
+// Lowercase name particles that belong with the surname: "Prabath de Silva"
+// files under "de Silva", not "Silva".
+const PARTICLE = /^(de|van|von|der|den|da|del|di|la|le)$/;
+
+/**
+ * The surname to alphabetise by: the last word of the name, plus any lowercase
+ * particle in front of it. Bracketed second surnames are ignored — someone
+ * listed as "Tamara Ginige (Senanayake)" files under Ginige.
+ */
+function surnameOf(m: Member): string {
+  if (m.sortAs) return m.sortAs;
+  const parts = m.name.replace(/\s*\([^)]*\)/g, '').trim().split(/\s+/);
+  let i = parts.length - 1;
+  if (i > 0 && PARTICLE.test(parts[i - 1])) i--;
+  return parts.slice(i).join(' ');
+}
+
+const bySurname = (a: Member, b: Member) =>
+  surnameOf(a).localeCompare(surnameOf(b), 'en', { sensitivity: 'base' }) ||
+  a.name.localeCompare(b.name, 'en', { sensitivity: 'base' });
+
+const roster: Discipline[] = [
+  {
+    id: 'civil',
+    label: 'Civil',
+    members: [
+      { name: 'Piyadasa Amaratunga' },
+      { name: 'Shanmuhgalingam Bhuvendralingam' },
+      { name: 'Janath Chandrasekera' },
+      { name: 'Ariyapala Fernando' },
+      { name: 'Lionel Fernando' },
+      { name: 'Pradeepa Fernando (Wijesiriwardene)' },
+      { name: 'Rohitha Fernando' },
+      { name: 'Piyadasa' },
+      { name: 'Priyantha Goonarathne', note: 'deceased' },
+      { name: 'Premini Gunawardene' },
+      { name: 'Milroy Gunawardene' },
+      { name: 'Hemamali Gajadeera' },
+      { name: 'Keerthi Gnanaprakasam' },
+      { name: 'Kathiyoges' },
+      { name: 'Sumi Prabakharan (Maheshwaran)' },
+      { name: 'Siri Dissanayake' },
+      { name: 'Sarath Jayawardene' },
+      { name: 'Sriyani Karunatilleke' },
+      { name: 'Denzil Lokuliyana' },
+      { name: 'Ajith Madappuli', note: 'deceased' },
+      { name: 'Priyantha Mendis' },
+      { name: 'Ranil Nedurana' },
+      { name: 'Geeganage Newton' },
+      { name: 'Nonis' },
+      { name: 'Anura Nanayakkara' },
+      { name: 'Pradeep Perera' },
+      { name: 'Priyantha' },
+      { name: 'Nimal Pushpakumara' },
+      { name: 'Sunil Ratnayake' },
+      { name: 'Rayan' },
+      { name: 'Seneviratne' },
+      { name: 'Shanmuganathan' },
+      { name: 'Sumitha Sumanaweera' },
+      { name: 'Rohitha Swarna' },
+      { name: 'Sundararaju' },
+      { name: 'Chandana Vidanarachchi' },
+      { name: 'Vinotharajah' },
+      { name: 'Nihal Vitharana' },
+      { name: 'Kolitha Weerasekera' },
+      { name: 'Ruwan Weerasekera' },
+      { name: 'Ranjith Wijegunasekera' },
+      { name: 'Dhamadasa Wijenayake' },
+      { name: 'Hemal Wijayratne' },
+      { name: 'Senaka Wijesinghe' },
+    ],
+  },
+  {
+    id: 'electrical',
+    label: 'Electrical',
+    members: [
+      { name: 'Udaya Annakkage' },
+      { name: 'Sunil Hapuarachchi' },
+      { name: 'Nihal Hettiarachchi' },
+      { name: 'Ranjith Jayawardene' },
+      { name: 'Nalin Pahalawatte' },
+      { name: 'Udaya Ranawaka' },
+      { name: 'H.J. Warnakulasuriya' },
+      { name: 'Priya Werahera' },
+      { name: 'Vijithaweera Wickramasinghe' },
+      { name: 'Kingsley Wijenayake' },
+      { name: 'Ajith Wijenayake' },
+      { name: 'Lal Wijewardene' },
+    ],
+  },
+  {
+    id: 'electronic',
+    label: 'Electronic',
+    members: [
+      { name: 'Kanishka Abeynayake' },
+      { name: 'Renuka Wasantha Attanayake', note: 'deceased' },
+      { name: 'Samanmali Dodangoda' },
+      { name: 'Susith Fernando' },
+      { name: 'Gayani Rupasinghe Gamage' },
+      { name: 'Saman Gamage' },
+      { name: 'Tamara Ginige (Senanayake)' },
+      { name: 'Champika Goonawardene' },
+      { name: 'Hettige Jayatissa' },
+      { name: 'Joachim Joseph' },
+      { name: 'Lakshman Joseph' },
+      { name: 'Gamini Karunarathne' },
+      { name: 'Deepa Liyanagama (Sederage)' },
+      { name: 'Vasantha Liyanage' },
+      { name: 'Priyantha Perera' },
+      { name: 'Vijitha Ratnayake (Dodampe Gamage)' },
+      { name: 'Sarath Ranatunge' },
+      { name: 'Daya Rupasinghe' },
+      { name: 'Tissa Samaratunga' },
+      { name: 'Vijith Seneviratne' },
+      { name: 'Erica Silva' },
+      { name: 'Mohan Silva' },
+      { name: 'Manjula Wickramaratne' },
+    ],
+  },
+  {
+    id: 'mechanical',
+    label: 'Mechanical',
+    members: [
+      { name: 'Abeysinghe Bandara' },
+      { name: 'Ariyadasa Abeywickrama' },
+      { name: 'Lekamge Ariyadasa' },
+      { name: 'Kalinga Amarasinghe' },
+      { name: 'S Amithajothi' },
+      { name: 'Rahula Attalage' },
+      { name: 'Prabath de Silva' },
+      { name: 'Stanley Fernando', note: 'deceased' },
+      { name: 'Nimal Gunarathne' },
+      { name: 'G.J.C. Gunatillake' },
+      { name: 'Harischandra Liyanagamage' },
+      { name: 'Sunil Mendis' },
+      { name: 'Lalith Munasinghe' },
+      { name: 'D.M. Ranasinghe' },
+      { name: 'Gamini Ranaweera' },
+      { name: 'Ananda Rajakaruna' },
+      { name: 'Ranjith Salgado' },
+      { name: 'Jinasiri Samarakoon' },
+      { name: 'Jayanath Weerasooriya' },
+      { name: 'Hemantha Wijesekera' },
+    ],
+  },
+  {
+    id: 'materials-chemical',
+    label: 'Materials / Chemical',
+    members: [
+      { name: 'Dudley Atapattu' },
+      { name: 'Abdul Buruhanudeen', note: 'deceased' },
+      { name: 'A R Dayananda' },
+      { name: 'Sunil Fonseka' },
+      // Two different people who share a surname. Confirmed by Kanishka — not a
+      // duplicate to be merged.
+      { name: 'Chandra Galappaththi' },
+      { name: 'Wimal Galappaththi' },
+      { name: 'Lalani Kuruppu (Pigera)' },
+      { name: 'Dayapani Patrick Piyasena' },
+      { name: 'Rambanda', note: 'deceased' },
+      { name: 'Don Dayananda Rodrigo' },
+      { name: 'Padma Samarakoon' },
+      { name: 'Sivasakthy' },
+      { name: 'Kuma Sumathipala' },
+      { name: 'Dhanapala Weerasuriya' },
+      { name: 'Victor Wickramasinghe', note: 'deceased' },
+    ],
+  },
+  {
+    id: 'other',
+    label: 'Other',
+    // This Fonseka is not Sunil Fonseka in Materials / Chemical — different
+    // people. Confirmed by Kanishka; not a duplicate to be merged.
+    members: [{ name: 'Alwis' }, { name: 'Fonseka' }],
+  },
 ];
+
+/** Each discipline with its members alphabetised by surname. */
+export const disciplines: Discipline[] = roster.map((d) => ({
+  ...d,
+  members: [...d.members].sort(bySurname),
+}));
 
 export const totalMembers = disciplines.reduce((n, d) => n + d.members.length, 0);
