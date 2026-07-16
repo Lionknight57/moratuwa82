@@ -1,9 +1,14 @@
-// The batch member list, rebuilt from scratch.
+// The batch member list, rebuilt from memory.
 //
 // The previous site kept this in a MongoDB database that didn't survive the
-// move, so every section starts empty and fills up as people send their details
-// in. Add a member by putting them in the right discipline below — the page and
-// the counts follow automatically.
+// move. Kanishka is writing the list out again from memory — about three
+// quarters of the batch — and the page asks readers to correct it and supply
+// the rest. Add a member by putting them in the right discipline below; the
+// page and the counts follow automatically.
+//
+// Because these are recalled rather than sourced, expect misspellings and
+// people filed under the wrong discipline. Corrections from batchmates beat
+// anything remembered here.
 //
 // `note` is optional and shows after the name, for anything worth recording
 // (specialisation, "overseas", a maiden name people would recognise).

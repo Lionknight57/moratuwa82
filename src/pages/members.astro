@@ -5,27 +5,27 @@ import { disciplines, totalMembers, contactEmail } from '../data/members';
 
 <BaseLayout
   title="Members — Moratuwa ’82"
-  description="The batch member list, being rebuilt. Send us your details."
+  description="The batch member list, rebuilt from memory. Help us fill the gaps and fix the errors."
 >
   <h1>Members</h1>
 
   <div class="notice">
     <p>
-      <strong>We’re rebuilding this list from scratch.</strong> The member list on the old
-      site lived in a database that didn’t survive the move, and it’s gone. Rather than
-      patch together a half-remembered version, we’re starting fresh — and that means we
-      need to hear from you.
+      <strong>This list is being rebuilt from memory.</strong> The old site kept our member
+      list in a database that didn’t survive the move, so Kanishka is writing it out again
+      from what he remembers — roughly three quarters of the batch. The rest, we need your
+      help with.
     </p>
     <p class="ask">
-      Send your name, discipline and anything you’d like listed to Kanishka at
-      <a href={`mailto:${contactEmail}`}>{contactEmail}</a>, and you’ll appear below.
-      Passing on a batchmate’s details is just as welcome — especially for those we’ve
-      lost touch with.
+      So please read your discipline below and tell us what’s wrong. Names spelled badly,
+      someone under the wrong discipline, or missing altogether — all of it is likely, and
+      none of it will offend anyone. Send corrections and the names we’ve forgotten to
+      Kanishka at <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
     </p>
   </div>
 
   {totalMembers === 0 && (
-    <p class="empty-all">No names yet. The sections below fill up as details come in.</p>
+    <p class="empty-all">The names are going up now — check back shortly.</p>
   )}
 
   {disciplines.map((d) => (
@@ -44,7 +44,7 @@ import { disciplines, totalMembers, contactEmail } from '../data/members';
           ))}
         </ul>
       ) : (
-        <p class="empty">Nobody listed yet — be the first.</p>
+        <p class="empty">Not written up yet.</p>
       )}
     </section>
   ))}
