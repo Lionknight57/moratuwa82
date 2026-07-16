@@ -8,14 +8,18 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "npm run build && wrangler dev",
     "astro": "astro",
-    "upload:historical": "node --env-file=.env scripts/upload-album.ts"
+    "upload:historical": "node --env-file=.env scripts/upload-album.ts",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "11",
     "astro": "^4.16.0"
   },
   "devDependencies": {
-    "cloudinary": "^2.10.0"
+    "cloudinary": "^2.10.0",
+    "wrangler": "^4.111.0"
   }
 }
