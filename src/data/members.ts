@@ -70,7 +70,7 @@ const roster: Discipline[] = [
       { name: 'Premini Gunawardene' },
       { name: 'Milroy Gunawardene' },
       { name: 'Hemamali Gajadeera' },
-      // Not the same person as Gnana in Materials / Chemical.
+      // Not the same person as Gnana Perera in Chemical.
       { name: 'Keerthi Gnanaprakasam' },
       { name: 'Sumi Prabakharan (Maheshwaran)' },
       { name: 'Siri Dissanayake' },
@@ -192,34 +192,47 @@ const roster: Discipline[] = [
       { name: 'Hemantha Wijesekera' },
     ],
   },
+  // The old "Materials / Chemical" section, split by Kanishka into the three
+  // streams of the Material/Mining/Chemical batch.
   {
-    id: 'materials-chemical',
-    label: 'Materials / Chemical',
+    id: 'materials',
+    label: 'Materials',
     members: [
-      { name: 'Dudley Atapattu' },
-      { name: 'Abdul Buruhanudeen', note: 'deceased' },
-      { name: 'A R Dayananda' },
-      { name: 'Egodawela' },
-      { name: 'Sunil Fonseka' },
       // Not the same person as Wimal Galappaththi in Mechanical. Confirmed by
       // Kanishka — two people who share a surname, not a duplicate to be merged.
       { name: 'Chandra Galappaththi' },
-      // Not a short form of Keerthi Gnanaprakasam in Civil. Confirmed by
-      // Kanishka — two different people.
-      { name: 'Gnana' },
       { name: 'Lalani Kuruppu (Pigera)' },
       { name: 'Dayapani Patrick Piyasena' },
       { name: 'Rajaram', note: 'deceased' },
-      { name: 'R B Nawarathna', note: 'deceased' },
-      { name: 'Rambanda', note: 'deceased' },
       { name: 'Don Dayananda Rodrigo' },
       { name: 'Padma Samarakoon' },
-      { name: 'Sivasakthy' },
-      { name: 'Kuma Sumathipala' },
       { name: 'Dhanapala Weerasuriya' },
-      { name: 'Victor Wickramasinghe', note: 'deceased' },
       { name: 'Wimaleswaren' },
       { name: 'Yogeswaren' },
+    ],
+  },
+  {
+    id: 'mining-mineral',
+    label: 'Mining / Mineral',
+    members: [
+      { name: 'Abdul Buruhanudeen', note: 'deceased' },
+      { name: 'Egodawela' },
+    ],
+  },
+  {
+    id: 'chemical',
+    label: 'Chemical',
+    members: [
+      { name: 'Dudley Atapattu' },
+      { name: 'A R Dayananda' },
+      { name: 'Sunil Fonseka' },
+      // Not the same person as Keerthi Gnanaprakasam in Civil. Confirmed by Kanishka.
+      { name: 'Gnana Perera' },
+      // Ram Banda and R.B. Nawaratna were the same person; merged.
+      { name: 'Ram Banda Nawarathna', note: 'deceased' },
+      { name: 'Sivasakthy' },
+      { name: 'Kuma Sumathipala' },
+      { name: 'Victor Wickramasinghe', note: 'deceased' },
     ],
   },
   {
