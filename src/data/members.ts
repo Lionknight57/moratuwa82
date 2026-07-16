@@ -103,6 +103,7 @@ const roster: Discipline[] = [
       { name: 'Ranjith Wijegunasekera' },
       { name: 'Dhamadasa Wijenayake' },
       { name: 'Hemal Wijayratne' },
+      { name: 'Sanjeewa Wijewardana' },
       { name: 'Senaka Wijesinghe' },
     ],
   },
