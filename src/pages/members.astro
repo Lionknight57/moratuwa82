@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { disciplines, totalMembers, contactEmail } from '../data/members';
+---
+
+<BaseLayout
+  title="Members — Moratuwa ’82"
+  description="The batch member list, being rebuilt. Send us your details."
+>
+  <h1>Members</h1>
+
+  <div class="notice">
+    <p>
+      <strong>We’re rebuilding this list from scratch.</strong> The member list on the old
+      site lived in a database that didn’t survive the move, and it’s gone. Rather than
+      patch together a half-remembered version, we’re starting fresh — and that means we
+      need to hear from you.
+    </p>
+    <p class="ask">
+      Send your name, discipline and anything you’d like listed to Kanishka at
+      <a href={`mailto:${contactEmail}`}>{contactEmail}</a>, and you’ll appear below.
+      Passing on a batchmate’s details is just as welcome — especially for those we’ve
+      lost touch with.
+    </p>
+  </div>
+
+  {totalMembers === 0 && (
+    <p class="empty-all">No names yet. The sections below fill up as details come in.</p>
+  )}
+
+  {disciplines.map((d) => (
+    <section class="discipline">
+      <div class="d-head">
+        <h2>{d.label}</h2>
+        <span class="count">{d.members.length === 0 ? 'awaiting names' : `${d.members.length} listed`}</span>
+      </div>
+      {d.members.length > 0 ? (
+        <ul class="members">
+          {d.members.map((m) => (
+            <li>
+              <span class="m-name">{m.name}</span>
+              {m.note && <span class="m-note">{m.note}</span>}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="empty">Nobody listed yet — be the first.</p>
+      )}
+    </section>
+  ))}
+
+  <style>
+    h1 { border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+
+    .notice {
+      background: var(--card); border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 10px; padding: 1rem 1.15rem; margin: 1.5rem 0 2rem;
+    }
+    .notice p { margin: 0; }
+    .notice .ask { margin-top: 0.75rem; color: var(--muted); }
+
+    .empty-all { color: var(--muted); }
+
+    .discipline { margin-top: 2rem; }
+    .d-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem;
+    }
+    .d-head h2 { font-size: 1.1rem; margin: 0; }
+    .count { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    .members { list-style: none; padding: 0; margin: 0.75rem 0 0; }
+    .members li { padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+    .m-name { font-weight: 600; }
+    .m-note { color: var(--muted); font-size: 0.9rem; margin-left: 0.5rem; }
+
+    .empty { color: var(--muted); font-size: 0.9rem; margin: 0.75rem 0 0; }
+  </style>
+</BaseLayout>
