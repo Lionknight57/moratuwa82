@@ -70,6 +70,7 @@ const roster: Discipline[] = [
       { name: 'Premini Gunawardene' },
       { name: 'Milroy Gunawardene' },
       { name: 'Hemamali Gajadeera' },
+      // Not the same person as Gnana in Materials / Chemical.
       { name: 'Keerthi Gnanaprakasam' },
       { name: 'Sumi Prabakharan (Maheshwaran)' },
       { name: 'Siri Dissanayake' },
@@ -197,6 +198,8 @@ const roster: Discipline[] = [
       // Not the same person as Wimal Galappaththi in Mechanical. Confirmed by
       // Kanishka — two people who share a surname, not a duplicate to be merged.
       { name: 'Chandra Galappaththi' },
+      // Not a short form of Keerthi Gnanaprakasam in Civil. Confirmed by
+      // Kanishka — two different people.
       { name: 'Gnana' },
       { name: 'Lalani Kuruppu (Pigera)' },
       { name: 'Dayapani Patrick Piyasena' },
