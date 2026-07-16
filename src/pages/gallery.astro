@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CldImage from '../components/CldImage.astro';
 import { photos } from '../data/gallery';
-import { albums } from '../data/albums';
+import { albums, photoCount } from '../data/albums';
 ---
 
 <BaseLayout title="Gallery — Moratuwa ’82" description="Batch photos through the years.">
@@ -12,12 +12,12 @@ import { albums } from '../data/albums';
   <h2>Albums</h2>
   <div class="grid">
     {albums.map((album) => (
-      <a class="album-card" href={album.href}>
+      <a class="album-card" href={`/gallery/${album.slug}/`}>
         <CldImage publicId={album.cover} alt={`${album.title} — album cover`} width={600} height={450} />
         <div class="album-meta">
           <span class="album-title">{album.title}</span>
           <span class="album-summary">{album.summary}</span>
-          <span class="album-count">{album.count} photos</span>
+          <span class="album-count">{photoCount(album)} photos</span>
         </div>
       </a>
     ))}

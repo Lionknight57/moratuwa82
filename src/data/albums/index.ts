@@ -1,25 +1,22 @@
-// The albums shown as cover cards at the top of /gallery.
+// Every album on the site, newest first — this is the order they appear at
+// /gallery.
 //
-// To add an album: create its data file alongside this one, create the matching
-// page in src/pages/gallery/, then add an entry here. The photo count is derived
-// so it can't drift out of sync with the album itself.
+// To add one: create its data file in this folder exporting an Album as its
+// default, then add it to the list below. The page at /gallery/<slug> and the
+// card on /gallery both come for free; photo counts are derived so they can't
+// drift.
 
-import * as historical from './historical';
+import type { Album } from './types.ts';
+import { photosOf } from './types.ts';
+import historical from './historical.ts';
+import reunion2006 from './reunion2006.ts';
 
-export type AlbumCard = {
-  href: string;
-  title: string;
-  summary: string;
-  cover: string;
-  count: number;
-};
+export type { Album, AlbumPhoto, AlbumSection } from './types.ts';
+export { photosOf } from './types.ts';
 
-export const albums: AlbumCard[] = [
-  {
-    href: '/gallery/historical/',
-    title: historical.title,
-    summary: historical.summary,
-    cover: historical.cover,
-    count: historical.sections.reduce((n, s) => n + s.photos.length, 0),
-  },
-];
+export const albums: Album[] = [reunion2006, historical];
+
+export const albumBySlug = (slug: string): Album | undefined =>
+  albums.find((a) => a.slug === slug);
+
+export const photoCount = (album: Album): number => photosOf(album).length;

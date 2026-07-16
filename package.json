@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "npm run build && wrangler dev",
     "astro": "astro",
-    "upload:historical": "node --env-file=.env scripts/upload-album.ts",
+    "upload": "node --env-file=.env scripts/upload-album.ts",
     "deploy": "npm run build && wrangler deploy",
     "cf-typegen": "wrangler types"
   },

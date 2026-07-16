@@ -2,20 +2,28 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CldImage from '../../components/CldImage.astro';
 import { cldUrl } from '../../lib/cloudinary';
-import { title, intro, closing, sections } from '../../data/albums/historical';
+import { albums } from '../../data/albums';
+import type { Album } from '../../data/albums';
+
+// One page per album at /gallery/<slug>, built from the registry.
+export async function getStaticPaths() {
+  return albums.map((album) => ({ params: { album: album.slug }, props: { album } }));
+}
+
+const { album } = Astro.props as { album: Album };
 
 // Alt text: the caption's first line reads as a description; the rest is a
 // name list that would be noise in a screen reader's image announcement.
 const altFor = (caption: string, sectionTitle?: string) =>
-  caption.split('\n')[0] || sectionTitle || title;
+  caption.split('\n')[0] || sectionTitle || album.title;
 ---
 
-<BaseLayout title={`${title} — Moratuwa ’82`} description="Photographs from our years at Katubedda.">
+<BaseLayout title={`${album.title} — Moratuwa ’82`} description={album.summary}>
   <p class="crumb"><a href="/gallery/">← Gallery</a></p>
-  <h1>{title}</h1>
-  <p class="intro">{intro}</p>
+  <h1>{album.title}</h1>
+  {album.intro && <p class="intro">{album.intro}</p>}
 
-  {sections.map((section) => (
+  {album.sections.map((section) => (
     <section class="album-section">
       {section.title && <h2>{section.title}</h2>}
       <div class="grid">
@@ -37,7 +45,7 @@ const altFor = (caption: string, sectionTitle?: string) =>
     </section>
   ))}
 
-  <p class="closing">{closing}</p>
+  {album.closing && <p class="closing">{album.closing}</p>}
 
   <style>
     h1 { border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }

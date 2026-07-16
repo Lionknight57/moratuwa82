@@ -56,24 +56,37 @@ Only `scripts/upload-album.ts` needs the key/secret; the site itself never does.
 
 ## Album data owns the Cloudinary mapping
 
-`src/data/albums/historical.ts` pairs a normalized `publicId` with the
-`sourceFile` it came from, and `scripts/upload-album.ts` reads that mapping —
-so the album file is the single source of truth. Don't hand-upload via the
-Cloudinary web UI: it derives public IDs from filenames, and the originals are
-inconsistently cased (`Campusboys.jpg` vs the `.JPG` the old site referenced)
-and contain spaces and semicolons (`2-02-2014 9;41;58 AM.jpg`). Cloudinary public
-IDs are case-sensitive; Windows filenames are not, so the old ASP.NET site hid
-these mismatches.
+Albums are data files in `src/data/albums/` exporting an `Album` (`types.ts`),
+registered in `index.ts`, all rendered by one route: `pages/gallery/[album].astro`.
+Adding an album is a data file plus one line — never a new page.
+
+Each photo pairs a normalized `publicId` with the `sourceFile` it came from, and
+`scripts/upload-album.ts` reads that mapping, so the album file is the single
+source of truth. Don't hand-upload via the Cloudinary web UI: it derives public
+IDs from filenames, and the originals are inconsistently cased (`Campusboys.jpg`
+vs the `.JPG` the old site referenced), URL-encoded in the old views
+(`re%2Dunion%20003.jpg`), and full of spaces and semicolons
+(`2-02-2014 9;41;58 AM.jpg`). Cloudinary public IDs are case-sensitive; Windows
+filenames are not, so the old ASP.NET site hid every one of these mismatches.
+
+**Generate large album data from the old `.cshtml`, don't transcribe it.** Of the
+90 photos in `reunion2006.ts`, 19 disagreed with the disk on case and all the
+`re-union` ones were URL-encoded. Parse the view, decode, then match the disk
+case-insensitively to recover the real filename.
+
+Imports inside `src/data/albums/` need explicit `.ts` extensions — the upload
+script runs under plain Node's type-stripping, which won't resolve extensionless
+paths the way Astro/Vite does.
 
 Album covers and news `heroImage`s that aren't album photos live under `site/`
 (e.g. `site/sumanadasa-hall`), not `historical/`.
 
-Uploads are idempotent — re-running skips existing photos unless `--overwrite`.
+Uploads are idempotent — re-running is safe; pass `--overwrite` to replace.
 Always dry-run first; it verifies every source file resolves before touching the
 network:
 
 ```bash
-npm run upload:historical -- --dry-run
+npm run upload -- <slug> --dry-run
 ```
 
 ## Derived numbers — don't hardcode

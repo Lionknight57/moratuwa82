@@ -34,31 +34,42 @@ of photos without the site being slow or the repo being huge.
 
 ## Albums
 
-An album is a titled, sectioned set of photos living under `/gallery/<name>`:
-a data file in `src/data/albums/` plus a page in `src/pages/gallery/`. Albums are
-listed at the top of `/gallery`.
+An album is a set of photos at `/gallery/<slug>`, listed as a card on `/gallery`.
+Each one is **just a data file** in `src/data/albums/` exporting an `Album`
+(see `types.ts`); `src/pages/gallery/[album].astro` renders them all and
+`index.ts` is the registry. Counts are derived, so they can't drift.
 
-`src/data/albums/historical.ts` ("Old Photographs", 43 photos) was imported from
-the old ASP.NET site. Its images live in
-`../LionknightWeb/LionknightWeb/Moratuwa82Reunion/Historical/` and are uploaded
-by the script below.
+Current albums: `historical.ts` ("Old Photographs", 43) and `reunion2006.ts`
+("Reunion 2006", 90), both imported from the old ASP.NET site.
+
+### Adding an album
+
+1. Write `src/data/albums/<slug>.ts` with a default-exported `Album`: a `slug`,
+   `title`, `summary`, `cover` publicId, `sourceDir`, and `sections`. Photos are
+   `{ publicId, sourceFile, caption }`. Sections may be untitled.
+2. Add it to `albums` in `index.ts`.
+3. Upload its photos (below). The page and card appear on their own.
+
+For a big album, generate the data file from the old `.cshtml` rather than typing
+it — see the note at the top of `reunion2006.ts` for why.
 
 ### Uploading an album's photos
 
-Don't drag the files into the Cloudinary web UI: it derives public IDs from
-filenames, and these filenames are inconsistently cased and contain spaces and
-semicolons (`2-02-2014 9;41;58 AM.jpg`). Each album entry therefore pairs a
-normalized `publicId` with the `sourceFile` it came from, and the script reads
-that mapping:
+Don't drag files into the Cloudinary web UI: it derives public IDs from
+filenames, and these filenames are inconsistently cased, URL-encoded in the old
+views, and contain spaces and semicolons (`2-02-2014 9;41;58 AM.jpg`). Each entry
+pairs a normalized `publicId` with the `sourceFile` it came from, and the script
+reads that mapping:
 
 ```bash
-cp .env.example .env                      # then fill in cloud name, key, secret
-npm run upload:historical -- --dry-run    # verifies sources, uploads nothing
-npm run upload:historical
+cp .env.example .env                     # then fill in cloud name, key, secret
+npm run upload -- <slug> --dry-run       # verifies every source file, uploads nothing
+npm run upload -- <slug>
 ```
 
-It's safe to re-run — existing photos are skipped unless you pass `--overwrite`.
-If your LionknightWeb checkout is elsewhere, set `SOURCE_DIR`.
+Always dry-run first: it checks every source file resolves before touching the
+network. Safe to re-run; pass `--overwrite` to replace what's already there. If
+your LionknightWeb checkout is elsewhere, set `SOURCE_DIR`.
 
 ## Add a news item
 

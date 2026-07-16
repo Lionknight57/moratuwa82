@@ -8,39 +8,11 @@
 // `publicId` is the Cloudinary ID this album expects. `sourceFile` is the
 // original file it came from, kept so the one-time upload is unambiguous — the
 // old filenames are inconsistently cased and not URL-safe, so the public IDs
-// here are normalized instead of copied verbatim. Upload each sourceFile from
-// LionknightWeb/Moratuwa82Reunion/Historical/ under its publicId.
+// here are normalized instead of copied verbatim.
 
-export type AlbumPhoto = {
-  publicId: string;
-  caption: string;
-  sourceFile: string;
-};
+import type { Album, AlbumSection } from './types.ts';
 
-export type AlbumSection = {
-  title?: string;
-  photos: AlbumPhoto[];
-};
-
-export const title = 'Old Photographs';
-
-export const summary = 'Batch photos, trips and graduation from our years at Katubedda.';
-
-// Shown as the album's cover on /gallery.
-export const cover = 'site/sumanadasa-hall';
-
-export const intro =
-  'Please send any old photographs that you would like to share with your batchmates, ' +
-  'or new photographs of your family to be published, to Kanishka at ken.abeynayake@gmail.com — ' +
-  'and make sure you get a response from him (the email gateway blocks some photographs). ' +
-  'If you do not get a response in two days, send an email without the picture and he will ' +
-  'give you an alternate way of sending them.';
-
-export const closing =
-  'We are especially looking for the Civil batch photo and the full batch photo. ' +
-  'A higher resolution Electronics photo would be great too.';
-
-export const sections: AlbumSection[] = [
+const sections: AlbumSection[] = [
   {
     title: 'Civil Engineering Batch Graduation — Partial',
     photos: [
@@ -320,3 +292,23 @@ export const sections: AlbumSection[] = [
     ],
   },
 ];
+
+const album: Album = {
+  slug: 'historical',
+  title: 'Old Photographs',
+  summary: 'Batch photos, trips and graduation from our years at Katubedda.',
+  cover: 'site/sumanadasa-hall',
+  sourceDir: '../LionknightWeb/LionknightWeb/Moratuwa82Reunion/Historical',
+  intro:
+    'Please send any old photographs that you would like to share with your batchmates, ' +
+    'or new photographs of your family to be published, to Kanishka at ken.abeynayake@gmail.com — ' +
+    'and make sure you get a response from him (the email gateway blocks some photographs). ' +
+    'If you do not get a response in two days, send an email without the picture and he will ' +
+    'give you an alternate way of sending them.',
+  closing:
+    'We are especially looking for the Civil batch photo and the full batch photo. ' +
+    'A higher resolution Electronics photo would be great too.',
+  sections,
+};
+
+export default album;
