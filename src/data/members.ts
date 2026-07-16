@@ -67,7 +67,6 @@ const roster: Discipline[] = [
       { name: 'Lionel Fernando' },
       { name: 'Pradeepa Fernando (Wijesiriwardene)' },
       { name: 'Rohitha Fernando' },
-      { name: 'Piyadasa' },
       { name: 'Priyantha Goonarathne', note: 'deceased' },
       { name: 'Premini Gunawardene' },
       { name: 'Milroy Gunawardene' },
