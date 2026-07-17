@@ -2,13 +2,19 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Latest 3 non-draft news items, newest first.
+// Latest 3 non-draft news items: pinned first, then newest by date.
 const news = (await getCollection('news', ({ data }) => !data.draft))
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .sort(
+    (a, b) =>
+      Number(b.data.pinned) - Number(a.data.pinned) ||
+      b.data.date.valueOf() - a.data.date.valueOf(),
+  )
   .slice(0, 3);
 
+// Frontmatter dates are parsed as UTC midnight; format in UTC too so a date
+// written as 2026-07-15 doesn't render as the 14th in a behind-UTC timezone.
 const fmt = (d: Date) =>
-  d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+  d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
 
 <BaseLayout title="Moratuwa 77'-82' — Home">
@@ -26,7 +32,7 @@ const fmt = (d: Date) =>
     <ul class="news-list">
       {news.map((item) => (
         <li>
-          <a href={`/news/${item.slug}/`}>
+          <a href={item.data.link ?? `/news/${item.slug}/`}>
             <span class="date">{fmt(item.data.date)}</span>
             <span class="title">{item.data.title}</span>
           </a>

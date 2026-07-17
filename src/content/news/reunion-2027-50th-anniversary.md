@@ -3,6 +3,7 @@ title: "50th Anniversary Reunion — 13 June 2027"
 date: 2026-06-27
 summary: "Two nights at Centauria Lake Resort, Udawalawe, 12–14 June 2027. Itinerary and costs are now settled enough to share."
 heroImage: "site/sumanadasa-hall"
+pinned: true
 draft: false
 ---
 

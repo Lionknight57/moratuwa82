@@ -5,7 +5,9 @@ import CldImage from '../../components/CldImage.astro';
 
 // Pre-render one page per news item at build time.
 export async function getStaticPaths() {
-  const news = await getCollection('news', ({ data }) => !data.draft);
+  // Items with an external `link` don't get their own page — they link straight
+  // to their target (e.g. a gallery album) from the home page.
+  const news = await getCollection('news', ({ data }) => !data.draft && !data.link);
   return news.map((item) => ({
     params: { slug: item.slug },
     props: { item },
@@ -14,8 +16,9 @@ export async function getStaticPaths() {
 
 const { item } = Astro.props;
 const { Content } = await item.render();
+// Format in UTC to match the UTC-midnight frontmatter dates (see index.astro).
 const fmt = (d: Date) =>
-  d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+  d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 ---
 
 <BaseLayout title={`${item.data.title} — Moratuwa 77'-82'`} description={item.data.summary}>

@@ -15,6 +15,7 @@ import reunion2013 from './reunion2013.ts';
 import reunion2014 from './reunion2014.ts';
 import reunion2015 from './reunion2015.ts';
 import reunion2016 from './reunion2016.ts';
+import vasanthaMaryland from './vasantha-maryland.ts';
 
 export type { Album, AlbumPhoto, AlbumSection } from './types.ts';
 export { photosOf } from './types.ts';
@@ -27,6 +28,7 @@ export const albums: Album[] = [
   reunion2014,
   reunion2015,
   reunion2016,
+  vasanthaMaryland,
 ];
 
 export const albumBySlug = (slug: string): Album | undefined =>
