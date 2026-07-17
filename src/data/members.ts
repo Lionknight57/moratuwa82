@@ -185,6 +185,7 @@ const roster: Discipline[] = [
       { name: 'Gamini Ranaweera' },
       { name: 'Ananda Rajakaruna' },
       { name: 'Ranjith Salgado' },
+      { name: 'Raja Thilakaratne' },
       { name: 'Jayaweera', note: 'deceased' },
       { name: 'Jinasiri Samarakoon' },
       { name: 'Seram' },

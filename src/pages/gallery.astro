@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CldImage from '../components/CldImage.astro';
-import { photos } from '../data/gallery';
 import { albums, photoCount } from '../data/albums';
 ---
 
@@ -9,7 +8,6 @@ import { albums, photoCount } from '../data/albums';
   <h1>Gallery</h1>
   <p class="intro">Photos from our years together and the reunions since. Have more? Send them to the committee.</p>
 
-  <h2>Albums</h2>
   <div class="grid">
     {albums.map((album) => (
       <a class="album-card" href={`/gallery/${album.slug}/`}>
@@ -23,20 +21,9 @@ import { albums, photoCount } from '../data/albums';
     ))}
   </div>
 
-  <h2>Recent</h2>
-  <div class="grid">
-    {photos.map((photo) => (
-      <figure>
-        <CldImage publicId={photo.publicId} alt={photo.caption} width={600} height={450} />
-        <figcaption>{photo.caption}</figcaption>
-      </figure>
-    ))}
-  </div>
-
   <style>
     h1 { border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
     .intro { color: var(--muted); }
-    h2 { font-size: 1.05rem; margin: 2.5rem 0 0.75rem; }
     .album-card {
       display: block; text-decoration: none; color: inherit;
       background: var(--card); border: 1px solid var(--border);
@@ -59,8 +46,5 @@ import { albums, photoCount } from '../data/albums';
       gap: 1rem;
       margin-top: 1.5rem;
     }
-    figure { margin: 0; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
-    figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-    figcaption { padding: 0.6rem 0.75rem; color: var(--muted); font-size: 0.9rem; }
   </style>
 </BaseLayout>
