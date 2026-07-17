@@ -137,6 +137,12 @@ const sections: AlbumSection[] = [
     ],
   },
   {
+    title: 'First Year Batch Trip',
+    photos: [
+      { publicId: 'historical/first-year-batch-trip', sourceFile: 'First year batch trip.jpg', caption: '' },
+    ],
+  },
+  {
     title: 'Mech/Electronics Engineering Batch Trip',
     photos: [
       { publicId: 'historical/badulla', sourceFile: 'Badulla.jpg', caption: 'Waiting for the bus' },
