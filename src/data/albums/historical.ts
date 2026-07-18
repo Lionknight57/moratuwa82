@@ -48,7 +48,7 @@ const sections: AlbumSection[] = [
     photos: [
       {
         publicId: 'historical/power-batch',
-        sourceFile: 'Power Batch.jpg',
+        sourceFile: 'Power Batch.png',
         caption:
           'Electrical Power Engineering Batch\n' +
           'Standing L-R: Udaya Ranawake, Udaya Annakkage, Priya Werahera, Sandaruwan Perera, ' +
