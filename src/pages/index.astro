@@ -1,6 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { cldUrl } from '../lib/cloudinary';
+
+const campusBg = cldUrl('site/moratuwa-campus', { width: 1200 });
+const crest = cldUrl('site/uom-logo', { width: 240 });
 
 // Latest 3 non-draft news items: pinned first, then newest by date.
 const news = (await getCollection('news', ({ data }) => !data.draft))
@@ -19,6 +23,8 @@ const fmt = (d: Date) =>
 
 <BaseLayout title="Moratuwa 77'-82' — Home">
   <section class="hero">
+    <div class="hero-banner" style={`background-image: url(${campusBg})`}></div>
+    <img class="crest" src={crest} alt="University of Moratuwa crest" width="104" height="104" />
     <h1>Moratuwa 77'-82'</h1>
     <p class="tagline">Reunion photos and news for our batch.</p>
     <div class="cta">
@@ -45,7 +51,23 @@ const fmt = (d: Date) =>
   <style>
     .hero {
       text-align: center;
-      padding: 2.5rem 0 1.5rem;
+      padding: 0 0 1.5rem;
+    }
+    .hero-banner {
+      height: 190px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .crest {
+      width: 104px; height: 104px; object-fit: contain;
+      background: #fff; border-radius: 16px; padding: 8px;
+      border: 4px solid var(--bg);
+      box-shadow: 0 3px 14px rgba(0, 0, 0, 0.18);
+      display: block; margin: -62px auto 0.6rem;
+      position: relative;
     }
     .hero h1 { font-size: clamp(2.2rem, 6vw, 3.5rem); margin: 0 0 0.25rem; }
     .tagline { color: var(--muted); font-size: 1.15rem; margin: 0 0 1.5rem; }
