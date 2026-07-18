@@ -47,7 +47,7 @@ const sections: AlbumSection[] = [
     title: 'Electrical Power Engineering Batch',
     photos: [
       {
-        publicId: 'historical/power-batch',
+        publicId: 'historical/power-batch-hd',
         sourceFile: 'Power Batch.png',
         caption:
           'Electrical Power Engineering Batch\n' +
