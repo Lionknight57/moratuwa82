@@ -153,6 +153,7 @@ const sections: AlbumSection[] = [
         caption: 'Pidurutalagala summit',
       },
       { publicId: 'historical/rathnapura', sourceFile: 'rathnapura.jpg', caption: 'At Eheliyagoda' },
+      { publicId: 'historical/diyaluma', sourceFile: 'Diyaluma1.png', caption: 'At Diyaluma Falls' },
       { publicId: 'historical/batch-trip-group', sourceFile: 'Batch trip group.jpg', caption: '' },
     ],
   },
