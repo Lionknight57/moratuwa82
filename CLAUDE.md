@@ -41,6 +41,30 @@ curl -s https://moratuwa82.ken-abeynayake.workers.dev/gallery/historical/ \
   | grep -c 'res.cloudinary.com/demo'   # 0 = good, anything else = broken
 ```
 
+**Verify without a `?cb=` cache-buster.** A cache-buster query hits a fresh
+Cloudflare edge copy and hides stale caching — it makes a broken deploy look
+live. Check the bare URL, the way a real visitor loads it.
+
+## Stale HTML across Cloudflare edge nodes
+
+After a deploy, some `*.workers.dev` edge nodes kept serving the old HTML even
+with `must-revalidate` — different visitors saw different versions, and a hard
+refresh didn't help because it's the edge, not the browser. Photos are fine
+(Cloudinary), but HTML/CSS changes (this is an inline-CSS site) could lag.
+
+Fix in place: `public/_headers` serves everything `Cache-Control: no-cache`, so
+every edge node revalidates and deploys reach everyone. Confirm it's honored:
+
+```bash
+curl -sI https://moratuwa82.ken-abeynayake.workers.dev/ | grep -i cache-control
+# -> Cache-Control: no-cache
+```
+
+There's no dashboard "Purge Everything" here — workers.dev is Cloudflare's zone,
+not ours. A custom domain would restore purge control. When *replacing* a
+Cloudinary image, upload under a fresh public ID rather than overwriting, for
+the same reason (see the power-batch history).
+
 ## Secrets
 
 `.env` holds the cloud name plus `CLOUDINARY_API_KEY` / `CLOUDINARY_API_SECRET`
