@@ -154,7 +154,7 @@ const sections: AlbumSection[] = [
       },
       { publicId: 'historical/rathnapura', sourceFile: 'rathnapura.jpg', caption: 'At Eheliyagoda' },
       { publicId: 'historical/diyaluma', sourceFile: 'Diyaluma1.png', caption: 'At Diyaluma Falls' },
-      { publicId: 'historical/batch-trip-group', sourceFile: 'Batch trip group.jpg', caption: '' },
+      { publicId: 'historical/diyaluma-snack', sourceFile: 'Batch trip group.png', caption: 'Having a snack at Diyaluma Falls' },
     ],
   },
   {
