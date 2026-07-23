@@ -1,0 +1,5 @@
+# Always revalidate HTML so a deploy reaches everyone, not just fresh edge
+# nodes. Images live on Cloudinary, so this only affects the small HTML/favicon
+# assets the Worker serves. See the CDN-cache notes in CLAUDE.md.
+/*
+  Cache-Control: no-cache
