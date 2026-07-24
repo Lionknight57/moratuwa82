@@ -65,7 +65,6 @@ const roster: Discipline[] = [
       { name: 'Ariyapala Fernando' },
       { name: 'Lionel Fernando' },
       { name: 'Pradeepa Fernando (Wijesiriwardene)' },
-      { name: 'Rohitha Fernando' },
       { name: 'Priyantha Goonarathne', note: 'deceased' },
       { name: 'Premini Gunawardene' },
       { name: 'Milroy Gunawardene' },
@@ -165,6 +164,7 @@ const roster: Discipline[] = [
     id: 'mechanical',
     label: 'Mechanical',
     members: [
+      { name: 'Rohitha Fernando' },
       { name: 'Abeysinghe Bandara' },
       { name: 'Ariyadasa Abeywickrama' },
       { name: 'Lekamge Ariyadasa' },
