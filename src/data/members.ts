@@ -74,7 +74,7 @@ const roster: Discipline[] = [
       { name: 'Sumi Prabakharan (Maheshwaran)' },
       { name: 'Siri Dissanayake' },
       { name: 'Sarath Jayawardene' },
-      { name: 'Sriyani Karunatilleke' },
+      { name: 'Sriyani Weerakkody (Karunatilleke)' },
       { name: 'Denzil Lokuliyana' },
       { name: 'Ajith Madappuli', note: 'deceased' },
       { name: 'Priyantha Mendis' },
