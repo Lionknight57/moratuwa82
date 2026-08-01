@@ -140,7 +140,7 @@ const roster: Discipline[] = [
       { name: 'Gayani Rupasinghe Gamage' },
       { name: 'Saman Gamage' },
       { name: 'Tamara Ginige (Senanayake)' },
-      { name: 'Champika Goonawardene' },
+      { name: 'Champika Gunnasekera (Goonawardene)' },
       { name: 'Hettige Jayatissa' },
       { name: 'Joachim Joseph' },
       { name: 'Lakshman Joseph' },
