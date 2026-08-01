@@ -178,6 +178,7 @@ const roster: Discipline[] = [
       { name: 'Wimal Galappaththi' },
       { name: 'Nimal Gunarathne' },
       { name: 'Jayantha Gunathilake' },
+      { name: 'Gamage Hemaratne' },
       { name: 'Harischandra Liyanagamage' },
       { name: 'Sunil Mendis' },
       { name: 'Lalith Munasinghe' },
