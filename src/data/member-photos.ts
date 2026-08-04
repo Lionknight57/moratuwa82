@@ -16,7 +16,7 @@ export const memberPhotos: MemberPhoto[] = [
   // Placed by Kanishka. Not Don Dayananda Rodrigo, who has his own portrait
   // (DonRod.jpg) — the two share a name.
   { name: 'A R Dayananda', sourceFile: 'Dayananda.jpg', publicId: 'member/a-r-dayananda' },
-  { name: 'Abdul Buruhanudeen', sourceFile: 'bhdeen.jpg', publicId: 'member/abdul-buruhanudeen' },
+  { name: 'Abdul Latheef Buruhanudeen', sourceFile: 'bhdeen.jpg', publicId: 'member/abdul-buruhanudeen' },
   { name: 'Abeysinghe Bandara', sourceFile: 'Abeysinghe.jpg', publicId: 'member/abeysinghe-bandara' },
   { name: 'Ajith Wijenayake', sourceFile: 'Aith_W.jpg', publicId: 'member/ajith-wijenayake' },
   { name: 'Ananda Rajakaruna', sourceFile: 'Rajakaruna.jpg', publicId: 'member/ananda-rajakaruna' },

@@ -220,7 +220,7 @@ const roster: Discipline[] = [
     id: 'mining-mineral',
     label: 'Mining / Mineral',
     members: [
-      { name: 'Abdul Buruhanudeen', note: 'deceased' },
+      { name: 'Abdul Latheef Buruhanudeen', note: 'deceased' },
       { name: 'Egodawela' },
     ],
   },
