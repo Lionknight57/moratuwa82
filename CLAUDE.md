@@ -47,23 +47,62 @@ live. Check the bare URL, the way a real visitor loads it.
 
 ## Stale HTML across Cloudflare edge nodes
 
-After a deploy, some `*.workers.dev` edge nodes kept serving the old HTML even
-with `must-revalidate` — different visitors saw different versions, and a hard
-refresh didn't help because it's the edge, not the browser. Photos are fine
-(Cloudinary), but HTML/CSS changes (this is an inline-CSS site) could lag.
+After a deploy, some `*.workers.dev` edge nodes keep serving the old HTML —
+different visitors see different versions, and a hard refresh doesn't help
+because it's the edge, not the browser. Photos are fine (Cloudinary), but
+HTML/CSS changes (this is an inline-CSS site) lag.
 
-Fix in place: `public/_headers` serves everything `Cache-Control: no-cache`, so
-every edge node revalidates and deploys reach everyone. Confirm it's honored:
+`public/_headers` serves everything `Cache-Control: no-cache`. That header **is**
+applied, and it narrows the window — but it does not close it. Responses still
+come back `CF-Cache-Status: HIT` with pre-deploy content:
 
 ```bash
-curl -sI https://moratuwa82.ken-abeynayake.workers.dev/ | grep -i cache-control
-# -> Cache-Control: no-cache
+curl -sI https://moratuwa82.ken-abeynayake.workers.dev/members/ \
+  | grep -iE 'cache-control|cf-cache-status'
+# -> CF-Cache-Status: HIT
+# -> Cache-Control: no-cache      <- both, at the same time
 ```
 
+**A single curl after deploying proves nothing.** Two back-to-back requests can
+land on different nodes and disagree — that looked like a broken deploy once and
+wasn't. Poll the bare URL until every fetch agrees:
+
+```bash
+for round in $(seq 1 20); do
+  good=0
+  for i in $(seq 1 10); do
+    curl -s https://moratuwa82.ken-abeynayake.workers.dev/members/ \
+      | grep -q '<a string only the new version has>' && good=$((good+1))
+  done
+  echo "round $round: $good of 10"
+  [ "$good" -eq 10 ] && break
+done
+```
+
+Observed convergence times, Aug 2026 (each round ≈ 10 fetches, ~20s):
+
+| deploy | rounds to 10/10 |
+| --- | --- |
+| one-line roster edit | immediate |
+| roster edit | ~6 (2 min) |
+| portrait added | 16 (4 min) |
+| album photo swapped | 12 (5 min) |
+| roster edit | 15 (6 min), oscillating 3–9 |
+
+It trends worse, and it does not climb steadily — counts bounce (7, 4, 7, 3, 8,
+9, 5, 9, 3, …) before settling, so "9 of 10" is not almost-done. Budget five
+minutes of polling after any user-facing deploy before telling anyone it's live.
+
+To confirm the deploy *itself* is good while nodes are still stale, fetch once
+with `?cb=$RANDOM` — that bypasses the cached copy and shows the origin. Use it
+only to diagnose; never as the verification, per the note above.
+
 There's no dashboard "Purge Everything" here — workers.dev is Cloudflare's zone,
-not ours. A custom domain would restore purge control. When *replacing* a
-Cloudinary image, upload under a fresh public ID rather than overwriting, for
-the same reason (see the power-batch history).
+not ours. **A custom domain would restore purge control and is the actual fix.**
+Until then, when *replacing* a Cloudinary image, upload under a fresh public ID
+rather than overwriting (see the power-batch history, and
+`historical/grad-by-p-frnando-restored`) — an overwritten image can stay stale
+with no way to purge it.
 
 ## Secrets
 
