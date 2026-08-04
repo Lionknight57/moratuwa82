@@ -17,8 +17,11 @@ const sections: AlbumSection[] = [
     title: 'Civil Engineering Batch Graduation — Partial',
     photos: [
       {
-        publicId: 'historical/grad-by-p-frnando',
-        sourceFile: 'grad by P Frnando.JPG',
+        // Restored scan (Aug 2026) replacing the stained original. Uploaded
+        // under a fresh public ID rather than over the old one — overwriting
+        // leaves stale copies on the Cloudinary/edge caches.
+        publicId: 'historical/grad-by-p-frnando-restored',
+        sourceFile: 'grad by P Frnando.png',
         caption:
           'Civil engineering\n' +
           'Front row L-R: Ajith Madappuli, Ariyapala, Nedurana, Newton, Pradeep\n' +
