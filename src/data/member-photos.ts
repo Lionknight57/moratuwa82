@@ -95,7 +95,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Sunil Fonseka', sourceFile: 'Sunil fonseka.jpg', publicId: 'member/sunil-fonseka' },
   { name: 'Sunil Hapuarachchi', sourceFile: 'Hapuarachchi.jpg', publicId: 'member/sunil-hapuarachchi' },
   { name: 'Sunil Mendis', sourceFile: 'SunilM.jpg', publicId: 'member/sunil-mendis' },
-  { name: 'Sunil Ratnayake', sourceFile: 'SunilShantha.jpg', publicId: 'member/sunil-ratnayake' },
+  { name: 'Sunil Shantha Ratnayake', sourceFile: 'SunilShantha.jpg', publicId: 'member/sunil-ratnayake' },
   { name: 'Susith Fernando', sourceFile: 'Susith_from_dsc02594.jpg', publicId: 'member/susith-fernando' },
   { name: 'Tamara Ginige (Senanayake)', sourceFile: 'Thamara.jpg', publicId: 'member/tamara-ginige' },
   { name: 'Tissa Samaratunga', sourceFile: 'TissaS.jpg', publicId: 'member/tissa-samaratunga' },

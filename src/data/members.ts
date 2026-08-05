@@ -75,6 +75,7 @@ const roster: Discipline[] = [
       { name: 'Sumi Prabhakaran (Maheswaran)' },
       { name: 'Siri Dissanayake' },
       { name: 'Sarath Jayawardene' },
+      { name: 'Saman Kanakaratne' },
       { name: 'Sriyani Weerakkody (Karunatilleke)' },
       { name: 'Denzil Lokuliyana' },
       { name: 'Ajith Madappuli', note: 'deceased' },
@@ -87,7 +88,7 @@ const roster: Discipline[] = [
       { name: 'Pradeep Perera' },
       { name: 'Priyantha' },
       { name: 'Nimal Pushpakumara' },
-      { name: 'Sunil Ratnayake' },
+      { name: 'Sunil Shantha Ratnayake' },
       { name: 'Rayan' },
       // Three Senevirathnes in the batch: Amal and Keerthi here, Vijith in Electronic.
       { name: 'Amal Senevirathne' },
