@@ -122,11 +122,7 @@ const sections: AlbumSection[] = [
     photos: [
       { publicId: 'historical/mmceng2', sourceFile: 'MMCEng2.jpg', caption: '' },
       { publicId: 'historical/ladies1', sourceFile: 'Ladies1.jpg', caption: '' },
-      {
-        publicId: 'historical/batchila',
-        sourceFile: 'Batchila.jpg',
-        caption: 'Graduation Day — Erica, Samanmalee, Sudharma, Pradeepa',
-      },
+      // Batchila.jpg moved to the Graduation Day section.
       {
         publicId: 'historical/batchila2',
         sourceFile: 'Batchila2.jpg',
@@ -191,17 +187,44 @@ const sections: AlbumSection[] = [
           'Second row: Amal Senevirathna\n' +
           'Last row: Keerthie Senevratne, Ruwan Weerasekara, Priyantha Perera',
       },
+      // Five prints that arrived scanned together on one sheet, cropped apart.
+      { publicId: 'historical/civil-trip5', sourceFile: 'CivilTrip5.jpg', caption: '' },
+      { publicId: 'historical/civil-trip6', sourceFile: 'CivilTrip6.jpg', caption: '' },
+      { publicId: 'historical/civil-trip7', sourceFile: 'CivilTrip7.jpg', caption: '' },
+      { publicId: 'historical/civil-trip8', sourceFile: 'CivilTrip8.jpg', caption: '' },
+      { publicId: 'historical/civil-trip9', sourceFile: 'CivilTrip9.jpg', caption: '' },
     ],
   },
   {
+    // Everything from Graduation Day, gathered here from the untitled sections
+    // it used to be scattered across. The first two are prints that arrived
+    // scanned together on one sheet; the middle three came off another.
+    title: 'Graduation Day',
     photos: [
-      // Three prints that arrived scanned together on one sheet (the Adobe Scan
-      // urn_aaid_… file in VasanthainMaryland/). Cropped apart so each is
-      // viewable on its own; the crops live in Historical/ with the originals.
+      {
+        publicId: 'historical/graduation-procession',
+        sourceFile: 'Graduation procession.jpg',
+        caption: 'Walking in',
+      },
+      {
+        publicId: 'historical/graduation-stage',
+        sourceFile: 'Graduation stage.jpg',
+        caption: '',
+      },
       {
         publicId: 'historical/graduation-group',
         sourceFile: 'Graduation group.jpg',
-        caption: 'Graduation Day',
+        caption: '',
+      },
+      {
+        publicId: 'historical/graduation-day',
+        sourceFile: 'Graduation Day.jpg',
+        caption: 'Ari, Rahula, Prabhath',
+      },
+      {
+        publicId: 'historical/batchila',
+        sourceFile: 'Batchila.jpg',
+        caption: 'Erica, Samanmalee, Sudharma, Pradeepa',
       },
       {
         publicId: 'historical/graduation-dinner-1',
@@ -213,11 +236,19 @@ const sections: AlbumSection[] = [
         sourceFile: 'Graduation dinner 2.jpg',
         caption: 'The graduation dinner',
       },
-      {
-        publicId: 'historical/graduation-day',
-        sourceFile: 'Graduation Day.jpg',
-        caption: 'Graduation Day — Ari, Rahula, Prabhath',
-      },
+    ],
+  },
+  {
+    // Three prints from one album page, cropped apart.
+    title: 'Picture Day',
+    photos: [
+      { publicId: 'historical/picture-day-1', sourceFile: 'Picture day 1.jpg', caption: '' },
+      { publicId: 'historical/picture-day-2', sourceFile: 'Picture day 2.jpg', caption: '' },
+      { publicId: 'historical/picture-day-3', sourceFile: 'Picture day 3.jpg', caption: '' },
+    ],
+  },
+  {
+    photos: [
       {
         publicId: 'historical/campus1',
         sourceFile: 'campus1.jpg',
