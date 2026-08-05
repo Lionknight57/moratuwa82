@@ -196,6 +196,13 @@ const sections: AlbumSection[] = [
   {
     photos: [
       {
+        // Scanned from the VasanthainMaryland folder, not Historical/, which is
+        // where the scan happened to land — hence the '..' in sourceFile.
+        publicId: 'historical/graduation-and-dinner-prints',
+        sourceFile: '../VasanthainMaryland/urn_aaid_sc_AP_902fa03a-09b3-40fb-82d0-a99ba17b8806.jpg',
+        caption: 'Three prints: a graduation group, and two from the dinner',
+      },
+      {
         publicId: 'historical/graduation-day',
         sourceFile: 'Graduation Day.jpg',
         caption: 'Graduation Day — Ari, Rahula, Prabhath',
