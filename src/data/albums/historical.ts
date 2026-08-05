@@ -195,12 +195,23 @@ const sections: AlbumSection[] = [
   },
   {
     photos: [
+      // Three prints that arrived scanned together on one sheet (the Adobe Scan
+      // urn_aaid_… file in VasanthainMaryland/). Cropped apart so each is
+      // viewable on its own; the crops live in Historical/ with the originals.
       {
-        // Scanned from the VasanthainMaryland folder, not Historical/, which is
-        // where the scan happened to land — hence the '..' in sourceFile.
-        publicId: 'historical/graduation-and-dinner-prints',
-        sourceFile: '../VasanthainMaryland/urn_aaid_sc_AP_902fa03a-09b3-40fb-82d0-a99ba17b8806.jpg',
-        caption: 'Three prints: a graduation group, and two from the dinner',
+        publicId: 'historical/graduation-group',
+        sourceFile: 'Graduation group.jpg',
+        caption: 'Graduation Day',
+      },
+      {
+        publicId: 'historical/graduation-dinner-1',
+        sourceFile: 'Graduation dinner 1.jpg',
+        caption: 'The graduation dinner',
+      },
+      {
+        publicId: 'historical/graduation-dinner-2',
+        sourceFile: 'Graduation dinner 2.jpg',
+        caption: 'The graduation dinner',
       },
       {
         publicId: 'historical/graduation-day',
