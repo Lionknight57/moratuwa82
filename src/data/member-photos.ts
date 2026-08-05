@@ -41,6 +41,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Harischandra Liyanagamage', sourceFile: 'Liyanagamage.jpg', publicId: 'member/harischandra-liyanagamage' },
   { name: 'Hemal Wijayratne', sourceFile: 'HemalW.jpg', publicId: 'member/hemal-wijayratne' },
   { name: 'Hemamali Gajadeera', sourceFile: 'Hemamali.jpg', publicId: 'member/hemamali-gajadeera' },
+  { name: 'Hemantha Wijesekera', sourceFile: 'hemantha_w.jpg', publicId: 'member/hemantha-wijesekera' },
   { name: 'I Carl R Fernando', sourceFile: 'Carl_Fernando.jpg', publicId: 'member/i-carl-r-fernando' },
   { name: 'Janath Chandrasekera', sourceFile: 'JanathC.jpg', publicId: 'member/janath-chandrasekera' },
   { name: 'Jayalath Warnakulasuriya', sourceFile: 'Warnakulasuriya.jpg', publicId: 'member/jayalath-warnakulasuriya' },
