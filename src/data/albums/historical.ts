@@ -14,7 +14,7 @@ import type { Album, AlbumSection } from './types.ts';
 
 const sections: AlbumSection[] = [
   {
-    title: 'Civil Engineering Batch Graduation — Partial',
+    title: 'Civil Engineering Batch — Partial',
     photos: [
       {
         // Restored scan (Aug 2026) replacing the stained original. Uploaded
@@ -26,6 +26,17 @@ const sections: AlbumSection[] = [
           'Civil engineering\n' +
           'Front row L-R: Ajith Madappuli, Ariyapala, Nedurana, Newton, Pradeep\n' +
           'Back row L-R: Denzil, Vidanarachchi, Vitharana, Nonis and Sunil Santha',
+      },
+      {
+        // Moved here from the Picture Day section, caption and all.
+        publicId: 'historical/picture-day-1',
+        sourceFile: 'Picture day 1.jpg',
+        // Names as supplied, spellings included; the trailing "?" is Kanishka's
+        // own uncertainty about the last man, same as "Buruhanudeen?" elsewhere.
+        caption:
+          'From Left to Right - Yogeswaran, Gnanasambandhan, Sundararaju, Nicholas, ' +
+          'Amirthajothi, Sriyani, Keerthi Gnanapragasam, Sudharma, Vinotharajah, Sumi, ' +
+          'Bhuvendralingam, Premini, Senthilkumar, Pradeepa, Shanmuganantha and Rayen?',
       },
     ],
   },
@@ -242,16 +253,9 @@ const sections: AlbumSection[] = [
     // Three prints from one album page, cropped apart.
     title: 'Picture Day',
     photos: [
-      {
-        publicId: 'historical/picture-day-1',
-        sourceFile: 'Picture day 1.jpg',
-        // Names as supplied, spellings included; the trailing "?" is Kanishka's
-        // own uncertainty about the last man, same as "Buruhanudeen?" elsewhere.
-        caption:
-          'From Left to Right - Yogeswaran, Gnanasambandhan, Sundararaju, Nicholas, ' +
-          'Amirthajothi, Sriyani, Keerthi Gnanapragasam, Sudharma, Vinotharajah, Sumi, ' +
-          'Bhuvendralingam, Premini, Senthilkumar, Pradeepa, Shanmuganantha and Rayen?',
-      },
+      // "Picture day 1" moved to the Civil Engineering Batch — Partial section.
+      // Its public ID keeps the picture-day- prefix; that is a storage key, not
+      // a label, and renaming it would mean a re-upload for no visible gain.
       { publicId: 'historical/picture-day-2', sourceFile: 'Picture day 2.jpg', caption: '' },
       { publicId: 'historical/picture-day-3', sourceFile: 'Picture day 3.jpg', caption: '' },
     ],
