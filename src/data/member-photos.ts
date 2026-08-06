@@ -18,6 +18,9 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'A R Dayananda', sourceFile: 'Dayananda.jpg', publicId: 'member/a-r-dayananda' },
   { name: 'Abdul Latheef Buruhanudeen', sourceFile: 'bhdeen.jpg', publicId: 'member/abdul-buruhanudeen' },
   { name: 'Abeysinghe Bandara', sourceFile: 'Abeysinghe.jpg', publicId: 'member/abeysinghe-bandara' },
+  // Cropped from the restored Civil graduation photo, using the front-row L-R
+  // order its own caption gives. See historical/grad-by-p-frnando-restored.
+  { name: 'Ajith Madappuli', sourceFile: 'Madappuli_grad.jpg', publicId: 'member/ajith-madappuli' },
   { name: 'Ajith Wijenayake', sourceFile: 'Aith_W.jpg', publicId: 'member/ajith-wijenayake' },
   { name: 'Ananda Rajakaruna', sourceFile: 'Rajakaruna.jpg', publicId: 'member/ananda-rajakaruna' },
   { name: 'Anura Nanayakkara', sourceFile: 'AnuraN.jpg', publicId: 'member/anura-nanayakkara' },
@@ -36,6 +39,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Dudley Atapattu', sourceFile: 'Atapattu.jpg', publicId: 'member/dudley-atapattu' },
   { name: 'Erica Silva', sourceFile: 'Erica.jpg', publicId: 'member/erica-silva' },
   { name: 'Gamage Hemaratne', sourceFile: 'Gamage_H.jpg', publicId: 'member/gamage-hemaratne' },
+  { name: 'Geeganage Newton', sourceFile: 'Newton_grad.jpg', publicId: 'member/geeganage-newton' },
   { name: 'Gamini Karunarathne', sourceFile: 'Gamini Karu.jpg', publicId: 'member/gamini-karunarathne' },
   { name: 'Gamini Ranaweera', sourceFile: 'RANAWEERA.jpg', publicId: 'member/gamini-ranaweera' },
   { name: 'Harischandra Liyanagamage', sourceFile: 'Liyanagamage.jpg', publicId: 'member/harischandra-liyanagamage' },
@@ -67,6 +71,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Padma Samarakoon', sourceFile: 'Padma_from_materials.jpg', publicId: 'member/padma-samarakoon' },
   { name: 'Piyadasa Amaratunga', sourceFile: 'Piyadasa.jpg', publicId: 'member/piyadasa-amaratunga' },
   { name: 'Prabath de Silva', sourceFile: 'Prabhath.JPG', publicId: 'member/prabath-de-silva' },
+  { name: 'Pradeep Perera', sourceFile: 'PradeepPerera_grad.jpg', publicId: 'member/pradeep-perera' },
   { name: 'Pradeepa Fernando (Wijesiriwardene)', sourceFile: 'Pradeepa.jpg', publicId: 'member/pradeepa-fernando' },
   { name: 'Premini Hettiarachchi (Gunewardena)', sourceFile: 'Premini.jpg', publicId: 'member/premini-gunawardene' },
   { name: 'Priya Werahera', sourceFile: 'Werahara.jpg', publicId: 'member/priya-werahera' },
