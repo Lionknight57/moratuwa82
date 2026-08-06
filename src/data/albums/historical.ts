@@ -242,7 +242,16 @@ const sections: AlbumSection[] = [
     // Three prints from one album page, cropped apart.
     title: 'Picture Day',
     photos: [
-      { publicId: 'historical/picture-day-1', sourceFile: 'Picture day 1.jpg', caption: '' },
+      {
+        publicId: 'historical/picture-day-1',
+        sourceFile: 'Picture day 1.jpg',
+        // Names as supplied, spellings included; the trailing "?" is Kanishka's
+        // own uncertainty about the last man, same as "Buruhanudeen?" elsewhere.
+        caption:
+          'From Left to Right - Yogeswaran, Gnanasambandhan, Sundararaju, Nicholas, ' +
+          'Amirthajothi, Sriyani, Keerthi Gnanapragasam, Sudharma, Vinotharajah, Sumi, ' +
+          'Bhuvendralingam, Premini, Senthilkumar, Pradeepa, Shanmuganantha and Rayen?',
+      },
       { publicId: 'historical/picture-day-2', sourceFile: 'Picture day 2.jpg', caption: '' },
       { publicId: 'historical/picture-day-3', sourceFile: 'Picture day 3.jpg', caption: '' },
     ],
