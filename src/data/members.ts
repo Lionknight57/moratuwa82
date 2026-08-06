@@ -69,7 +69,7 @@ const roster: Discipline[] = [
       { name: 'Priyantha Goonarathne', note: 'deceased' },
       { name: 'Premini Hettiarachchi (Gunewardena)' },
       { name: 'Milroy Gunawardene' },
-      { name: 'Hemamali Gajadeera' },
+      { name: 'Sudharma Hemamali Gajadeera' },
       // Not the same person as Gnana Perera in Chemical.
       { name: 'Keerthi Gnanaprakasam' },
       { name: 'Gnanasambandhan' },
