@@ -25,7 +25,7 @@ const sections: AlbumSection[] = [
         caption:
           'Civil engineering\n' +
           'Front row L-R: Ajith Madappuli, Ariyapala, Nedurana, Newton, Pradeep\n' +
-          'Back row L-R: Denzil, Vidanarachchi, Darmadasa, Nonis and Sunil Santha',
+          'Back row L-R: Denzil, Vidanarachchi, Vitharana, Nonis and Sunil Santha',
       },
     ],
   },
