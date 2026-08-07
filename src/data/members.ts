@@ -182,7 +182,6 @@ const roster: Discipline[] = [
       // Not the same person as Chandra Galappaththi in Materials / Chemical.
       { name: 'Wimal Galappaththi' },
       { name: 'Nimal Gunarathne' },
-      { name: 'Jayantha Gunathilake' },
       { name: 'Gamage Hemaratne' },
       { name: 'Harischandra Liyanagamage' },
       { name: 'Sunil Mendis' },
@@ -225,6 +224,7 @@ const roster: Discipline[] = [
     members: [
       { name: 'Abdul Latheef Buruhanudeen', note: 'deceased' },
       { name: 'Egodawela' },
+      { name: 'Jayantha Gunathilake' },
     ],
   },
   {
