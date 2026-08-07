@@ -238,6 +238,7 @@ const roster: Discipline[] = [
       { name: 'Gnana Perera' },
       // Ram Banda and R.B. Nawaratna were the same person; merged.
       { name: 'Ram Banda Nawarathna', note: 'deceased' },
+      { name: 'Mataraarachchi' },
       { name: 'Sivasakthy' },
       { name: 'Kuma Sumathipala' },
       { name: 'Victor Wickramasinghe', note: 'deceased' },
