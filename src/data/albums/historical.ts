@@ -131,14 +131,8 @@ const sections: AlbumSection[] = [
   },
   {
     photos: [
-      { publicId: 'historical/mmceng2', sourceFile: 'MMCEng2.jpg', caption: '' },
-      { publicId: 'historical/ladies1', sourceFile: 'Ladies1.jpg', caption: '' },
-      // Batchila.jpg moved to the Graduation Day section.
-      {
-        publicId: 'historical/batchila2',
-        sourceFile: 'Batchila2.jpg',
-        caption: 'Civil Engineering Ladies L-R: Pradeepa, Sudarma, Sumithirai, Premini, Sriyani',
-      },
+      // Batchila.jpg moved to Graduation Day. MMCEng2 and Ladies1 moved to
+      // Picture Day. Batchila2.jpg removed as a duplicate of "Picture day 2".
       {
         publicId: 'historical/civil-ladies2',
         sourceFile: 'CivilLadies2.png',
@@ -277,9 +271,16 @@ const sections: AlbumSection[] = [
       // "Picture day 1" moved to the Civil Engineering Batch — Partial section.
       // Its public ID keeps the picture-day- prefix; that is a storage key, not
       // a label, and renaming it would mean a re-upload for no visible gain.
-      { publicId: 'historical/picture-day-2', sourceFile: 'Picture day 2.jpg', caption: '' },
+      {
+        publicId: 'historical/picture-day-2',
+        sourceFile: 'Picture day 2.jpg',
+        caption: 'Civil Engineering Ladies L-R: Pradeepa, Sudarma, Sumithirai, Premini, Sriyani',
+      },
       { publicId: 'historical/picture-day-3', sourceFile: 'Picture day 3.jpg', caption: '' },
       // "Picture day 4" and the three campus photos moved to Hostel Photos.
+      // These two moved here from the untitled block under Materials Batch.
+      { publicId: 'historical/mmceng2', sourceFile: 'MMCEng2.jpg', caption: '' },
+      { publicId: 'historical/ladies1', sourceFile: 'Ladies1.jpg', caption: '' },
     ],
   },
   {
