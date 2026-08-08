@@ -251,7 +251,7 @@ const sections: AlbumSection[] = [
         // Same sideways-EXIF story as picture-day-4.
         publicId: 'historical/graduation-trio',
         sourceFile: 'Graduation trio.jpg',
-        caption: 'Galappaththi, MPVC Wickramasinghe and Rodrigo',
+        caption: 'Rodrigo, MPVC Wickramasinghe and Gunatilleke',
       },
     ],
   },
