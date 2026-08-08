@@ -422,6 +422,17 @@ const sections: AlbumSection[] = [
         sourceFile: 'Tissa- Finland.jpg',
         caption: 'Tissa, Ranatunga and Lucky in Finland, 1983',
       },
+      {
+        publicId: 'historical/first-overseas-assignment',
+        sourceFile: 'dongha2.jpg',
+        caption:
+          'First overseas assignment\n' +
+          'Standing L-R: Nihal Hettiarachchi (1st), Vijith Seneviratne (5th), ' +
+          'Saman Gamage (6th), Ajith Wijenayake (7th), ' +
+          'Vijithaweera Wickramasinghe (9th), and Chandana Samarasinghe ' +
+          '(two batches senior) at the right\n' +
+          'Seated: Kanishka Abeynayake, Priyantha Fonseka (one batch senior), Susith Fernando',
+      },
     ],
   },
 ];
