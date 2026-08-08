@@ -239,7 +239,7 @@ const roster: Discipline[] = [
       // Ram Banda and R.B. Nawaratna were the same person; merged.
       { name: 'Ram Banda Nawarathna', note: 'deceased' },
       { name: 'Pushpa Kumara Mataraarachchi' },
-      { name: 'Sivasakthy' },
+      { name: 'Sivasakthy Sett' },
       { name: 'Kuma Sumathipala' },
       { name: 'Victor Wickramasinghe', note: 'deceased' },
     ],

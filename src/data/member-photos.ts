@@ -100,7 +100,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Shanmugalingam Bhuvendralingam', sourceFile: 'Bhuwen.jpg', publicId: 'member/shanmugalingam-bhuvendralingam' },
   { name: 'Sivasubramaniam Shanmuganantha', sourceFile: 'Shanmuganathan.jpg', publicId: 'member/shanmuganathan' },
   { name: 'Siri Dissanayake', sourceFile: 'Dissanayake.jpg', publicId: 'member/siri-dissanayake' },
-  { name: 'Sivasakthy', sourceFile: 'sivasakthy.jpg', publicId: 'member/sivasakthy' },
+  { name: 'Sivasakthy Sett', sourceFile: 'sivasakthy.jpg', publicId: 'member/sivasakthy' },
   { name: 'Sriyani Weerakkody (Karunatilleke)', sourceFile: 'sriyani.jpg', publicId: 'member/sriyani-karunatilleke' },
   { name: 'Sudharma Hemamali Gajadeera', sourceFile: 'Hemamali.jpg', publicId: 'member/hemamali-gajadeera' },
   { name: 'Sumi Prabhakaran (Maheswaran)', sourceFile: 'Sumi Prabhakaran.jpg', publicId: 'member/sumi-prabakharan' },
