@@ -206,9 +206,7 @@ const sections: AlbumSection[] = [
           'Last row: Keerthie Senevratne, Ruwan Weerasekara, Priyantha Perera',
       },
       // Five prints that arrived scanned together on one sheet, cropped apart.
-      { publicId: 'historical/civil-trip5', sourceFile: 'CivilTrip5.jpg', caption: '' },
-      { publicId: 'historical/civil-trip6', sourceFile: 'CivilTrip6.jpg', caption: '' },
-      // CivilTrip7 moved to Ladies Trip below.
+      // CivilTrip5, 6 and 7 moved to Ladies Trip below.
       { publicId: 'historical/civil-trip8', sourceFile: 'CivilTrip8.jpg', caption: '' },
       { publicId: 'historical/civil-trip9', sourceFile: 'CivilTrip9.jpg', caption: '' },
     ],
@@ -218,6 +216,8 @@ const sections: AlbumSection[] = [
     // and renaming it would mean a re-upload and an orphaned asset.
     title: 'Ladies Trip',
     photos: [
+      { publicId: 'historical/civil-trip5', sourceFile: 'CivilTrip5.jpg', caption: '' },
+      { publicId: 'historical/civil-trip6', sourceFile: 'CivilTrip6.jpg', caption: '' },
       { publicId: 'historical/civil-trip7', sourceFile: 'CivilTrip7.jpg', caption: '' },
     ],
   },
