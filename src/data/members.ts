@@ -131,7 +131,7 @@ const roster: Discipline[] = [
       { name: 'Vijithaweera Wickramasinghe' },
       { name: 'Kingsley Wijenayake' },
       { name: 'Ajith Wijenayake' },
-      { name: 'Lal Wijewardene' },
+      { name: 'Lal Wijayawardhana' },
     ],
   },
   {
