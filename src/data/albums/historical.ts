@@ -247,6 +247,12 @@ const sections: AlbumSection[] = [
         sourceFile: 'Graduation dinner 2.jpg',
         caption: 'The graduation dinner',
       },
+      {
+        // Same sideways-EXIF story as picture-day-4.
+        publicId: 'historical/graduation-trio',
+        sourceFile: 'Graduation trio.jpg',
+        caption: 'Galappaththi, MPVC Wickramasinghe and Rodrigo',
+      },
     ],
   },
   {
@@ -258,6 +264,13 @@ const sections: AlbumSection[] = [
       // a label, and renaming it would mean a re-upload for no visible gain.
       { publicId: 'historical/picture-day-2', sourceFile: 'Picture day 2.jpg', caption: '' },
       { publicId: 'historical/picture-day-3', sourceFile: 'Picture day 3.jpg', caption: '' },
+      {
+        // Source was stored sideways with an EXIF rotation flag; the copy here
+        // is rotated upright with the flag stripped, so no renderer can undo it.
+        publicId: 'historical/picture-day-4',
+        sourceFile: 'Picture day 4.jpg',
+        caption: 'Sarath Ranatunge, Saman Gamage, Tissa Samaratunga in 1981',
+      },
     ],
   },
   {
@@ -278,7 +291,7 @@ const sections: AlbumSection[] = [
     ],
   },
   {
-    title: 'Study Leave',
+    title: 'Power Instructors Room',
     photos: [
       {
         publicId: 'historical/study-leave-1',
@@ -293,7 +306,7 @@ const sections: AlbumSection[] = [
       {
         publicId: 'historical/study-leave-3',
         sourceFile: 'WhatsApp Image 2026-08-08 at 4.24.20 AM.jpeg',
-        caption: 'Grab Lunch during Study Leave',
+        caption: 'Grab Lunch in Instructors Room',
       },
     ],
   },
