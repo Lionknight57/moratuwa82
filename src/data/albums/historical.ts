@@ -271,30 +271,7 @@ const sections: AlbumSection[] = [
       // a label, and renaming it would mean a re-upload for no visible gain.
       { publicId: 'historical/picture-day-2', sourceFile: 'Picture day 2.jpg', caption: '' },
       { publicId: 'historical/picture-day-3', sourceFile: 'Picture day 3.jpg', caption: '' },
-      {
-        // Source was stored sideways with an EXIF rotation flag; the copy here
-        // is rotated upright with the flag stripped, so no renderer can undo it.
-        publicId: 'historical/picture-day-4',
-        sourceFile: 'Picture day 4.jpg',
-        caption: 'Sarath Ranatunge, Saman Gamage, Tissa Samaratunga in 1981',
-      },
-    ],
-  },
-  {
-    photos: [
-      {
-        publicId: 'historical/campus1',
-        sourceFile: 'campus1.jpg',
-        caption: 'Abeywickreme Ariyadasa, Rajakaruna, Salgado, Sarath Ranatunge',
-      },
-      {
-        publicId: 'historical/campus2',
-        sourceFile: 'campus2.jpg',
-        caption:
-          'Rohitha Swarna, Rodrigo, Dhrmadasa, Sarath Ranatunge, Abeywickreme Ariyadasa, Stanley, ' +
-          'Rajakaruna, Tissa Samaratunge, Abeysinghe Bandara, Amarasinghe',
-      },
-      { publicId: 'historical/campus3', sourceFile: 'campus3.jpg', caption: '' },
+      // "Picture day 4" and the three campus photos moved to Hostel Photos.
     ],
   },
   {
@@ -333,6 +310,39 @@ const sections: AlbumSection[] = [
       // Mihintale, Polonnaruwa and Puttalam Cement moved to First Year Batch Trip.
       { publicId: 'historical/sri-pada2', sourceFile: 'Sri Pada2.jpg', caption: 'At Sri Pada' },
       { publicId: 'historical/sri-pada', sourceFile: 'SriPada.jpg', caption: 'At Sri Pada' },
+    ],
+  },
+  {
+    title: 'Hostel Photos',
+    photos: [
+      {
+        // Source was stored sideways with an EXIF rotation flag; the copy here
+        // is rotated upright with the flag stripped, so no renderer can undo it.
+        publicId: 'historical/picture-day-4',
+        sourceFile: 'Picture day 4.jpg',
+        caption: 'Sarath Ranatunge, Saman Gamage, Tissa Samaratunga in 1981',
+      },
+      {
+        publicId: 'historical/campus1',
+        sourceFile: 'campus1.jpg',
+        caption: 'Abeywickreme Ariyadasa, Rajakaruna, Salgado, Sarath Ranatunge',
+      },
+      {
+        publicId: 'historical/campus2',
+        sourceFile: 'campus2.jpg',
+        caption:
+          'Rohitha Swarna, Rodrigo, Dhrmadasa, Sarath Ranatunge, Abeywickreme Ariyadasa, Stanley, ' +
+          'Rajakaruna, Tissa Samaratunge, Abeysinghe Bandara, Amarasinghe',
+      },
+      { publicId: 'historical/campus3', sourceFile: 'campus3.jpg', caption: '' },
+      {
+        publicId: 'historical/boarding-group',
+        sourceFile: 'WhatsApp Image 2026-08-08 at 4.34.20 AM.jpeg',
+        caption:
+          'Front Row Dayananda, Wickramasinghe, Galappathy. ' +
+          '2nd row Rajaram, Gunatilake, RB, Patrick. ' +
+          'Back row Matara, Wimaleshwaran, Dissanayaka. Dhane and Rodrigo standing',
+      },
     ],
   },
   {
@@ -401,14 +411,7 @@ const sections: AlbumSection[] = [
         sourceFile: 'attanayake8.jpg',
         caption: 'Wasantha at Rupavahini Tower',
       },
-      {
-        publicId: 'historical/boarding-group',
-        sourceFile: 'WhatsApp Image 2026-08-08 at 4.34.20 AM.jpeg',
-        caption:
-          'Front Row Dayananda, Wickramasinghe, Galappathy. ' +
-          '2nd row Rajaram, Gunatilake, RB, Patrick. ' +
-          'Back row Matara, Wimaleshwaran, Dissanayaka. Dhane and Rodrigo standing',
-      },
+      // The twelve-man group photo moved to Hostel Photos.
     ],
   },
   {
