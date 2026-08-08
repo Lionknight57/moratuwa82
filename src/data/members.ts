@@ -60,7 +60,7 @@ const roster: Discipline[] = [
     id: 'civil',
     label: 'Civil',
     members: [
-      { name: 'Piyadasa Amaratunga' },
+      { name: 'Piyadasa Amarasinghe' },
       { name: 'Shanmugalingam Bhuvendralingam' },
       { name: 'Ariyapala Fernando' },
       { name: 'I Carl R Fernando' },
@@ -102,7 +102,7 @@ const roster: Discipline[] = [
       { name: 'Chandana Vidanarachchi' },
       { name: 'Vinotharajah' },
       { name: 'Nihal Vitharana' },
-      { name: 'Kolitha Weerasekera' },
+      { name: 'Kolita Weerasekera' },
       { name: 'Ruwan Weerasekera' },
       { name: 'Ranjith Wijegunasekera' },
       { name: 'Dhamadasa Wijenayake' },
@@ -110,7 +110,6 @@ const roster: Discipline[] = [
       { name: 'Sudath Wijerathna', note: 'deceased' },
       { name: 'Nimal Rohana', note: 'deceased' },
       { name: 'Sanjeewa Wijewardana' },
-      { name: 'Senaka Wijesinghe' },
     ],
   },
   {
@@ -156,7 +155,7 @@ const roster: Discipline[] = [
       { name: 'Priyantha Perera' },
       { name: 'Vijitha Ratnayake (Dodampe Gamage)' },
       { name: 'Sarath Ranatunge' },
-      { name: 'Daya Rupasinghe' },
+      { name: 'Dayawansa Rupasinghe' },
       { name: 'Thavarajah' },
       { name: 'Tissa Samaratunga' },
       { name: 'Vijith Seneviratne' },
@@ -185,7 +184,9 @@ const roster: Discipline[] = [
       { name: 'Gamage Hemaratne' },
       { name: 'Harischandra Liyanagamage' },
       { name: 'Sunil Mendis' },
-      { name: 'Lalith Munasinghe' },
+      // sortAs keeps him under M; the surname rule would otherwise file the
+      // whole name under "Sudatta".
+      { name: 'Lalith Munasinghe - Ven Kalaniye Sudatta', sortAs: 'Munasinghe' },
       { name: 'Nirmalan' },
       { name: 'D.M. Ranasinghe' },
       { name: 'Gamini Ranaweera' },
@@ -197,6 +198,7 @@ const roster: Discipline[] = [
       { name: 'Seram' },
       { name: 'Jayanath Weerasooriya' },
       { name: 'Hemantha Wijesekera' },
+      { name: 'Senaka Wijesinghe' },
     ],
   },
   // The old "Materials / Chemical" section, split by Kanishka into the three
