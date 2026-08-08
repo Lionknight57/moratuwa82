@@ -278,6 +278,26 @@ const sections: AlbumSection[] = [
     ],
   },
   {
+    title: 'Study Leave',
+    photos: [
+      {
+        publicId: 'historical/study-leave-1',
+        sourceFile: 'WhatsApp Image 2026-08-08 at 4.27.36 AM.jpeg',
+        caption: 'Priya Werahera, Udaya Annakkage, Nihal Hettiarachchi',
+      },
+      {
+        publicId: 'historical/study-leave-2',
+        sourceFile: 'WhatsApp Image 2026-08-08 at 4.24.19 AM.jpeg',
+        caption: 'Nihal Hettiarachchi',
+      },
+      {
+        publicId: 'historical/study-leave-3',
+        sourceFile: 'WhatsApp Image 2026-08-08 at 4.24.20 AM.jpeg',
+        caption: 'Grab Lunch during Study Leave',
+      },
+    ],
+  },
+  {
     title:
       'Photos of our dearly missed batch mate Renuka Wasantha Attanayake, sent to us by his family',
     photos: [
