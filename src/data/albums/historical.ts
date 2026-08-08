@@ -311,6 +311,28 @@ const sections: AlbumSection[] = [
         caption: 'A.R.Dayananda and Pani Piyasena',
       },
       { publicId: 'historical/dayananda-5', sourceFile: 'Dayananda5.jpeg', caption: '' },
+      // Moved here from the untitled section that used to sit after the
+      // Attanayake memorial.
+      {
+        publicId: 'historical/photo-2014-02-02',
+        sourceFile: '2-02-2014 9;41;58 AM.jpg',
+        caption: '',
+      },
+      {
+        publicId: 'historical/ohiya-railway-tunnel-1980',
+        sourceFile: 'At Ohiya Railway tunnel, on the way to Worlds End 1980.jpg',
+        caption: 'At Ohiya railway tunnel, on the way to World’s End, 1980',
+      },
+      { publicId: 'historical/bus', sourceFile: 'Bus.jpg', caption: 'Bus' },
+      { publicId: 'historical/fake-smokers', sourceFile: 'Fake smokers.jpg', caption: 'Fake smokers' },
+      {
+        publicId: 'historical/hike-bit-tired',
+        sourceFile: 'hike bit tired.jpg',
+        caption: 'A bit tired after the hike',
+      },
+      // Mihintale, Polonnaruwa and Puttalam Cement moved to First Year Batch Trip.
+      { publicId: 'historical/sri-pada2', sourceFile: 'Sri Pada2.jpg', caption: 'At Sri Pada' },
+      { publicId: 'historical/sri-pada', sourceFile: 'SriPada.jpg', caption: 'At Sri Pada' },
     ],
   },
   {
@@ -387,30 +409,6 @@ const sections: AlbumSection[] = [
           '2nd row Rajaram, Gunatilake, RB, Patrick. ' +
           'Back row Matara, Wimaleshwaran, Dissanayaka. Dhane and Rodrigo standing',
       },
-    ],
-  },
-  {
-    photos: [
-      {
-        publicId: 'historical/photo-2014-02-02',
-        sourceFile: '2-02-2014 9;41;58 AM.jpg',
-        caption: '',
-      },
-      {
-        publicId: 'historical/ohiya-railway-tunnel-1980',
-        sourceFile: 'At Ohiya Railway tunnel, on the way to Worlds End 1980.jpg',
-        caption: 'At Ohiya railway tunnel, on the way to World’s End, 1980',
-      },
-      { publicId: 'historical/bus', sourceFile: 'Bus.jpg', caption: 'Bus' },
-      { publicId: 'historical/fake-smokers', sourceFile: 'Fake smokers.jpg', caption: 'Fake smokers' },
-      {
-        publicId: 'historical/hike-bit-tired',
-        sourceFile: 'hike bit tired.jpg',
-        caption: 'A bit tired after the hike',
-      },
-      // Mihintale, Polonnaruwa and Puttalam Cement moved to First Year Batch Trip.
-      { publicId: 'historical/sri-pada2', sourceFile: 'Sri Pada2.jpg', caption: 'At Sri Pada' },
-      { publicId: 'historical/sri-pada', sourceFile: 'SriPada.jpg', caption: 'At Sri Pada' },
     ],
   },
   {
