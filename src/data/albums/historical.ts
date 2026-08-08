@@ -374,6 +374,22 @@ const sections: AlbumSection[] = [
     ],
   },
   {
+    // From A.R. Dayananda's collection; public IDs keep his name so the source
+    // stays traceable, even though the section is broader than him.
+    title: 'Chemical/Materials/Mining/Mineral Photos',
+    photos: [
+      { publicId: 'historical/dayananda-1', sourceFile: 'Dayananda1.jpeg', caption: '' },
+      { publicId: 'historical/dayananda-2', sourceFile: 'Dayananda2.jpeg', caption: '' },
+      { publicId: 'historical/dayananda-3', sourceFile: 'Dayananda3.jpeg', caption: '' },
+      {
+        publicId: 'historical/dayananda-4',
+        sourceFile: 'Dayananda4.jpeg',
+        caption: 'A.R.Dayananda and Pani Piyasena',
+      },
+      { publicId: 'historical/dayananda-5', sourceFile: 'Dayananda5.jpeg', caption: '' },
+    ],
+  },
+  {
     photos: [
       {
         publicId: 'historical/photo-2014-02-02',
