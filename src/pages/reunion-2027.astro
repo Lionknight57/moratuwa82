@@ -15,6 +15,7 @@ import {
   discountPerPerson,
   netPerPerson,
   costsAsOf,
+  sponsorDeposit,
   updates,
 } from '../data/reunion';
 
@@ -124,6 +125,32 @@ const rs = (n: number) => `Rs ${n.toLocaleString('en-US')}`;
   </section>
 
   <section>
+    <h2>Sponsorship payments</h2>
+    <p class="note">
+      <strong>Sponsors only.</strong> These details are for depositing agreed sponsorship
+      contributions. All other payments will be collected three months before the reunion —
+      nothing else is due yet.
+    </p>
+
+    <dl class="bank">
+      <div><dt>Name</dt><dd>{sponsorDeposit.accountName}</dd></div>
+      <div><dt>A/C No.</dt><dd>{sponsorDeposit.account}</dd></div>
+      <div><dt>Bank</dt><dd>{sponsorDeposit.bank}</dd></div>
+      <div><dt>Branch</dt><dd>{sponsorDeposit.branch}</dd></div>
+    </dl>
+
+    <p>
+      Once you have deposited, email
+      {sponsorDeposit.confirmTo.map((e, i) => (
+        <>
+          {i > 0 && ' and '}<a href={`mailto:${e}`}>{e}</a>
+        </>
+      ))} with:
+    </p>
+    <ul>{sponsorDeposit.confirmWith.map((f) => <li>{f}</li>)}</ul>
+  </section>
+
+  <section>
     <h2>Committee updates</h2>
     <p class="note">Most recent first. Kept as a record — the confirmation deadlines below have passed.</p>
     {updates.map((u) => (
@@ -148,6 +175,15 @@ const rs = (n: number) => `Rs ${n.toLocaleString('en-US')}`;
     .facts > div { background: var(--card); padding: 0.85rem 1rem; }
     .facts dt { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
     .facts dd { margin: 0.2rem 0 0; font-weight: 600; }
+
+    .bank {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1px; margin: 1.25rem 0 1.5rem; padding: 1px;
+      background: var(--border); border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    }
+    .bank > div { background: var(--card); padding: 0.85rem 1rem; }
+    .bank dt { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .bank dd { margin: 0.2rem 0 0; font-weight: 600; }
 
     section { margin-top: 3rem; }
     h2 { border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; font-size: 1.3rem; }

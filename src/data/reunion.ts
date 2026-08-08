@@ -128,11 +128,41 @@ export const discountPerPerson = Math.round(sponsorshipsLkr / totalPax);
 
 export const netPerPerson = (room: RoomType) => perPerson(room) - discountPerPerson;
 
+// --- Sponsorship deposits ----------------------------------------------------
+//
+// From the committee's 8 August 2026 circular. These are for SPONSOR
+// contributions only — all other payments are collected three months before the
+// reunion. Published in full at Kanishka's direction; if the committee ever
+// wants the account number off the public site, blanking `account` here removes
+// it from the page in one edit.
+
+export const sponsorDeposit = {
+  accountName: 'D. R. Lokuliyana',
+  account: '0009 5000 4223',
+  bank: 'Sampath Bank',
+  branch: 'Nawam Mawatha',
+  /** Email both addresses with the slip once deposited. */
+  confirmTo: ['denzil@eureka.lk', 'luckyujoseph@gmail.com'],
+  confirmWith: [
+    'Name of sponsor',
+    'Amount remitted',
+    'Date remitted',
+    'Payment slip attached',
+  ],
+};
+
 // --- Committee updates (newest first) ---------------------------------------
 
 export type Update = { date?: string; body: string[] };
 
 export const updates: Update[] = [
+  {
+    date: '8 August 2026',
+    body: [
+      'All rooms have been reserved.',
+      'Bank details issued for sponsors only to deposit their contributions (see above).',
+    ],
+  },
   {
     date: '27 June 2026',
     body: [
