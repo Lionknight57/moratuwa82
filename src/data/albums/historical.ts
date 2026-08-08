@@ -150,6 +150,13 @@ const sections: AlbumSection[] = [
     title: 'First Year Batch Trip',
     photos: [
       { publicId: 'historical/first-year-batch-trip', sourceFile: 'First year batch trip.jpg', caption: '' },
+      { publicId: 'historical/mihintale', sourceFile: 'Mihintale.jpg', caption: 'Mihintale' },
+      { publicId: 'historical/polonnaruwa', sourceFile: 'Polonnaruwa.jpg', caption: 'Polonnaruwa' },
+      {
+        publicId: 'historical/puttalam-cement',
+        sourceFile: 'Puttalam Cement.jpg',
+        caption: 'Puttalam Cement',
+      },
     ],
   },
   {
@@ -385,13 +392,7 @@ const sections: AlbumSection[] = [
         sourceFile: 'hike bit tired.jpg',
         caption: 'A bit tired after the hike',
       },
-      { publicId: 'historical/mihintale', sourceFile: 'Mihintale.jpg', caption: 'Mihintale' },
-      { publicId: 'historical/polonnaruwa', sourceFile: 'Polonnaruwa.jpg', caption: 'Polonnaruwa' },
-      {
-        publicId: 'historical/puttalam-cement',
-        sourceFile: 'Puttalam Cement.jpg',
-        caption: 'Puttalam Cement',
-      },
+      // Mihintale, Polonnaruwa and Puttalam Cement moved to First Year Batch Trip.
       { publicId: 'historical/sri-pada2', sourceFile: 'Sri Pada2.jpg', caption: 'At Sri Pada' },
       { publicId: 'historical/sri-pada', sourceFile: 'SriPada.jpg', caption: 'At Sri Pada' },
     ],
