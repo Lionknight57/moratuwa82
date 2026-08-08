@@ -356,6 +356,14 @@ const sections: AlbumSection[] = [
         sourceFile: 'attanayake8.jpg',
         caption: 'Wasantha at Rupavahini Tower',
       },
+      {
+        publicId: 'historical/boarding-group',
+        sourceFile: 'WhatsApp Image 2026-08-08 at 4.34.20 AM.jpeg',
+        caption:
+          'Front Row Dayananda, Wickramasinghe, Galappathy. ' +
+          '2nd row Rajaram, Gunatilake, RB, Patrick. ' +
+          'Back row Matara, Wimaleshwaran, Dissanayaka. Dhane and Rodrigo standing',
+      },
     ],
   },
   {
