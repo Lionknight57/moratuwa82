@@ -55,7 +55,7 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Kuma Sumathipala', sourceFile: 'kuma.jpg', publicId: 'member/kuma-sumathipala' },
   { name: 'Lakshman Joseph', sourceFile: 'Lucky.jpg', publicId: 'member/lakshman-joseph' },
   { name: 'Lalani Kuruppu (Pigera)', sourceFile: 'Lalani_from_materials.jpg', publicId: 'member/lalani-kuruppu' },
-  { name: 'Lalith Munasinghe - Ven Kalaniye Sudatta', sourceFile: 'munasinghe.jpg', publicId: 'member/lalith-munasinghe' },
+  { name: 'Lalith Munasinghe - Ven Kalaniye Sidaththa', sourceFile: 'munasinghe.jpg', publicId: 'member/lalith-munasinghe' },
   { name: 'Lekamge Ariyadasa', sourceFile: 'L Ariyadasa.jpg', publicId: 'member/lekamge-ariyadasa' },
   { name: 'Lionel Fernando', sourceFile: 'Lionel Fernando.jpg', publicId: 'member/lionel-fernando' },
   { name: 'Manjula Wickramaratne', sourceFile: 'Manjula.jpg', publicId: 'member/manjula-wickramaratne' },

@@ -185,8 +185,8 @@ const roster: Discipline[] = [
       { name: 'Harischandra Liyanagamage' },
       { name: 'Sunil Mendis' },
       // sortAs keeps him under M; the surname rule would otherwise file the
-      // whole name under "Sudatta".
-      { name: 'Lalith Munasinghe - Ven Kalaniye Sudatta', sortAs: 'Munasinghe' },
+      // whole name under "Sidaththa".
+      { name: 'Lalith Munasinghe - Ven Kalaniye Sidaththa', sortAs: 'Munasinghe' },
       { name: 'Nirmalan' },
       { name: 'D.M. Ranasinghe' },
       { name: 'Gamini Ranaweera' },
