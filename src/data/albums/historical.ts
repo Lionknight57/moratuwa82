@@ -308,14 +308,14 @@ const sections: AlbumSection[] = [
         sourceFile: 'Dayananda2.jpeg',
         caption:
           'L-R: Rajaram (deceased), Vimaleswaran, Yogeswaran, Burhanudeen (deceased), ' +
-          'Kuma Sumathipala, Egodawela',
+          'Kuma Sumathipala, Pushpa Kumara Mataraarachchi',
       },
       {
         publicId: 'historical/dayananda-3',
         sourceFile: 'Dayananda3.jpeg',
         caption:
           'L-R: Rajaram (deceased), Vimaleswaran, Yogeswaran, Burhanudeen (deceased), ' +
-          'Sunil Fonseka, Egodawela',
+          'Sunil Fonseka, Pushpa Kumara Mataraarachchi',
       },
       {
         publicId: 'historical/dayananda-4',
