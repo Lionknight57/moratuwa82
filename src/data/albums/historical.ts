@@ -272,8 +272,12 @@ const sections: AlbumSection[] = [
       // Its public ID keeps the picture-day- prefix; that is a storage key, not
       // a label, and renaming it would mean a re-upload for no visible gain.
       {
-        publicId: 'historical/picture-day-2',
-        sourceFile: 'Picture day 2.jpg',
+        // Two scans of this same photo existed. Batchila2.jpg (1000x681, clean
+        // colour) beats "Picture day 2.jpg" (474x328, cropped off an album page
+        // and heavily faded), so the better one is what shows here. The
+        // historical/picture-day-2 asset is now unreferenced.
+        publicId: 'historical/batchila2',
+        sourceFile: 'Batchila2.jpg',
         caption: 'Civil Engineering Ladies L-R: Pradeepa, Sudarma, Sumithirai, Premini, Sriyani',
       },
       { publicId: 'historical/picture-day-3', sourceFile: 'Picture day 3.jpg', caption: '' },
