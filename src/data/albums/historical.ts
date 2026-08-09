@@ -130,17 +130,6 @@ const sections: AlbumSection[] = [
     ],
   },
   {
-    photos: [
-      // Batchila.jpg moved to Graduation Day. MMCEng2 and Ladies1 moved to
-      // Picture Day. Batchila2.jpg removed as a duplicate of "Picture day 2".
-      {
-        publicId: 'historical/civil-ladies2',
-        sourceFile: 'CivilLadies2.png',
-        caption: 'Civil Engineering Ladies',
-      },
-    ],
-  },
-  {
     title: 'First Year Batch Trip',
     photos: [
       { publicId: 'historical/first-year-batch-trip', sourceFile: 'First year batch trip.jpg', caption: '' },
@@ -203,6 +192,13 @@ const sections: AlbumSection[] = [
       // CivilTrip5, 6 and 7 moved to Ladies Trip below.
       { publicId: 'historical/civil-trip8', sourceFile: 'CivilTrip8.jpg', caption: '' },
       { publicId: 'historical/civil-trip9', sourceFile: 'CivilTrip9.jpg', caption: '' },
+      // Moved here from the untitled block that used to follow Materials Batch
+      // with Academic Staff; it was the last photo there, so that block is gone.
+      {
+        publicId: 'historical/civil-ladies2',
+        sourceFile: 'CivilLadies2.png',
+        caption: 'Civil Engineering Ladies',
+      },
     ],
   },
   {
