@@ -36,6 +36,18 @@ const sections = album.sections.map((section) => {
 // Only worth showing when there is more than one place to jump to.
 const toc = sections.filter((s) => s.id);
 
+// Per-photo anchor, so a single photo can be linked to directly. Derived from
+// the Cloudinary public ID (unique within an album) with the album prefix
+// dropped. The "p-" guard matters: without it, the photo historical/graduation-day
+// would collide with the section anchor #graduation-day.
+const photoId = (publicId: string) =>
+  'p-' +
+  publicId
+    .replace(/^[^/]+\//, '')
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, '-')
+    .replace(/^-+|-+$/g, '');
+
 // Alt text: the caption's first line reads as a description; the rest is a
 // name list that would be noise in a screen reader's image announcement.
 const altFor = (caption: string, sectionTitle?: string) =>
@@ -63,7 +75,7 @@ const altFor = (caption: string, sectionTitle?: string) =>
       {section.title && <h2>{section.title}</h2>}
       <div class="grid">
         {section.photos.map((photo) => (
-          <figure>
+          <figure id={photoId(photo.publicId)}>
             <a
               class="ph-link"
               href={cldUrl(photo.publicId, { width: 1600, crop: 'fit' })}
@@ -131,7 +143,7 @@ const altFor = (caption: string, sectionTitle?: string) =>
       gap: 1rem;
     }
     /* Scoped to .grid so these thumbnail rules never reach the lightbox figure. */
-    .grid figure { margin: 0; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .grid figure { margin: 0; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; scroll-margin-top: 1rem; }
     .grid figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
     .ph-link { cursor: zoom-in; display: block; }
     .grid figcaption { padding: 0.6rem 0.75rem; color: var(--muted); font-size: 0.85rem; white-space: pre-line; }
@@ -212,17 +224,39 @@ const altFor = (caption: string, sectionTitle?: string) =>
         counter.textContent = idx + 1 + ' / ' + links.length;
         preload(idx + 1);
         preload(idx - 1);
+        if (!lb.hidden) syncHash(idx, false);
       };
 
-      const open = (i) => {
+      // --- Deep links -------------------------------------------------------
+      // The address bar tracks the open photo, so it can be copied and shared;
+      // loading such a URL opens that photo straight away. replaceState while
+      // paging keeps 50 photos from filling the history.
+      const idOf = (i) => (links[i].closest('figure') || {}).id || '';
+      const bare = () => location.pathname + location.search;
+      const syncHash = (i, push) => {
+        const id = idOf(i);
+        if (!id) return;
+        const url = '#' + id;
+        if (push) history.pushState({ photo: i }, '', url);
+        else history.replaceState({ photo: i }, '', url);
+      };
+      const indexFromHash = () => {
+        const h = decodeURIComponent(location.hash.slice(1));
+        if (!h) return -1;
+        return links.findIndex((a) => ((a.closest('figure') || {}).id || '') === h);
+      };
+
+      const open = (i, fromHash) => {
         show(i);
         lb.hidden = false;
         document.body.style.overflow = 'hidden';
+        if (!fromHash) syncHash(idx, true);
       };
-      const close = () => {
+      const close = (keepHash) => {
         lb.hidden = true;
         document.body.style.overflow = '';
         img.src = '';
+        if (!keepHash && indexFromHash() >= 0) history.replaceState(null, '', bare());
       };
 
       links.forEach((a, i) =>
@@ -233,7 +267,7 @@ const altFor = (caption: string, sectionTitle?: string) =>
       );
       lb.querySelector('.lb-next').addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
       lb.querySelector('.lb-prev').addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
-      lb.querySelector('.lb-close').addEventListener('click', close);
+      lb.querySelector('.lb-close').addEventListener('click', () => close());
       lb.addEventListener('click', (e) => { if (e.target === lb || e.target.classList.contains('lb-stage')) close(); });
 
       document.addEventListener('keydown', (e) => {
@@ -243,13 +277,38 @@ const altFor = (caption: string, sectionTitle?: string) =>
         else if (e.key === 'ArrowLeft') show(idx - 1);
       });
 
-      // Touch swipe on the image.
+      // Touch swipe on the image. `swiping` guards against a touchend arriving
+      // without its touchstart — otherwise the stale sx of 0 reads as a huge
+      // swipe and silently jumps a photo.
       let sx = 0;
-      lb.addEventListener('touchstart', (e) => { sx = e.changedTouches[0].clientX; }, { passive: true });
+      let swiping = false;
+      lb.addEventListener('touchstart', (e) => {
+        sx = e.changedTouches[0].clientX;
+        swiping = true;
+      }, { passive: true });
       lb.addEventListener('touchend', (e) => {
+        if (!swiping) return;
+        swiping = false;
         const dx = e.changedTouches[0].clientX - sx;
         if (Math.abs(dx) > 45) show(idx + (dx < 0 ? 1 : -1));
       }, { passive: true });
+
+      // Open whatever the URL points at, on load and on Back/Forward. A section
+      // anchor matches no photo, so it just scrolls as before.
+      const syncFromHash = () => {
+        const i = indexFromHash();
+        if (i >= 0) {
+          if (lb.hidden) open(i, true);
+          else show(i);
+        } else if (!lb.hidden) {
+          close(true);
+        }
+      };
+      // popstate covers Back/Forward; hashchange covers a link to #p-… clicked
+      // on the page itself, which does not fire popstate.
+      window.addEventListener('popstate', syncFromHash);
+      window.addEventListener('hashchange', syncFromHash);
+      syncFromHash();
     }
   </script>
 </BaseLayout>
