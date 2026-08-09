@@ -132,7 +132,21 @@ const sections: AlbumSection[] = [
   {
     title: 'First Year Batch Trip',
     photos: [
-      { publicId: 'historical/first-year-batch-trip', sourceFile: 'First year batch trip.jpg', caption: '' },
+      {
+        publicId: 'historical/first-year-batch-trip',
+        sourceFile: 'First year batch trip.jpg',
+        // "?" marks people nobody has placed yet, same convention as
+        // "Buruhanudeen?" and "Rayen?" elsewhere in this album.
+        caption:
+          'Sigiriya, in front of the Lion’s Paws\n' +
+          'Top row: Nihal Hettiarachchi, Kingsley Wijenayake, Nihal Vitharana, ' +
+          'Raja Thilakaratne, Hettige Jayatissa, A R Dayananda, Dayapani Patrick Piyasena\n' +
+          'Middle row: Uthpala Siriwardene, ?, ?, ?\n' +
+          'Seated: an instructor?, ?, Ajith Wijenayake, Ranjith Jayawardene, ' +
+          'Harischandra Liyanagamage, Ananda Rajakaruna, ?, Siri Dissanayake, ' +
+          'Ram Banda Nawarathna\n' +
+          'On the ground: ?',
+      },
       { publicId: 'historical/mihintale', sourceFile: 'Mihintale.jpg', caption: 'Mihintale' },
       { publicId: 'historical/polonnaruwa', sourceFile: 'Polonnaruwa.jpg', caption: 'Polonnaruwa' },
       {
