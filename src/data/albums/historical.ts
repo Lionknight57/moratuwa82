@@ -289,8 +289,20 @@ const sections: AlbumSection[] = [
     title: 'Chemical/Materials/Mining/Mineral Photos',
     photos: [
       { publicId: 'historical/dayananda-1', sourceFile: 'Dayananda1.jpeg', caption: '' },
-      { publicId: 'historical/dayananda-2', sourceFile: 'Dayananda2.jpeg', caption: '' },
-      { publicId: 'historical/dayananda-3', sourceFile: 'Dayananda3.jpeg', caption: '' },
+      {
+        publicId: 'historical/dayananda-2',
+        sourceFile: 'Dayananda2.jpeg',
+        caption:
+          'L-R: Rajaram (deceased), Vimaleswaran, Yogeswaran, Burhanudeen (deceased), ' +
+          'Kuma Sumathipala, Egodawela',
+      },
+      {
+        publicId: 'historical/dayananda-3',
+        sourceFile: 'Dayananda3.jpeg',
+        caption:
+          'L-R: Rajaram (deceased), Vimaleswaran, Yogeswaran, Burhanudeen (deceased), ' +
+          'Sunil Fonseka, Egodawela',
+      },
       {
         publicId: 'historical/dayananda-4',
         sourceFile: 'Dayananda4.jpeg',
