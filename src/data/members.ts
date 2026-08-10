@@ -249,9 +249,18 @@ const roster: Discipline[] = [
   {
     id: 'other',
     label: 'Other',
+    // "Other" is for batchmates who left before the streams split, so there is
+    // no Civil/Mechanical/etc. to file them under.
+    //
     // This Fonseka is not Sunil Fonseka in Materials / Chemical — different
     // people. Confirmed by Kanishka; not a duplicate to be merged.
-    members: [{ name: 'Alwis' }, { name: 'Fonseka' }],
+    members: [
+      { name: 'Alwis' },
+      { name: 'Fonseka' },
+      // Left in first year; the surname is a best guess, hence the note rather
+      // than a bare "Saman Weerasinghe" that would read as confirmed.
+      { name: 'Saman Weerasinghe', note: 'surname unconfirmed' },
+    ],
   },
 ];
 
