@@ -147,7 +147,11 @@ const sections: AlbumSection[] = [
           'Udaya Ranawaka, Siri Dissanayake, Ram Banda Nawarathna\n' +
           'On the ground: Ariyapala Fernando',
       },
-      { publicId: 'historical/mihintale', sourceFile: 'Mihintale.jpg', caption: 'Mihintale' },
+      {
+        publicId: 'historical/mihintale',
+        sourceFile: 'Mihintale.jpg',
+        caption: 'Mihintale with Denzil, Priya and Chandra',
+      },
       { publicId: 'historical/polonnaruwa', sourceFile: 'Polonnaruwa.jpg', caption: 'Polonnaruwa' },
       {
         publicId: 'historical/puttalam-cement',
