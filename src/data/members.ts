@@ -259,7 +259,7 @@ const roster: Discipline[] = [
       { name: 'Fonseka' },
       // Left in first year; the surname is a best guess, hence the note rather
       // than a bare "Saman Weerasinghe" that would read as confirmed.
-      { name: 'Saman Weerasinghe', note: 'surname unconfirmed' },
+      { name: 'Saman Wijewardana', note: 'surname unconfirmed' },
     ],
   },
 ];
