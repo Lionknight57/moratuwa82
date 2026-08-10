@@ -141,11 +141,11 @@ const sections: AlbumSection[] = [
           'Sigiriya, in front of the Lion’s Paws\n' +
           'Top row: Nihal Hettiarachchi, Kingsley Wijenayake, Nihal Vitharana, ' +
           'Raja Thilakaratne, Hettige Jayatissa, A R Dayananda, Dayapani Patrick Piyasena\n' +
-          'Middle row: Uthpala Siriwardene, ?, ?, ?\n' +
+          'Middle row: Uthpala Siriwardene, ?, Nalin Pahalawatte, Priyantha Mendis\n' +
           'Seated: an instructor?, ?, Ajith Wijenayake, Ranjith Jayawardene, ' +
-          'Harischandra Liyanagamage, Ananda Rajakaruna, ?, Siri Dissanayake, ' +
+          'Harischandra Liyanagamage, Ananda Rajakaruna, Udaya Ranawaka, Siri Dissanayake, ' +
           'Ram Banda Nawarathna\n' +
-          'On the ground: ?',
+          'On the ground: Ariyapala Fernando',
       },
       { publicId: 'historical/mihintale', sourceFile: 'Mihintale.jpg', caption: 'Mihintale' },
       { publicId: 'historical/polonnaruwa', sourceFile: 'Polonnaruwa.jpg', caption: 'Polonnaruwa' },
