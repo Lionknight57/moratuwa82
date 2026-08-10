@@ -243,7 +243,7 @@ const sections: AlbumSection[] = [
       {
         publicId: 'historical/graduation-stage',
         sourceFile: 'Graduation stage.jpg',
-        caption: '',
+        caption: 'Sumi and Premini',
       },
       {
         publicId: 'historical/graduation-group',
