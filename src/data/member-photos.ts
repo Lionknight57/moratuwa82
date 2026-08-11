@@ -75,10 +75,6 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Pradeepa Fernando (Wijesiriwardene)', sourceFile: 'Pradeepa.jpg', publicId: 'member/pradeepa-fernando' },
   { name: 'Premini Hettiarachchi (Gunewardena)', sourceFile: 'Premini.jpg', publicId: 'member/premini-gunawardene' },
   { name: 'Priya Werahera', sourceFile: 'Werahara.jpg', publicId: 'member/priya-werahera' },
-  // The Civil "Priyantha" recorded under that name alone — not Goonarathne,
-  // Mendis or Perera below. Cropped from reunion2006/dsc02585, front row second
-  // from left (white shirt), placed by Kanishka.
-  { name: 'Priyantha', sourceFile: 'Priyantha_2006.jpg', publicId: 'member/priyantha' },
   { name: 'Priyantha Goonarathne', sourceFile: 'PriyanthaG.jpg', publicId: 'member/priyantha-goonarathne' },
   { name: 'Priyantha Mendis', sourceFile: 'Priyan Mendis.jpg', publicId: 'member/priyantha-mendis' },
   { name: 'Priyantha Perera', sourceFile: 'Priyantha Perera.jpg', publicId: 'member/priyantha-perera' },
@@ -121,6 +117,10 @@ export const memberPhotos: MemberPhoto[] = [
   { name: 'Vijith Seneviratne', sourceFile: 'Vijith_from_dsc02594.jpg', publicId: 'member/vijith-seneviratne' },
   { name: 'Vijithaweera Wickramasinghe', sourceFile: 'wicky.jpg', publicId: 'member/vijithaweera-wickramasinghe' },
   { name: 'Vinotharajah', sourceFile: 'Vinotharaj.jpg', publicId: 'member/vinotharajah' },
+  // The Civil Priyantha — not Goonarathne, Mendis or Perera. Cropped from
+  // reunion2006/dsc02585, front row second from left (white shirt), placed by
+  // Kanishka. Public ID stays member/priyantha from when he had no initials.
+  { name: 'W.P Priyantha', sourceFile: 'Priyantha_2006.jpg', publicId: 'member/priyantha' },
   { name: 'Wimal Galappaththi', sourceFile: 'Wimal Galappatti.jpg', publicId: 'member/wimal-galappaththi' },
   { name: 'Wimaleswaren', sourceFile: 'Wimaleswaren_from_materials.jpg', publicId: 'member/wimaleswaren' },
   { name: 'Yogeswaren', sourceFile: 'yogesh.jpg', publicId: 'member/yogeswaren' },

@@ -87,7 +87,7 @@ const roster: Discipline[] = [
       { name: 'Nicholas' },
       { name: 'Anura Nanayakkara' },
       { name: 'Pradeep Perera' },
-      { name: 'Priyantha' },
+      { name: 'W.P Priyantha' },
       { name: 'Nimal Pushpakumara' },
       { name: 'Sunil Shantha Ratnayake' },
       { name: 'Joseph Stanislaus Rayen' },
