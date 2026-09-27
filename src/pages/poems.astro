@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionNav from '../components/SectionNav.astro';
+import { poets, totalPoems } from '../data/poems';
+import { anchorIds } from '../lib/anchors';
+
+// One section per poet, anchored by name (/poems/#tissa-samaratunga). Each poem
+// also carries its own id, so a single poem can be linked to directly.
+const label = (p: (typeof poets)[number]) => p.member ?? p.name;
+const ids = anchorIds(poets.map(label));
+const sections = poets.map((poet, i) => ({ poet, id: ids[i]! }));
+const toc = sections.map((s) => ({ id: s.id, label: label(s.poet) }));
+---
+
+<BaseLayout
+  title="Poems — Moratuwa 77'-82'"
+  description="Poems by the batch — campus days, the boarding house, the canteen, and friends we lost."
+>
+  <h1>Poems</h1>
+  <p class="intro">
+    Written by batchmates and first collected on the batch's poem site in January 2021.
+    {totalPoems} poems, in Sinhala.
+  </p>
+
+  <SectionNav items={toc} label="Poets" />
+
+  {sections.map(({ poet, id }) => (
+    <section class="poet" id={id}>
+      <div class="p-head">
+        <h2>{label(poet)}</h2>
+        <span class="count">{poet.poems.length === 1 ? '1 poem' : `${poet.poems.length} poems`}</span>
+      </div>
+      {poet.poems.map((poem) => (
+        <article class="poem" id={poem.id} lang="si">
+          <h3><a href={`#${poem.id}`}>{poem.title}</a></h3>
+          {poem.text.split('\n\n').map((stanza) => (
+            <p class="stanza">
+              {stanza.split('\n').map((line) => <span class="line">{line}</span>)}
+            </p>
+          ))}
+        </article>
+      ))}
+    </section>
+  ))}
+
+  <style>
+    h1 { border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    .intro { color: var(--muted); }
+
+    /* scroll-margin so a jumped-to poet or poem isn't flush against the viewport. */
+    .poet { margin-top: 2.5rem; scroll-margin-top: 1rem; }
+    .p-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem;
+    }
+    .p-head h2 { font-size: 1.1rem; margin: 0; }
+    .count { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+    .poem {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 1.1rem 1.25rem; margin: 1rem 0 0; scroll-margin-top: 1rem;
+    }
+    .poem h3 { font-size: 1.15rem; margin: 0 0 0.75rem; }
+    .poem h3 a { color: var(--fg); text-decoration: none; }
+    .poem h3 a:hover { color: var(--accent); }
+    .poem:target { border-color: var(--accent); }
+    /* One span per line, so a line too long for a phone wraps with a hanging
+       indent instead of passing for a new line of the poem. The writers' extra
+       spaces were for alignment in a fixed layout and collapse here, which reads
+       better in a proportional font. Sinhala stacks marks above and below the
+       line, so it needs more leading than the Latin body text. */
+    .stanza { line-height: 1.9; margin: 0 0 1rem; }
+    .stanza:last-child { margin-bottom: 0; }
+    .line { display: block; padding-left: 1.5em; text-indent: -1.5em; }
+  </style>
+</BaseLayout>
