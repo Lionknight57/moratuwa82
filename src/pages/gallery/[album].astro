@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CldImage from '../../components/CldImage.astro';
+import SectionNav from '../../components/SectionNav.astro';
 import { cldUrl } from '../../lib/cloudinary';
+import { anchorIds } from '../../lib/anchors';
 import { albums } from '../../data/albums';
 import type { Album } from '../../data/albums';
 
@@ -13,28 +15,13 @@ export async function getStaticPaths() {
 const { album } = Astro.props as { album: Album };
 
 // Anchor ids for titled sections, so /gallery/<album>/#<id> jumps straight
-// there. Derived from the title rather than the index, so a link keeps working
-// when sections are added or reordered above it. Untitled sections get no id
-// and stay out of the jump list.
-const slugify = (title: string) =>
-  title
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 60)
-    .replace(/-+$/, '');
+// there. Untitled sections get no id and stay out of the jump list.
+const ids = anchorIds(album.sections.map((s) => s.title));
+const sections = album.sections.map((section, i) => ({ section, id: ids[i] }));
 
-const usedIds = new Map<string, number>();
-const sections = album.sections.map((section) => {
-  if (!section.title) return { section, id: undefined };
-  const base = slugify(section.title) || 'section';
-  const n = (usedIds.get(base) ?? 0) + 1;
-  usedIds.set(base, n);
-  return { section, id: n === 1 ? base : `${base}-${n}` };
-});
-
-// Only worth showing when there is more than one place to jump to.
-const toc = sections.filter((s) => s.id);
+const toc = sections
+  .filter((s) => s.id)
+  .map((s) => ({ id: s.id!, label: s.section.title! }));
 
 // Per-photo anchor, so a single photo can be linked to directly. Derived from
 // the Cloudinary public ID (unique within an album) with the album prefix
@@ -59,16 +46,7 @@ const altFor = (caption: string, sectionTitle?: string) =>
   <h1>{album.title}</h1>
   {album.intro && <p class="intro">{album.intro}</p>}
 
-  {toc.length > 1 && (
-    <nav class="toc" aria-labelledby="toc-label">
-      <span class="toc-label" id="toc-label">Jump to</span>
-      <ul>
-        {toc.map((s) => (
-          <li><a href={`#${s.id}`}>{s.section.title}</a></li>
-        ))}
-      </ul>
-    </nav>
-  )}
+  <SectionNav items={toc} />
 
   {sections.map(({ section, id }) => (
     <section class="album-section" id={id}>
@@ -119,23 +97,6 @@ const altFor = (caption: string, sectionTitle?: string) =>
     /* scroll-margin so a jumped-to heading isn't flush against the viewport. */
     .album-section { margin-top: 2.5rem; scroll-margin-top: 1rem; }
 
-    .toc {
-      margin: 1.5rem 0 0; padding: 0.85rem 1rem;
-      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
-    }
-    .toc-label {
-      display: block; color: var(--muted); font-size: 0.75rem;
-      text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem;
-    }
-    .toc ul {
-      list-style: none; margin: 0; padding: 0;
-      display: flex; flex-wrap: wrap; gap: 0.35rem 1rem;
-    }
-    .toc li { max-width: 100%; }
-    .toc a { font-size: 0.9rem; }
-    @media (prefers-reduced-motion: no-preference) {
-      html { scroll-behavior: smooth; }
-    }
     .album-section h2 { font-size: 1.05rem; color: var(--fg); margin: 0 0 0.75rem; }
     .grid {
       display: grid;

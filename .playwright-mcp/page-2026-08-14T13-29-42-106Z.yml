@@ -1,0 +1,67 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - link "Moratuwa 77'-82'" [ref=f6e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=f6e4]:
+      - link "Home" [ref=f6e5] [cursor=pointer]:
+        - /url: /
+      - link "Members" [ref=f6e6] [cursor=pointer]:
+        - /url: /members/
+      - link "Reunion 2027" [ref=f6e7] [cursor=pointer]:
+        - /url: /reunion-2027/
+      - link "Gallery" [ref=f6e8] [cursor=pointer]:
+        - /url: /gallery/
+  - main [ref=f6e9]:
+    - article [ref=f6e10]:
+      - link "← Home" [ref=f6e11] [cursor=pointer]:
+        - /url: /
+      - heading "Prof. P. A. de Silva has passed away" [level=1] [ref=f6e12]
+      - paragraph [ref=f6e13]: 14 August 2026
+      - img "Prof. P. A. de Silva has passed away" [ref=f6e15]
+      - generic [ref=f6e16]:
+        - paragraph [ref=f6e17]:
+          - strong [ref=f6e18]: Emeritus Professor P. A. de Silva
+          - text: ", a pioneering Sri Lankan mechanical engineer, technologist and academic at the University of Moratuwa, has passed away at the age of 92."
+        - paragraph [ref=f6e19]:
+          - text: He was widely celebrated for
+          - strong [ref=f6e20]: inventing Sri Lanka’s first electric car
+          - text: and for
+          - strong [ref=f6e21]: pioneering CAD/CAM technology
+          - text: in the country.
+        - paragraph [ref=f6e22]: He taught Thermodynamics in Final Part II for most of us.
+        - paragraph [ref=f6e23]:
+          - text: He was last seen celebrating with
+          - link "the batch that graduated in 1976" [ref=f6e24] [cursor=pointer]:
+            - /url: /gallery/our-teachers/
+          - text: .
+        - heading "Funeral arrangements" [level=2] [ref=f6e25]
+        - paragraph [ref=f6e26]:
+          - text: The remains lie at
+          - strong [ref=f6e27]: Mahinda Florists, 591 Galle Road, Dehiwala–Mount Lavinia
+          - text: ", from"
+          - strong [ref=f6e28]: 2.00 p.m. on 14 August
+          - text: .
+        - paragraph [ref=f6e29]:
+          - text: The funeral is on
+          - strong [ref=f6e30]: Friday 15 August at 10.00 a.m.
+          - text: at the
+          - strong [ref=f6e31]: General Cemetery (Nisala Sevana), Mount Lavinia
+          - text: .
+        - paragraph [ref=f6e32]:
+          - emphasis [ref=f6e33]: May he attain the supreme bliss of Nibbāna.
+        - heading "A political chapter" [level=2] [ref=f6e34]
+        - paragraph [ref=f6e35]:
+          - text: His career was also marked by a significant political chapter. A staunch supporter of the UNP’s return to power in 1977, he served as
+          - strong [ref=f6e36]: Chairman of the Ceylon Steel Corporation from 1977 to 1980
+          - text: ", and subsequently of the"
+          - strong [ref=f6e37]: State Hardware Corporation
+          - text: . His tenure at the Steel Corporation was not without controversy, and he became the subject of parliamentary scrutiny and criticism — an unusual episode for an engineer and academic appointed to head a major state corporation.
+      - figure "The electric car being assembled at the Mechanical workshop, University of Moratuwa." [ref=f6e39]:
+        - img "The electric car being assembled at the Mechanical workshop, University of Moratuwa." [ref=f6e40]
+  - contentinfo [ref=f6e42]:
+    - paragraph [ref=f6e43]: Moratuwa 77'-82' batch · 2026
+  - generic [ref=f6e46]:
+    - button [ref=f6e47]
+    - button [ref=f6e53]
+    - button [ref=f6e57]
+    - button [ref=f6e62]

@@ -1,0 +1,44 @@
+---
+// The "Jump to" strip of links to a page's sections. Renders nothing unless
+// there is more than one place to go — a single link is just noise.
+//
+// Ids come from lib/anchors.ts, which is also what stamps them onto the
+// sections themselves, so the two can't drift apart.
+export interface Props {
+  items: { id: string; label: string }[];
+  label?: string;
+}
+
+const { items, label = 'Jump to' } = Astro.props;
+---
+
+{items.length > 1 && (
+  <nav class="toc" aria-labelledby="toc-label">
+    <span class="toc-label" id="toc-label">{label}</span>
+    <ul>
+      {items.map((item) => (
+        <li><a href={`#${item.id}`}>{item.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc {
+    margin: 1.5rem 0 0; padding: 0.85rem 1rem;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+  }
+  .toc-label {
+    display: block; color: var(--muted); font-size: 0.75rem;
+    text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 0.5rem;
+  }
+  .toc ul {
+    list-style: none; margin: 0; padding: 0;
+    display: flex; flex-wrap: wrap; gap: 0.35rem 1rem;
+  }
+  .toc li { max-width: 100%; }
+  .toc a { font-size: 0.9rem; }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+</style>

@@ -14,7 +14,7 @@ import type { Album, AlbumSection } from './types.ts';
 
 const sections: AlbumSection[] = [
   {
-    title: 'Civil Engineering Batch — Partial',
+    title: 'Civil Engineering Batch',
     photos: [
       {
         // Restored scan (Aug 2026) replacing the stained original. Uploaded
@@ -37,6 +37,18 @@ const sections: AlbumSection[] = [
           'From Left to Right - Yogeswaran, Gnanasambandhan, Sundararaju, Nicholas, ' +
           'Amirthajothi, Sriyani, Keerthi Gnanapragasam, Sudharma, Vinotharajah, Sumi, ' +
           'Bhuvendralingam, Premini, Senthilkumar, Pradeepa, Shanmuganantha and Rayen?',
+      },
+      {
+        publicId: 'historical/sumanadasa',
+        sourceFile: 'Sumanadasa.jpeg',
+        caption:
+          'On the Sumanadasa Building balcony - L-R: Kirthi Gnanapragasam, K Gnanasampanthan, ' +
+          'N Sunderaraju, B Senthilkumar, S Shanmuganantha, AC Vinotharaja, PS Nonis, ' +
+          'Nimal Pushpakumara, ?, Anura Nanayakkara, Denzil Lokuliyana, PP Gunaratne, ' +
+          'Priyantha Mendis, Tissa Samaratunge, Sudath Wijeyratne, Keerthi Seniviratne, ' +
+          'J Nicholas, Amal Seniviratne, Sudarma Hemamali, Sriyani Karunanayake, JS Rayen, ' +
+          'Pradeepa Wijesiriwardena, Sumithirai Maheswaran, Premini Gunawardena, Nedurana, ' +
+          'RM Sunil Shantha, LHU Wijeyratne, Pradeep Perera, Nihal Damsiri Vitharana',
       },
     ],
   },
@@ -156,7 +168,8 @@ const sections: AlbumSection[] = [
       {
         publicId: 'historical/puttalam-cement',
         sourceFile: 'Puttalam Cement.jpg',
-        caption: 'Puttalam Cement',
+        caption:
+          'At Puttalam Cement — L-R Chandra, Gunatilleke, Ajith Wijenayake, Patrick, Rajakaruna, Pradeep, Dharme and Denzil',
       },
     ],
   },
@@ -217,6 +230,14 @@ const sections: AlbumSection[] = [
         sourceFile: 'CivilLadies2.png',
         caption: 'Civil Engineering Ladies',
       },
+      // From Bhuvendralingam's set, so the source filename says "Graduation",
+      // but the photo is the batch trip. The public ID keeps the bhu- prefix
+      // for traceability; it is a storage key, not a label.
+      {
+        publicId: 'historical/bhu-graduation-10',
+        sourceFile: 'bhuGraduation10.jpeg',
+        caption: '',
+      },
     ],
   },
   {
@@ -226,13 +247,33 @@ const sections: AlbumSection[] = [
     photos: [
       { publicId: 'historical/civil-trip5', sourceFile: 'CivilTrip5.jpg', caption: '' },
       { publicId: 'historical/civil-trip6', sourceFile: 'CivilTrip6.jpg', caption: '' },
-      { publicId: 'historical/civil-trip7', sourceFile: 'CivilTrip7.jpg', caption: '' },
+      {
+        // Trailing '?' marks a name the source was unsure of, as with 'Rayen?'
+        // above — deliberate, not a stray keystroke. Five stand and nine sit;
+        // the print is 278x362, so several seated faces are genuinely
+        // unidentifiable rather than merely unnamed.
+        publicId: 'historical/civil-trip7',
+        sourceFile: 'CivilTrip7.jpg',
+        caption:
+          'Standing L-R: Sumithirai, Kusumalatha?, Deepa?, two unidentified\n' +
+          'Sitting L-R: Champika, partly hidden (shawl)?, partly hidden?, Erica, Manora, ' +
+          'partly hidden?, Vasantha, Sudharma, Manjula',
+      },
     ],
   },
   {
     // Everything from Graduation Day, gathered here from the untitled sections
-    // it used to be scattered across. The first two are prints that arrived
-    // scanned together on one sheet; the middle three came off another.
+    // it used to be scattered across. The procession and stage prints arrived
+    // scanned together on one sheet; graduation-day and batchila came off
+    // another.
+    //
+    // Bhuvendralingam's album (Aug 2026) supplied 1600px scans of the whole
+    // day. Two of them are the same photographs as small faded scans that used
+    // to sit here — historical/graduation-group (486x330) and
+    // historical/graduation-dinner-2 (534x362) — so those entries were dropped
+    // in favour of the better scans, which take their place and keep their
+    // captions. Fresh public IDs rather than overwrites, per the caching note
+    // in CLAUDE.md; the two old assets are now unreferenced.
     title: 'Graduation Day',
     photos: [
       {
@@ -246,9 +287,10 @@ const sections: AlbumSection[] = [
         caption: 'Sumi and Premini',
       },
       {
-        publicId: 'historical/graduation-group',
-        sourceFile: 'Graduation group.jpg',
-        caption: '',
+        publicId: 'historical/graduation-group-hires',
+        sourceFile: '6bhuGraduation6.jpeg',
+        caption:
+          'L-R: Premini, Bhuvendralingam, Gnanapragasam, Mr (later Prof) Samantha Hettiarachchi, Senthilkumar, Shanmuganantha, Sumi',
       },
       {
         publicId: 'historical/graduation-day',
@@ -266,8 +308,8 @@ const sections: AlbumSection[] = [
         caption: 'The graduation dinner',
       },
       {
-        publicId: 'historical/graduation-dinner-2',
-        sourceFile: 'Graduation dinner 2.jpg',
+        publicId: 'historical/graduation-dinner-2-hires',
+        sourceFile: 'bhuGraduation4.jpeg',
         caption: 'The graduation dinner',
       },
       {
@@ -276,13 +318,51 @@ const sections: AlbumSection[] = [
         sourceFile: 'Graduation trio.jpg',
         caption: 'Rodrigo, MPVC Wickramasinghe and Gunatilleke',
       },
+      // The rest of Bhuvendralingam's graduation scans. Captions left empty
+      // except where the setting is unmistakable — nobody has identified the
+      // faces yet.
+      { publicId: 'historical/bhu-graduation-1', sourceFile: 'bhuGraduation1.jpeg', caption: '' },
+      {
+        publicId: 'historical/bhu-graduation-2',
+        sourceFile: 'bhuGraduation2.jpeg',
+        caption:
+          'Walking up for graduation - SG Jayawardena, Amirthajothi, Bhuvendralingam, ' +
+          'Shanmuganantha, Nandakumar (1 year senior, but graduated with our batch), ' +
+          'Sriyani, Sumi',
+      },
+      {
+        publicId: 'historical/bhu-graduation-3',
+        sourceFile: 'bhuGraduation3.jpeg',
+        caption: 'The graduation dinner',
+      },
+      {
+        publicId: 'historical/bhu-graduation-5',
+        sourceFile: 'bhuGraduation5.jpeg',
+        caption:
+          'With Prof Dayantha; L-R: Gnanapragasam, Vinotharaja, Shanmuganantha, ' +
+          'Prof Dayantha Wijeysekera, Senthilkumar, Bhuvendralingam',
+      },
+      { publicId: 'historical/bhu-graduation-6', sourceFile: 'bhuGraduation6.jpeg', caption: '' },
+      { publicId: 'historical/bhu-graduation-7', sourceFile: 'bhuGraduation7.jpeg', caption: '' },
+      {
+        publicId: 'historical/bhu-graduation-8',
+        sourceFile: '6bhuGraduation8.jpeg',
+        caption:
+          'L-R: Keerthi Gnanapragasam, Senthilkumar, Shanmuganantha, Vinotharaja, ' +
+          'Bhuvendralingam, Rayen, Nicholas',
+      },
+      {
+        publicId: 'historical/bhu-graduation-9',
+        sourceFile: 'bhuGraduation9.jpeg',
+        caption: 'Rayen and Bhuvendralingam',
+      },
     ],
   },
   {
     // Three prints from one album page, cropped apart.
     title: 'Picture Day',
     photos: [
-      // "Picture day 1" moved to the Civil Engineering Batch — Partial section.
+      // "Picture day 1" moved to the Civil Engineering Batch section.
       // Its public ID keeps the picture-day- prefix; that is a storage key, not
       // a label, and renaming it would mean a re-upload for no visible gain.
       {
@@ -299,6 +379,13 @@ const sections: AlbumSection[] = [
       // These two moved here from the untitled block under Materials Batch.
       { publicId: 'historical/mmceng2', sourceFile: 'MMCEng2.jpg', caption: '' },
       { publicId: 'historical/ladies1', sourceFile: 'Ladies1.jpg', caption: '' },
+      {
+        // On disk as TamilMedium.jpeg — capital T, .jpeg not .jpg.
+        publicId: 'historical/tamil-medium',
+        sourceFile: 'TamilMedium.jpeg',
+        caption:
+          'L-R: Gnanasampanthan, Yogeswaran, Senthilkumar, Vinotharaja, Vimaleswaran, Gnanapragasam, Burhanudeen, Amirthajothi, Nicholas, Sunderaraju, Shanmuganantha, Bhuvendralingam',
+      },
     ],
   },
   {

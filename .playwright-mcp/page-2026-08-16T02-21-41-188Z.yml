@@ -1,0 +1,407 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - link "Moratuwa 77'-82'" [ref=f1e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=f1e4]:
+      - link "Home" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+      - link "Members" [ref=f1e6] [cursor=pointer]:
+        - /url: /members/
+      - link "Reunion 2027" [ref=f1e7] [cursor=pointer]:
+        - /url: /reunion-2027/
+      - link "Gallery" [ref=f1e8] [cursor=pointer]:
+        - /url: /gallery/
+  - main [ref=f1e9]:
+    - paragraph [ref=f1e10]:
+      - link "← Gallery" [ref=f1e11] [cursor=pointer]:
+        - /url: /gallery/
+    - heading "Old Photographs" [level=1] [ref=f1e12]
+    - paragraph [ref=f1e13]: Please send any old photographs that you would like to share with your batchmates, or new photographs of your family to be published, to Kanishka at ken.abeynayake@gmail.com — and make sure you get a response from him (the email gateway blocks some photographs). If you do not get a response in two days, send an email without the picture and he will give you an alternate way of sending them.
+    - navigation "Jump to" [ref=f1e14]:
+      - list [ref=f1e16]:
+        - listitem [ref=f1e17]:
+          - link "Civil Engineering Batch — Partial" [ref=f1e18] [cursor=pointer]:
+            - /url: "#civil-engineering-batch-partial"
+        - listitem [ref=f1e19]:
+          - link "Mechanical Engineering Batch" [ref=f1e20] [cursor=pointer]:
+            - /url: "#mechanical-engineering-batch"
+        - listitem [ref=f1e21]:
+          - link "Electrical Power Engineering Batch" [ref=f1e22] [cursor=pointer]:
+            - /url: "#electrical-power-engineering-batch"
+        - listitem [ref=f1e23]:
+          - link "Electronics and Telecommunication Engineering Batch" [ref=f1e24] [cursor=pointer]:
+            - /url: "#electronics-and-telecommunication-engineering-batch"
+        - listitem [ref=f1e25]:
+          - link "Material/Mining/Chemical Engineering Batch" [ref=f1e26] [cursor=pointer]:
+            - /url: "#material-mining-chemical-engineering-batch"
+        - listitem [ref=f1e27]:
+          - link "Materials Batch with Academic Staff" [ref=f1e28] [cursor=pointer]:
+            - /url: "#materials-batch-with-academic-staff"
+        - listitem [ref=f1e29]:
+          - link "First Year Batch Trip" [ref=f1e30] [cursor=pointer]:
+            - /url: "#first-year-batch-trip"
+        - listitem [ref=f1e31]:
+          - link "Mech/Electronics Engineering Batch Trip" [ref=f1e32] [cursor=pointer]:
+            - /url: "#mech-electronics-engineering-batch-trip"
+        - listitem [ref=f1e33]:
+          - link "Civil Engineering Batch Trip" [ref=f1e34] [cursor=pointer]:
+            - /url: "#civil-engineering-batch-trip"
+        - listitem [ref=f1e35]:
+          - link "Ladies Trip" [ref=f1e36] [cursor=pointer]:
+            - /url: "#ladies-trip"
+        - listitem [ref=f1e37]:
+          - link "Graduation Day" [ref=f1e38] [cursor=pointer]:
+            - /url: "#graduation-day"
+        - listitem [ref=f1e39]:
+          - link "Picture Day" [ref=f1e40] [cursor=pointer]:
+            - /url: "#picture-day"
+        - listitem [ref=f1e41]:
+          - link "Chemical/Materials/Mining/Mineral Photos" [ref=f1e42] [cursor=pointer]:
+            - /url: "#chemical-materials-mining-mineral-photos"
+        - listitem [ref=f1e43]:
+          - link "Hostel Photos" [ref=f1e44] [cursor=pointer]:
+            - /url: "#hostel-photos"
+        - listitem [ref=f1e45]:
+          - link "Power Instructors Room" [ref=f1e46] [cursor=pointer]:
+            - /url: "#power-instructors-room"
+        - listitem [ref=f1e47]:
+          - link "Photos of our dearly missed batch mate Renuka Wasantha Attanayake, sent to us by his family" [ref=f1e48] [cursor=pointer]:
+            - /url: "#photos-of-our-dearly-missed-batch-mate-renuka-wasantha-attan"
+        - listitem [ref=f1e49]:
+          - link "Post Graduation Photos" [ref=f1e50] [cursor=pointer]:
+            - /url: "#post-graduation-photos"
+    - generic [ref=f1e51]:
+      - heading "Civil Engineering Batch — Partial" [level=2] [ref=f1e52]
+      - generic [ref=f1e53]:
+        - 'figure "Civil engineering Front row L-R: Ajith Madappuli, Ariyapala, Nedurana, Newton, Pradeep Back row L-R: Denzil, Vidanarachchi, Vitharana, Nonis and Sunil Santha" [ref=f1e54]':
+          - link [ref=f1e55]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/grad-by-p-frnando-restored
+            - img "Civil engineering" [ref=f1e56]
+        - figure "From Left to Right - Yogeswaran, Gnanasambandhan, Sundararaju, Nicholas, Amirthajothi, Sriyani, Keerthi Gnanapragasam, Sudharma, Vinotharajah, Sumi, Bhuvendralingam, Premini, Senthilkumar, Pradeepa, Shanmuganantha and Rayen?" [ref=f1e58]:
+          - link [ref=f1e59]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/picture-day-1
+            - img "From Left to Right - Yogeswaran, Gnanasambandhan, Sundararaju, Nicholas, Amirthajothi, Sriyani, Keerthi Gnanapragasam, Sudharma, Vinotharajah, Sumi, Bhuvendralingam, Premini, Senthilkumar, Pradeepa, Shanmuganantha and Rayen?" [ref=f1e60]
+    - generic [ref=f1e62]:
+      - heading "Mechanical Engineering Batch" [level=2] [ref=f1e63]
+      - 'figure "Mechanical engineering Seated L-R: Rohitha Fernando, Kalinga Amarasighe, Prabath De Silva, Lekamlage Ariyadasa, Stanley Fernando, Harischandra Liyanagamage, M N Gunaratne, Rahula Attalage, Janath Chandrasekara, Sunil Mendis Standing L-R: M R D Salgado, Abeywickreme Ariyadasa, Abeysinghe Bandara, Wimal Galappatti, D M Ranasinghe, Ananda W Rajakaruna, S Amithajothi, Raja Thilakaratne, K G Ranaweera, Hemantha Wijesekara" [ref=f1e65]':
+        - link [ref=f1e66]:
+          - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/mech-batch-5-nov-1981
+          - img "Mechanical engineering" [ref=f1e67]
+    - generic [ref=f1e69]:
+      - heading "Electrical Power Engineering Batch" [level=2] [ref=f1e70]
+      - 'figure "Electrical Power Engineering Batch Standing L-R: Udaya Ranawake, Udaya Annakkage, Priya Werahera, Sandaruwan Perera, Sunil Hapuarachchi, U I P Siriwardene, Vijithaweera Wickramasinghe, Ajith Wijenayake, Nihal Hettiarachchi, Nalin Pahalawatte, Jayalath Warnakulasuriya Sitting L-R: Mr. R.A. Ponrajah, Dr Chelliah B Rajanathan, Mr. D.F.A. Jayakody, Prof Samarajeewa Karunaratne, Prof K K Y W Perera, Dr J Rohan Lucas, Dr Abhaya Induruwa, Dr W R Perera, Mr. P.D.P. Kumarasiri." [ref=f1e72]':
+        - link [ref=f1e73]:
+          - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/power-batch-hd
+          - img "Electrical Power Engineering Batch" [ref=f1e74]
+    - generic [ref=f1e76]:
+      - heading "Electronics and Telecommunication Engineering Batch" [level=2] [ref=f1e77]
+      - generic [ref=f1e78]:
+        - 'figure "Electronic and Telecommunication Engineering Batch Standing L-R: Erica, Vijitha, Gayani, Samanmali, Champika, Manjula, Tamara, Vasantha, Deepa, Manora Seated L-R: Vijith, Susith, Rupasinghe, Tissa, Jayatissa, Priyantha, Laksman, Ranatunge, Joachim Joseph, Gamini, Attanayake, Saman, Kanishka" [ref=f1e79]':
+          - link [ref=f1e80]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/campusboys
+            - img "Electronic and Telecommunication Engineering Batch" [ref=f1e81]
+        - 'figure "Electronic and Telecommunication Engineering Batch Back row L-R: Susith, Thissa, Vijith, Jayatissa, Gamini, Rupasinghe, Priyantha, Lucky, Ranathunge, Joseph, Attanayake, Gamage, Kanishka Front row L-R: Vijitha, Erica, Gayani, Champika, Wasantha, Manjula, Tamara, Samanmalee, Deepa, Manora" [ref=f1e83]':
+          - link [ref=f1e84]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/campusgirls
+            - img "Electronic and Telecommunication Engineering Batch" [ref=f1e85]
+    - generic [ref=f1e87]:
+      - heading "Material/Mining/Chemical Engineering Batch" [level=2] [ref=f1e88]
+      - 'figure "Material/Mining/Chemical Batch Back row L-R: Rodrigo, Atapattu, Egodawela, Dayananda, Rambanda, Sunil, Dhanapala, Wimaleswaren, Buruhanudeen?, Yogeswaren, Sumathipala, Galappaththi, Wickramasinghe Front row L-R: Lalani, Gnana, Padma" [ref=f1e90]':
+        - link [ref=f1e91]:
+          - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/mmceng1
+          - img "Material/Mining/Chemical Batch" [ref=f1e92]
+    - generic [ref=f1e94]:
+      - heading "Materials Batch with Academic Staff" [level=2] [ref=f1e95]
+      - 'figure "Materials Batch with academic staff Standing L-R: Lalani Pigera, Chandra Galappaththi, Patrick Piyasena, Wimaleswaran, Rajaram, Dhanapala Weerasuriya, Mr Upul Gunawardane, Mr P Nanda, Yogeswaran, Don Rodrigo, Mr Sarath Mallawaarachchi, Pathma Samarakoon Seated L-R: Mr Peter Knott, Prof Ayal Jayatilake, Dr Aruna Malewana, Prof Lal Fernando, Dr R I Marshall" [ref=f1e97]':
+        - link [ref=f1e98]:
+          - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/materials-batch-with-academic-staff
+          - img "Materials Batch with academic staff" [ref=f1e99]
+    - generic [ref=f1e101]:
+      - heading "First Year Batch Trip" [level=2] [ref=f1e102]
+      - generic [ref=f1e103]:
+        - 'figure "Sigiriya, in front of the Lion’s Paws Top row: Nihal Hettiarachchi, Kingsley Wijenayake, Nihal Vitharana, Raja Thilakaratne, Hettige Jayatissa, A R Dayananda, Dayapani Patrick Piyasena Middle row: Uthpala Siriwardene, Renuka Wasantha Attanayake, Nalin Pahalawatte, Priyantha Mendis Seated: Anura Nanayakkara, Sarath Jayawardene, Ajith Wijenayake, Ranjith Jayawardene, Harischandra Liyanagamage, Ananda Rajakaruna, Udaya Ranawaka, Siri Dissanayake, Ram Banda Nawarathna On the ground: Ariyapala Fernando" [ref=f1e104]':
+          - link [ref=f1e105]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/first-year-batch-trip
+            - img "Sigiriya, in front of the Lion’s Paws" [ref=f1e106]
+        - figure "Mihintale with Denzil, Priya and Chandra" [ref=f1e108]:
+          - link [ref=f1e109]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/mihintale
+            - img "Mihintale with Denzil, Priya and Chandra" [ref=f1e110]
+        - figure "Polonnaruwa" [ref=f1e112]:
+          - link [ref=f1e113]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/polonnaruwa
+            - img "Polonnaruwa" [ref=f1e114]
+        - figure "Puttalam Cement" [ref=f1e116]:
+          - link [ref=f1e117]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/puttalam-cement
+            - img "Puttalam Cement" [ref=f1e118]
+    - generic [ref=f1e120]:
+      - heading "Mech/Electronics Engineering Batch Trip" [level=2] [ref=f1e121]
+      - generic [ref=f1e122]:
+        - figure "Waiting for the bus" [ref=f1e123]:
+          - link [ref=f1e124]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/badulla
+            - img "Waiting for the bus" [ref=f1e125]
+        - figure [ref=f1e127]:
+          - link [ref=f1e128]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/bandarawela
+            - img "Mech/Electronics Engineering Batch Trip" [ref=f1e129]
+        - figure "Pidurutalagala summit" [ref=f1e130]:
+          - link [ref=f1e131]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/nuwara-eliya
+            - img "Pidurutalagala summit" [ref=f1e132]
+        - figure "At Eheliyagoda" [ref=f1e134]:
+          - link [ref=f1e135]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/rathnapura
+            - img "At Eheliyagoda" [ref=f1e136]
+        - figure "At Diyaluma Falls" [ref=f1e138]:
+          - link [ref=f1e139]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/diyaluma
+            - img "At Diyaluma Falls" [ref=f1e140]
+        - figure "Having a snack at Diyaluma Falls" [ref=f1e142]:
+          - link [ref=f1e143]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/diyaluma-snack
+            - img "Having a snack at Diyaluma Falls" [ref=f1e144]
+    - generic [ref=f1e146]:
+      - heading "Civil Engineering Batch Trip" [level=2] [ref=f1e147]
+      - generic [ref=f1e148]:
+        - figure "Civil Trip — Pradeep Perera, Nonis (tall guy), Nedurana (next to Nonis, only part of his face), Madupulli (in the front looking away), Newton, Vidanarachie" [ref=f1e149]:
+          - link [ref=f1e150]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip1
+            - img "Civil Trip — Pradeep Perera, Nonis (tall guy), Nedurana (next to Nonis, only part of his face), Madupulli (in the front looking away), Newton, Vidanarachie" [ref=f1e151]
+        - figure "Civil Trip — L-R Vidanarachie, Nonis, Newton, Nedurana, Ajith Madappulli" [ref=f1e153]:
+          - link [ref=f1e154]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip2
+            - img "Civil Trip — L-R Vidanarachie, Nonis, Newton, Nedurana, Ajith Madappulli" [ref=f1e155]
+        - figure "Civil Trip — L-R Nonis, Pradeep Perera, Nedurana (with back to camera), Ajith Madappulli, Vidanarachie" [ref=f1e157]:
+          - link [ref=f1e158]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip3
+            - img "Civil Trip — L-R Nonis, Pradeep Perera, Nedurana (with back to camera), Ajith Madappulli, Vidanarachie" [ref=f1e159]
+        - 'figure "Civil Trip — Front: Pradeep Perera (handiya), Kolitha Weerasekera, Newton, Priyantha Mendis, Vitharana, Vidanarachie (behind Vitharana) Second row: Amal Senevirathna Last row: Keerthie Senevratne, Ruwan Weerasekara, Priyantha Perera" [ref=f1e161]':
+          - link [ref=f1e162]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip4
+            - 'img "Civil Trip — Front: Pradeep Perera (handiya), Kolitha Weerasekera, Newton, Priyantha Mendis, Vitharana, Vidanarachie (behind Vitharana)" [ref=f1e163]'
+        - figure [ref=f1e165]:
+          - link [ref=f1e166]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip8
+            - img "Civil Engineering Batch Trip" [ref=f1e167]
+        - figure [ref=f1e168]:
+          - link [ref=f1e169]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip9
+            - img "Civil Engineering Batch Trip" [ref=f1e170]
+        - figure "Civil Engineering Ladies" [ref=f1e171]:
+          - link [ref=f1e172]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-ladies2
+            - img "Civil Engineering Ladies" [ref=f1e173]
+    - generic [ref=f1e175]:
+      - heading "Ladies Trip" [level=2] [ref=f1e176]
+      - generic [ref=f1e177]:
+        - figure [ref=f1e178]:
+          - link [ref=f1e179]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip5
+            - img "Ladies Trip" [ref=f1e180]
+        - figure [ref=f1e181]:
+          - link [ref=f1e182]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip6
+            - img "Ladies Trip" [ref=f1e183]
+        - figure [ref=f1e184]:
+          - link [ref=f1e185]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/civil-trip7
+            - img "Ladies Trip" [ref=f1e186]
+    - generic [ref=f1e187]:
+      - heading "Graduation Day" [level=2] [ref=f1e188]
+      - generic [ref=f1e189]:
+        - figure "Walking in" [ref=f1e190]:
+          - link [ref=f1e191]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/graduation-procession
+            - img "Walking in" [ref=f1e192]
+        - figure "Sumi and Premini" [ref=f1e194]:
+          - link [ref=f1e195]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/graduation-stage
+            - img "Sumi and Premini" [ref=f1e196]
+        - figure [ref=f1e198]:
+          - link [ref=f1e199]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/graduation-group
+            - img "Graduation Day" [ref=f1e200]
+        - figure "Ari, Rahula, Prabhath" [ref=f1e201]:
+          - link [ref=f1e202]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/graduation-day
+            - img "Ari, Rahula, Prabhath" [ref=f1e203]
+        - figure "Erica, Samanmalee, Sudharma, Pradeepa" [ref=f1e205]:
+          - link [ref=f1e206]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/batchila
+            - img "Erica, Samanmalee, Sudharma, Pradeepa" [ref=f1e207]
+        - figure "The graduation dinner" [ref=f1e209]:
+          - link [ref=f1e210]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/graduation-dinner-1
+            - img "The graduation dinner" [ref=f1e211]
+        - figure "The graduation dinner" [ref=f1e213]:
+          - link [ref=f1e214]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/graduation-dinner-2
+            - img "The graduation dinner" [ref=f1e215]
+        - figure "Rodrigo, MPVC Wickramasinghe and Gunatilleke" [ref=f1e217]:
+          - link [ref=f1e218]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/graduation-trio
+            - img "Rodrigo, MPVC Wickramasinghe and Gunatilleke" [ref=f1e219]
+    - generic [ref=f1e221]:
+      - heading "Picture Day" [level=2] [ref=f1e222]
+      - generic [ref=f1e223]:
+        - 'figure "Civil Engineering Ladies L-R: Pradeepa, Sudarma, Sumithirai, Premini, Sriyani" [ref=f1e224]':
+          - link [ref=f1e225]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/batchila2
+            - 'img "Civil Engineering Ladies L-R: Pradeepa, Sudarma, Sumithirai, Premini, Sriyani" [ref=f1e226]'
+        - figure [ref=f1e228]:
+          - link [ref=f1e229]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/picture-day-3
+            - img "Picture Day" [ref=f1e230]
+        - figure [ref=f1e231]:
+          - link [ref=f1e232]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/mmceng2
+            - img "Picture Day" [ref=f1e233]
+        - figure [ref=f1e234]:
+          - link [ref=f1e235]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/ladies1
+            - img "Picture Day" [ref=f1e236]
+    - generic [ref=f1e237]:
+      - heading "Chemical/Materials/Mining/Mineral Photos" [level=2] [ref=f1e238]
+      - generic [ref=f1e239]:
+        - figure [ref=f1e240]:
+          - link [ref=f1e241]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/dayananda-1
+            - img "Chemical/Materials/Mining/Mineral Photos" [ref=f1e242]
+        - 'figure "L-R: Rajaram (deceased), Vimaleswaran, Yogeswaran, Burhanudeen (deceased), Kuma Sumathipala, Pushpa Kumara Mataraarachchi" [ref=f1e243]':
+          - link [ref=f1e244]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/dayananda-2
+            - 'img "L-R: Rajaram (deceased), Vimaleswaran, Yogeswaran, Burhanudeen (deceased), Kuma Sumathipala, Pushpa Kumara Mataraarachchi" [ref=f1e245]'
+        - 'figure "L-R: Rajaram (deceased), Vimaleswaran, Yogeswaran, Burhanudeen (deceased), Sunil Fonseka, Pushpa Kumara Mataraarachchi" [ref=f1e247]':
+          - link [ref=f1e248]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/dayananda-3
+            - 'img "L-R: Rajaram (deceased), Vimaleswaran, Yogeswaran, Burhanudeen (deceased), Sunil Fonseka, Pushpa Kumara Mataraarachchi" [ref=f1e249]'
+        - figure "A.R.Dayananda and Pani Piyasena" [ref=f1e251]:
+          - link [ref=f1e252]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/dayananda-4
+            - img "A.R.Dayananda and Pani Piyasena" [ref=f1e253]
+        - figure [ref=f1e255]:
+          - link [ref=f1e256]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/dayananda-5
+            - img "Chemical/Materials/Mining/Mineral Photos" [ref=f1e257]
+        - figure [ref=f1e258]:
+          - link [ref=f1e259]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/photo-2014-02-02
+            - img "Chemical/Materials/Mining/Mineral Photos" [ref=f1e260]
+        - figure "At Ohiya railway tunnel, on the way to World’s End, 1980" [ref=f1e261]:
+          - link [ref=f1e262]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/ohiya-railway-tunnel-1980
+            - img "At Ohiya railway tunnel, on the way to World’s End, 1980" [ref=f1e263]
+        - figure "Bus" [ref=f1e265]:
+          - link [ref=f1e266]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/bus
+            - img "Bus" [ref=f1e267]
+        - figure "Fake smokers" [ref=f1e269]:
+          - link [ref=f1e270]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/fake-smokers
+            - img "Fake smokers" [ref=f1e271]
+        - figure "A bit tired after the hike" [ref=f1e273]:
+          - link [ref=f1e274]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/hike-bit-tired
+            - img "A bit tired after the hike" [ref=f1e275]
+        - figure "At Sri Pada" [ref=f1e277]:
+          - link [ref=f1e278]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/sri-pada2
+            - img "At Sri Pada" [ref=f1e279]
+        - figure "At Sri Pada" [ref=f1e281]:
+          - link [ref=f1e282]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/sri-pada
+            - img "At Sri Pada" [ref=f1e283]
+    - generic [ref=f1e285]:
+      - heading "Hostel Photos" [level=2] [ref=f1e286]
+      - generic [ref=f1e287]:
+        - figure "Sarath Ranatunge, Saman Gamage, Tissa Samaratunga in 1981" [ref=f1e288]:
+          - link [ref=f1e289]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/picture-day-4
+            - img "Sarath Ranatunge, Saman Gamage, Tissa Samaratunga in 1981" [ref=f1e290]
+        - figure "Abeywickreme Ariyadasa, Rajakaruna, Salgado, Sarath Ranatunge" [ref=f1e292]:
+          - link [ref=f1e293]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/campus1
+            - img "Abeywickreme Ariyadasa, Rajakaruna, Salgado, Sarath Ranatunge" [ref=f1e294]
+        - figure "Rohitha Swarna, Rodrigo, Dhrmadasa, Sarath Ranatunge, Abeywickreme Ariyadasa, Stanley, Rajakaruna, Tissa Samaratunge, Abeysinghe Bandara, Amarasinghe" [ref=f1e296]:
+          - link [ref=f1e297]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/campus2
+            - img "Rohitha Swarna, Rodrigo, Dhrmadasa, Sarath Ranatunge, Abeywickreme Ariyadasa, Stanley, Rajakaruna, Tissa Samaratunge, Abeysinghe Bandara, Amarasinghe" [ref=f1e298]
+        - figure [ref=f1e300]:
+          - link [ref=f1e301]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/campus3
+            - img "Hostel Photos" [ref=f1e302]
+        - figure "Front Row Dayananda, Wickramasinghe, Galappathy. 2nd row Rajaram, Gunatilake, RB, Patrick. Back row Matara, Wimaleshwaran, Dissanayaka. Dhane and Rodrigo standing" [ref=f1e303]:
+          - link [ref=f1e304]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/boarding-group
+            - img "Front Row Dayananda, Wickramasinghe, Galappathy. 2nd row Rajaram, Gunatilake, RB, Patrick. Back row Matara, Wimaleshwaran, Dissanayaka. Dhane and Rodrigo standing" [ref=f1e305]
+    - generic [ref=f1e307]:
+      - heading "Power Instructors Room" [level=2] [ref=f1e308]
+      - generic [ref=f1e309]:
+        - figure "Priya Werahera, Udaya Annakkage, Nihal Hettiarachchi" [ref=f1e310]:
+          - link [ref=f1e311]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/study-leave-1
+            - img "Priya Werahera, Udaya Annakkage, Nihal Hettiarachchi" [ref=f1e312]
+        - figure "Nihal Hettiarachchi" [ref=f1e314]:
+          - link [ref=f1e315]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/study-leave-2
+            - img "Nihal Hettiarachchi" [ref=f1e316]
+        - figure "Grab Lunch in Instructors Room" [ref=f1e318]:
+          - link [ref=f1e319]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/study-leave-3
+            - img "Grab Lunch in Instructors Room" [ref=f1e320]
+    - generic [ref=f1e322]:
+      - heading "Photos of our dearly missed batch mate Renuka Wasantha Attanayake, sent to us by his family" [level=2] [ref=f1e323]
+      - generic [ref=f1e324]:
+        - figure "Wasantha on Graduation Day" [ref=f1e325]:
+          - link [ref=f1e326]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/attanayake1
+            - img "Wasantha on Graduation Day" [ref=f1e327]
+        - figure "Wasantha with family. His next eldest brother (Wasantha was the eldest), who was in Medical School at this time, is not in the photo" [ref=f1e329]:
+          - link [ref=f1e330]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/attanayake2
+            - img "Wasantha with family. His next eldest brother (Wasantha was the eldest), who was in Medical School at this time, is not in the photo" [ref=f1e331]
+        - figure "Wasantha with Udaya — they were in the same lab group in Part 1 and Part 2" [ref=f1e333]:
+          - link [ref=f1e334]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/attanayake3
+            - img "Wasantha with Udaya — they were in the same lab group in Part 1 and Part 2" [ref=f1e335]
+        - figure "Wasantha with Rupavahini colleagues" [ref=f1e337]:
+          - link [ref=f1e338]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/attanayake4
+            - img "Wasantha with Rupavahini colleagues" [ref=f1e339]
+        - figure "Wasantha with boarding mates" [ref=f1e341]:
+          - link [ref=f1e342]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/attanayake5
+            - img "Wasantha with boarding mates" [ref=f1e343]
+        - figure "Wasantha with batch mates" [ref=f1e345]:
+          - link [ref=f1e346]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/attanayake6
+            - img "Wasantha with batch mates" [ref=f1e347]
+        - figure "Wasantha at Rupavahini" [ref=f1e349]:
+          - link [ref=f1e350]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/attanayake7
+            - img "Wasantha at Rupavahini" [ref=f1e351]
+        - figure "Wasantha at Rupavahini Tower" [ref=f1e353]:
+          - link [ref=f1e354]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/attanayake8
+            - img "Wasantha at Rupavahini Tower" [ref=f1e355]
+    - generic [ref=f1e357]:
+      - heading "Post Graduation Photos" [level=2] [ref=f1e358]
+      - generic [ref=f1e359]:
+        - figure "Tissa, Ranatunga and Lucky in Finland, 1983" [ref=f1e360]:
+          - link [ref=f1e361]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/tissa-finland
+            - img "Tissa, Ranatunga and Lucky in Finland, 1983" [ref=f1e362]
+        - 'figure "First overseas assignment Standing L-R: Nihal Hettiarachchi (1st), Vijith Seneviratne (5th), Saman Gamage (6th), Ajith Wijenayake (7th), Vijithaweera Wickramasinghe (9th), and Chandana Samarasinghe (two batches senior) at the right Seated: Kanishka Abeynayake, Priyantha Fonseka (one batch senior), Susith Fernando" [ref=f1e364]':
+          - link [ref=f1e365]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/historical/first-overseas-assignment
+            - img "First overseas assignment" [ref=f1e366]
+    - paragraph [ref=f1e368]: We are especially looking for the Civil batch photo and the full batch photo. A higher resolution Electronics photo would be great too.
+  - contentinfo [ref=f1e369]:
+    - paragraph [ref=f1e370]: Moratuwa 77'-82' batch · 2026
+  - generic [ref=f1e373]:
+    - button [ref=f1e374]
+    - button [ref=f1e380]
+    - button [ref=f1e384]
+    - button [ref=f1e389]

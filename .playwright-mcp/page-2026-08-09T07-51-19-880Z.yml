@@ -1,0 +1,108 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - link "Moratuwa 77'-82'" [ref=f1e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=f1e4]:
+      - link "Home" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+      - link "Members" [ref=f1e6] [cursor=pointer]:
+        - /url: /members/
+      - link "Reunion 2027" [ref=f1e7] [cursor=pointer]:
+        - /url: /reunion-2027/
+      - link "Gallery" [ref=f1e8] [cursor=pointer]:
+        - /url: /gallery/
+  - main [ref=f1e9]:
+    - paragraph [ref=f1e10]:
+      - link "← Gallery" [ref=f1e11] [cursor=pointer]:
+        - /url: /gallery/
+    - heading "Reunion 2024" [level=1] [ref=f1e12]
+    - paragraph [ref=f1e13]: The batch met at the Kithulgala Kanda Mountain Resort on 21 December 2024 — the 47th year since 1977. A long table under the rainforest canopy, the group photographs on the terrace, and lunch with a band above the valley.
+    - navigation "Jump to" [ref=f1e14]:
+      - list [ref=f1e16]:
+        - listitem [ref=f1e17]:
+          - link "Under the trees" [ref=f1e18] [cursor=pointer]:
+            - /url: "#under-the-trees"
+        - listitem [ref=f1e19]:
+          - link "The group photographs" [ref=f1e20] [cursor=pointer]:
+            - /url: "#the-group-photographs"
+        - listitem [ref=f1e21]:
+          - link "Lunch and music" [ref=f1e22] [cursor=pointer]:
+            - /url: "#lunch-and-music"
+    - generic [ref=f1e23]:
+      - heading "Under the trees" [level=2] [ref=f1e24]
+      - generic [ref=f1e25]:
+        - figure "The long table under the canopy." [ref=f1e26]:
+          - link [ref=f1e27]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/table-1
+            - img "The long table under the canopy." [ref=f1e28]
+        - figure [ref=f1e30]:
+          - link [ref=f1e31]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/table-2
+            - img "Under the trees" [ref=f1e32]
+        - figure [ref=f1e33]:
+          - link [ref=f1e34]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/table-3
+            - img "Under the trees" [ref=f1e35]
+        - figure [ref=f1e36]:
+          - link [ref=f1e37]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/gathering-1
+            - img "Under the trees" [ref=f1e38]
+        - figure "The pavilion by the stream." [ref=f1e39]:
+          - link [ref=f1e40]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/gathering-2
+            - img "The pavilion by the stream." [ref=f1e41]
+        - 'figure "The cake: “UOM 1977–1981, 47th Batch Reunion”." [ref=f1e43]':
+          - link [ref=f1e44]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/cake
+            - 'img "The cake: “UOM 1977–1981, 47th Batch Reunion”." [ref=f1e45]'
+    - generic [ref=f1e47]:
+      - heading "The group photographs" [level=2] [ref=f1e48]
+      - generic [ref=f1e49]:
+        - figure "The batch and their families outside the resort." [ref=f1e50]:
+          - link [ref=f1e51]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/batch-group
+            - img "The batch and their families outside the resort." [ref=f1e52]
+        - figure "Gathering for the group photograph." [ref=f1e54]:
+          - link [ref=f1e55]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/before-the-photo
+            - img "Gathering for the group photograph." [ref=f1e56]
+        - figure [ref=f1e58]:
+          - link [ref=f1e59]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/men-group
+            - img "The group photographs" [ref=f1e60]
+        - figure [ref=f1e61]:
+          - link [ref=f1e62]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/ladies-group
+            - img "The group photographs" [ref=f1e63]
+    - generic [ref=f1e64]:
+      - heading "Lunch and music" [level=2] [ref=f1e65]
+      - generic [ref=f1e66]:
+        - figure "Lunch, with the hills through the glass." [ref=f1e67]:
+          - link [ref=f1e68]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/lunch-1
+            - img "Lunch, with the hills through the glass." [ref=f1e69]
+        - figure [ref=f1e71]:
+          - link [ref=f1e72]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/lunch-2
+            - img "Lunch and music" [ref=f1e73]
+        - figure [ref=f1e74]:
+          - link [ref=f1e75]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/lunch-3
+            - img "Lunch and music" [ref=f1e76]
+        - figure "The baila band." [ref=f1e77]:
+          - link [ref=f1e78]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/band
+            - img "The baila band." [ref=f1e79]
+        - figure [ref=f1e81]:
+          - link [ref=f1e82]:
+            - /url: https://res.cloudinary.com/moratuwa82/image/upload/f_auto,q_auto,w_1600,c_fit/reunion2024/dancing
+            - img "Lunch and music" [ref=f1e83]
+    - dialog "Photo viewer" [ref=f1e84]:
+      - button "Close" [ref=f1e85] [cursor=pointer]: ×
+      - button "Previous photo" [ref=f1e86] [cursor=pointer]: ‹
+      - figure "The batch and their families outside the resort." [ref=f1e87]:
+        - img "The batch and their families outside the resort." [ref=f1e89]
+      - button "Next photo" [ref=f1e91] [cursor=pointer]: ›
+      - generic [ref=f1e92]: 7 / 15
+  - contentinfo [ref=f1e93]:
+    - paragraph [ref=f1e94]: Moratuwa 77'-82' batch · 2026

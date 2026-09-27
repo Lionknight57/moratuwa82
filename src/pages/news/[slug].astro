@@ -36,6 +36,17 @@ const fmt = (d: Date) =>
     <div class="prose">
       <Content />
     </div>
+
+    {item.data.images && (
+      <div class="photos">
+        {item.data.images.map((img) => (
+          <figure>
+            <CldImage publicId={img.publicId} alt={img.caption || item.data.title} width={1040} />
+            {img.caption && <figcaption>{img.caption}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    )}
   </article>
 
   <style>
@@ -46,5 +57,9 @@ const fmt = (d: Date) =>
     .prose :global(h2) { margin-top: 2rem; }
     .prose :global(img) { border-radius: 10px; margin: 1.5rem 0; }
     .prose :global(ul) { padding-left: 1.25rem; }
+    .photos { margin-top: 2rem; }
+    .photos figure { margin: 0 0 1.5rem; }
+    .photos img { width: 100%; height: auto; border-radius: 10px; display: block; }
+    .photos figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 0.5rem; }
   </style>
 </BaseLayout>

@@ -1,8 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionNav from '../components/SectionNav.astro';
 import { disciplines, totalMembers, contactEmail } from '../data/members';
 import { photoByName } from '../data/member-photos';
 import { cldUrl } from '../lib/cloudinary';
+import { anchorIds } from '../lib/anchors';
+
+// One anchor per discipline, so /members/#mechanical jumps straight there —
+// same scheme the album pages use. Disciplines with no names yet are still
+// listed: the jump strip doubles as the index of what the roster covers.
+const ids = anchorIds(disciplines.map((d) => d.label));
+const sections = disciplines.map((d, i) => ({ discipline: d, id: ids[i]! }));
+const toc = sections.map((s) => ({ id: s.id, label: s.discipline.label }));
 
 // Initials for the fallback avatar when a member has no portrait.
 const initials = (name: string) =>
@@ -43,8 +52,10 @@ const initials = (name: string) =>
       : `${totalMembers} names so far.`}
   </p>
 
-  {disciplines.map((d) => (
-    <section class="discipline">
+  <SectionNav items={toc} />
+
+  {sections.map(({ discipline: d, id }) => (
+    <section class="discipline" id={id}>
       <div class="d-head">
         <h2>{d.label}</h2>
         <span class="count">{d.members.length === 0 ? 'awaiting names' : `${d.members.length} listed`}</span>
@@ -89,7 +100,8 @@ const initials = (name: string) =>
 
     .tally { color: var(--muted); }
 
-    .discipline { margin-top: 2rem; }
+    /* scroll-margin so a jumped-to discipline isn't flush against the viewport. */
+    .discipline { margin-top: 2rem; scroll-margin-top: 1rem; }
     .d-head {
       display: flex; align-items: baseline; justify-content: space-between;
       gap: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem;

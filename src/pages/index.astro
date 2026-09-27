@@ -6,14 +6,14 @@ import { cldUrl } from '../lib/cloudinary';
 const campusBg = cldUrl('site/moratuwa-campus', { width: 1200 });
 const crest = cldUrl('site/uom-logo', { width: 240 });
 
-// Latest 3 non-draft news items: pinned first, then newest by date.
-const news = (await getCollection('news', ({ data }) => !data.draft))
-  .sort(
-    (a, b) =>
-      Number(b.data.pinned) - Number(a.data.pinned) ||
-      b.data.date.valueOf() - a.data.date.valueOf(),
-  )
-  .slice(0, 3);
+// Every non-draft news item: pinned first, then newest by date. The list is
+// scrollable rather than truncated — there is no /news/ index page, so anything
+// cut here would be unreachable.
+const news = (await getCollection('news', ({ data }) => !data.draft)).sort(
+  (a, b) =>
+    Number(b.data.pinned) - Number(a.data.pinned) ||
+    b.data.date.valueOf() - a.data.date.valueOf(),
+);
 
 // Frontmatter dates are parsed as UTC midnight; format in UTC too so a date
 // written as 2026-07-15 doesn't render as the 14th in a behind-UTC timezone.
@@ -36,17 +36,19 @@ const fmt = (d: Date) =>
 
   <section>
     <h2>Latest news</h2>
-    <ul class="news-list">
-      {news.map((item) => (
-        <li>
-          <a href={item.data.link ?? `/news/${item.slug}/`}>
-            <span class="date">{fmt(item.data.date)}</span>
-            <span class="title">{item.data.title}</span>
-          </a>
-          {item.data.summary && <p class="summary">{item.data.summary}</p>}
-        </li>
-      ))}
-    </ul>
+    <div class="news-scroll" tabindex="0" role="region" aria-label="Latest news">
+      <ul class="news-list">
+        {news.map((item) => (
+          <li>
+            <a href={item.data.link ?? `/news/${item.slug}/`}>
+              <span class="date">{fmt(item.data.date)}</span>
+              <span class="title">{item.data.title}</span>
+            </a>
+            {item.data.summary && <p class="summary">{item.data.summary}</p>}
+          </li>
+        ))}
+      </ul>
+    </div>
   </section>
 
   <style>
@@ -80,6 +82,24 @@ const fmt = (d: Date) =>
     .btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
 
     h2 { border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; }
+    /* Sized so the item at the fold is visibly cut in half — that clipping, not
+       the scrollbar, is what tells people there is more news below. Padding on
+       the right keeps text clear of the scrollbar. */
+    .news-scroll {
+      max-height: 24rem;
+      overflow-y: auto;
+      padding-right: 0.75rem;
+      overscroll-behavior: contain;
+      /* Keep the scrollbar visible rather than hover-revealed — it is the only
+         hint that there is more news below the fold. */
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .news-scroll::-webkit-scrollbar { width: 8px; }
+    .news-scroll::-webkit-scrollbar-thumb {
+      background: var(--border); border-radius: 4px;
+    }
+    .news-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     .news-list { list-style: none; padding: 0; margin: 0; }
     .news-list li { padding: 1rem 0; border-bottom: 1px solid var(--border); }
     .news-list a { text-decoration: none; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: baseline; }

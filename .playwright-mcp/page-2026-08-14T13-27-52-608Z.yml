@@ -1,0 +1,72 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - link "Moratuwa 77'-82'" [ref=f2e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=f2e4]:
+      - link "Home" [ref=f2e5] [cursor=pointer]:
+        - /url: /
+      - link "Members" [ref=f2e6] [cursor=pointer]:
+        - /url: /members/
+      - link "Reunion 2027" [ref=f2e7] [cursor=pointer]:
+        - /url: /reunion-2027/
+      - link "Gallery" [ref=f2e8] [cursor=pointer]:
+        - /url: /gallery/
+  - main [ref=f2e9]:
+    - generic [ref=f2e10]:
+      - img "University of Moratuwa crest" [ref=f2e12]
+      - heading "Engineering Batch Moratuwa 77'-82'" [level=1] [ref=f2e13]
+      - paragraph [ref=f2e14]: Photos and news for our batch.
+      - generic [ref=f2e15]:
+        - link "Browse the gallery" [ref=f2e16] [cursor=pointer]:
+          - /url: /gallery/
+        - link "See the members" [ref=f2e17] [cursor=pointer]:
+          - /url: /members/
+        - link "Reunion 2027" [ref=f2e18] [cursor=pointer]:
+          - /url: /reunion-2027/
+    - generic [ref=f2e19]:
+      - heading "Latest news" [level=2] [ref=f2e20]
+      - region "Latest news" [ref=f2e21]:
+        - list [ref=f2e22]:
+          - listitem [ref=f2e23]:
+            - link "14 August 2026 Prof. P. A. de Silva has passed away" [ref=f2e24] [cursor=pointer]:
+              - /url: /news/pa-de-silva-passes-away/
+              - generic [ref=f2e25]: 14 August 2026
+              - generic [ref=f2e26]: Prof. P. A. de Silva has passed away
+            - paragraph [ref=f2e27]: Emeritus Professor P. A. de Silva — who built Sri Lanka's first electric car and brought CAD/CAM to the country — has died at the age of 92. Funeral on 15 August at the General Cemetery, Mount Lavinia.
+          - listitem [ref=f2e28]:
+            - link "11 August 2026 Dinner at the SSC — 25 August, for batchmates in Sri Lanka" [ref=f2e29] [cursor=pointer]:
+              - /url: /news/ssc-dinner-25-august/
+              - generic [ref=f2e30]: 11 August 2026
+              - generic [ref=f2e31]: Dinner at the SSC — 25 August, for batchmates in Sri Lanka
+            - paragraph [ref=f2e32]: Three batchmates are in Sri Lanka this month. Dinner at the SSC on Tuesday 25 August at 6.00 pm — please confirm by the 15th.
+          - listitem [ref=f2e33]:
+            - link "27 June 2026 50th Anniversary Reunion — 13 June 2027" [ref=f2e34] [cursor=pointer]:
+              - /url: /news/reunion-2027-50th-anniversary/
+              - generic [ref=f2e35]: 27 June 2026
+              - generic [ref=f2e36]: 50th Anniversary Reunion — 13 June 2027
+            - paragraph [ref=f2e37]: Two nights at Centauria Lake Resort, Udawalawe, 12–14 June 2027. Itinerary and costs are now settled enough to share.
+          - listitem [ref=f2e38]:
+            - link "8 August 2026 All rooms reserved — sponsor deposits now open" [ref=f2e39] [cursor=pointer]:
+              - /url: /news/rooms-reserved-sponsor-deposits/
+              - generic [ref=f2e40]: 8 August 2026
+              - generic [ref=f2e41]: All rooms reserved — sponsor deposits now open
+            - paragraph [ref=f2e42]: Every room at Centauria Lake Resort is booked, and the committee has issued bank details for sponsors to deposit their agreed contributions.
+          - listitem [ref=f2e43]:
+            - link "18 July 2026 Hosting our past teachers" [ref=f2e44] [cursor=pointer]:
+              - /url: /gallery/our-teachers/
+              - generic [ref=f2e45]: 18 July 2026
+              - generic [ref=f2e46]: Hosting our past teachers
+            - paragraph [ref=f2e47]: The batch that graduated in 1976 hosted past teachers Prof. K.K.Y.W. Perera, Prof. PA de Silva, Prof. Sam Karunaratne, Prof. (Mrs) Indra Dayawansha and Mr. Prelis. Prof. GTF and Prof. Lucas had to cancel at the last minute due to ill health.
+          - listitem [ref=f2e48]:
+            - link "15 July 2026 Vasantha visited Lalani in Maryland" [ref=f2e49] [cursor=pointer]:
+              - /url: /gallery/vasantha-maryland/
+              - generic [ref=f2e50]: 15 July 2026
+              - generic [ref=f2e51]: Vasantha visited Lalani in Maryland
+            - paragraph [ref=f2e52]: Vasantha visited Lalani in Maryland recently.
+  - contentinfo [ref=f2e53]:
+    - paragraph [ref=f2e54]: Moratuwa 77'-82' batch · 2026
+  - generic [ref=f2e57]:
+    - button [ref=f2e58]
+    - button [ref=f2e64]
+    - button [ref=f2e68]
+    - button [ref=f2e76]
