@@ -12,6 +12,8 @@ export interface Poem {
   /** Stable anchor id — the old database key, lowercased. */
   id: string;
   title: string;
+  /** Who the poem is written about, when it is about a batchmate. */
+  about?: string;
   /** One line per line of verse; a blank line separates stanzas. */
   text: string;
 }
@@ -503,6 +505,23 @@ Coffee Bean , StarBucks
 නැතුව ඒ  පොලිටික්ස්
 සිත්  සතන් සතුටින්
 පදිමු හය්යෙන් ඔරුව "වට්ස්අප්"`,
+      },
+    ],
+  },
+
+  // Added after the import — not from the old site.
+  {
+    name: 'His Saudi villa mates',
+    poems: [
+      {
+        id: 'hapu',
+        // Untitled; known by its first line.
+        title: 'හීනියි උසයි හයියයි',
+        about: 'Sunil Hapuarachchi',
+        text: `හීනියි උසයි හයියයි
+කුලියට බෝල අහුලයි
+සුළගටද විසිවෙයි
+දනෝ හප්පා නමින් හදුනයි`,
       },
     ],
   },

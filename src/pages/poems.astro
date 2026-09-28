@@ -18,7 +18,7 @@ const toc = sections.map((s) => ({ id: s.id, label: label(s.poet) }));
 >
   <h1>Poems</h1>
   <p class="intro">
-    Written by batchmates and first collected on the batch's poem site in January 2021.
+    Written by batchmates, most of them first collected on the batch's poem site in January 2021.
     {totalPoems} poems, in Sinhala.
   </p>
 
@@ -33,6 +33,7 @@ const toc = sections.map((s) => ({ id: s.id, label: label(s.poet) }));
       {poet.poems.map((poem) => (
         <article class="poem" id={poem.id} lang="si">
           <h3><a href={`#${poem.id}`}>{poem.title}</a></h3>
+          {poem.about && <p class="about" lang="en">About {poem.about}</p>}
           {poem.text.split('\n\n').map((stanza) => (
             <p class="stanza">
               {stanza.split('\n').map((line) => <span class="line">{line}</span>)}
@@ -64,6 +65,7 @@ const toc = sections.map((s) => ({ id: s.id, label: label(s.poet) }));
     .poem h3 a { color: var(--fg); text-decoration: none; }
     .poem h3 a:hover { color: var(--accent); }
     .poem:target { border-color: var(--accent); }
+    .about { color: var(--muted); font-size: 0.9rem; margin: -0.5rem 0 0.75rem; }
     /* One span per line, so a line too long for a phone wraps with a hanging
        indent instead of passing for a new line of the poem. The writers' extra
        spaces were for alignment in a fixed layout and collapse here, which reads
