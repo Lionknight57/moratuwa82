@@ -2,6 +2,7 @@
 title: "Batch reunion on 19 December 2026"
 date: 2026-10-05
 summary: "Our batch reunion is set for 19 December at Seethawaka Miracle Nature Resort, Avissawella. Please confirm your participation before the end of October."
+pinned: true
 draft: false
 ---
 

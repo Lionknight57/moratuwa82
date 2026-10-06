@@ -2,7 +2,6 @@
 title: "Priyantha Perera's mother has passed away"
 date: 2026-09-06
 summary: "The mother of our batchmate Priyantha Perera has passed away. Her remains lie at the family residence near Dagonna Church, and the funeral takes place on Monday 7 September at 3.30 p.m. at Dagonna Church."
-pinned: true
 draft: false
 ---
 
