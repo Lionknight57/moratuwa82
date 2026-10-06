@@ -38,15 +38,19 @@ const fmt = (d: Date) =>
     <h2>Latest news</h2>
     <div class="news-scroll" tabindex="0" role="region" aria-label="Latest news">
       <ul class="news-list">
-        {news.map((item) => (
-          <li>
-            <a href={item.data.link ?? `/news/${item.slug}/`}>
-              <span class="date">{fmt(item.data.date)}</span>
-              <span class="title">{item.data.title}</span>
-            </a>
-            {item.data.summary && <p class="summary">{item.data.summary}</p>}
-          </li>
-        ))}
+        {news.map((item) => {
+          const href = item.data.link ?? `/news/${item.slug}/`;
+          return (
+            <li>
+              <a href={href}>
+                <span class="date">{fmt(item.data.date)}</span>
+                <span class="title">{item.data.title}</span>
+              </a>
+              {item.data.summary && <p class="summary">{item.data.summary}</p>}
+              <a class="more" href={href} aria-hidden="true" tabindex="-1">Read more →</a>
+            </li>
+          );
+        })}
       </ul>
     </div>
   </section>
@@ -104,7 +108,18 @@ const fmt = (d: Date) =>
     .news-list li { padding: 1rem 0; border-bottom: 1px solid var(--border); }
     .news-list a { text-decoration: none; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: baseline; }
     .news-list .date { color: var(--muted); font-size: 0.85rem; min-width: 8rem; }
-    .news-list .title { color: var(--fg); font-weight: 600; font-size: 1.1rem; }
+    /* Accent colour plus underline so headlines read as links — in body colour
+       with no underline, people didn't realise they could click them. */
+    .news-list .title {
+      color: var(--accent); font-weight: 600; font-size: 1.1rem;
+      text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+    }
+    .news-list a:hover .title { text-decoration-thickness: 2px; }
     .news-list .summary { color: var(--muted); margin: 0.35rem 0 0; }
+    .news-list .more {
+      display: inline-block; margin-top: 0.35rem;
+      color: var(--accent); font-weight: 600; font-size: 0.9rem;
+    }
+    .news-list .more:hover { text-decoration: underline; }
   </style>
 </BaseLayout>
