@@ -353,6 +353,7 @@ simple   ඇඳුම    කවදත්                  ඇඳලා
   },
   {
     name: 'Priyantha',
+    member: 'W.P Priyantha',
     poems: [
       {
         id: 'priyantha1',
@@ -426,7 +427,7 @@ Coffee Bean , StarBucks
     ],
   },
   {
-    name: 'Lucky',
+    name: 'Lucky Joseph',
     poems: [
       {
         id: 'lucky1',
@@ -448,6 +449,7 @@ Coffee Bean , StarBucks
   },
   {
     name: 'Chandra',
+    member: 'Chandra Galappaththi',
     poems: [
       {
         id: 'chandra1',
@@ -461,6 +463,7 @@ Coffee Bean , StarBucks
   },
   {
     name: 'Ananda',
+    member: 'Ananda Rajakaruna',
     poems: [
       {
         id: 'ananda1',
