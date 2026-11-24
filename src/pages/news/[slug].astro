@@ -28,8 +28,14 @@ const fmt = (d: Date) =>
     <p class="date">{fmt(item.data.date)}</p>
 
     {item.data.heroImage && (
-      <div class="hero-img">
-        <CldImage publicId={item.data.heroImage} alt={item.data.title} width={1040} loading="eager" />
+      <div class="hero-img" style={item.data.heroWidth ? `max-width: ${item.data.heroWidth}px` : undefined}>
+        <CldImage
+          publicId={item.data.heroImage}
+          alt={item.data.title}
+          width={item.data.heroWidth ?? 1040}
+          sizes={item.data.heroWidth ? `(max-width: 700px) 100vw, ${item.data.heroWidth}px` : undefined}
+          loading="eager"
+        />
       </div>
     )}
 

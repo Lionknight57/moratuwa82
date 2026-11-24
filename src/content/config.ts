@@ -9,6 +9,9 @@ const news = defineCollection({
     summary: z.string().optional(),
     // Optional Cloudinary public ID for a hero image on the post
     heroImage: z.string().optional(),
+    // Display width in px for a hero that is smaller than the page (e.g. a
+    // 416px member portrait), so it isn't upscaled to full width and blurred.
+    heroWidth: z.number().int().positive().optional(),
     // Further photos, shown under the body. Public IDs, same as heroImage, so
     // the cloud name still comes from the build environment rather than a URL
     // pasted into the Markdown.

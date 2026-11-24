@@ -2,6 +2,8 @@
 title: "Carl Fernando has passed away"
 date: 2026-11-24
 summary: "Our batchmate Carl Fernando (Civil) has passed away. The funeral will most probably be held tomorrow at his house in Ratmalana. Further details to follow."
+heroImage: "member/i-carl-r-fernando"
+heroWidth: 416
 draft: false
 ---
 
