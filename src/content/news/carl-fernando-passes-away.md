@@ -1,7 +1,7 @@
 ---
 title: "Carl Fernando has passed away"
 date: 2026-11-24
-summary: "Our batchmate Carl Fernando (Civil) has passed away. The funeral takes place on Wednesday 25 November at 4.00 p.m. at the General Cemetery, Mount Lavinia."
+summary: "Our batchmate Carl Fernando (Civil) has passed away. The funeral takes place on Thursday 26 November at 4.00 p.m. at the General Cemetery, Mount Lavinia."
 heroImage: "member/i-carl-r-fernando"
 heroWidth: 416
 draft: false
@@ -14,7 +14,7 @@ It is with a heavy heart that we share the sad news that our batchmate
 
 His remains lie at **his house in Ratmalana**.
 
-The funeral will be held on **Wednesday 25 November at 4.00 p.m.** at the
+The funeral will be held on **Thursday 26 November at 4.00 p.m.** at the
 **General Cemetery, Mount Lavinia**.
 
 ## From his group
