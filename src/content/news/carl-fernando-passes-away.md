@@ -10,6 +10,11 @@ draft: false
 It is with a heavy heart that we share the sad news that our batchmate
 **[Carl Fernando](/members/)** (Civil) passed away on 24 November 2026.
 
+## His career
+
+Carl worked at the **Mahaweli Development Board**, then **overseas**, and
+finally on the **Southern Expressway Project**.
+
 ## The funeral
 
 His remains lie at **his residence, Raja Mawatha, Ratmalana**.
