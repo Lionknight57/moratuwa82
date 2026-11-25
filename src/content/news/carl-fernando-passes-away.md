@@ -1,7 +1,7 @@
 ---
 title: "Carl Fernando has passed away"
 date: 2026-11-24
-summary: "Our batchmate Carl Fernando (Civil) has passed away. The funeral takes place on Wednesday 25 November at 4.00 p.m. at the General Cemetery, Mount Lavinia."
+summary: "Our batchmate Carl Fernando (Civil) has passed away. His remains lie at his residence on Raja Mawatha, Ratmalana, and the cremation takes place on Wednesday 25 November at 4.00 p.m. at the Mount Lavinia (Galkissa) Cemetery."
 heroImage: "member/i-carl-r-fernando"
 heroWidth: 416
 draft: false
@@ -12,10 +12,13 @@ It is with a heavy heart that we share the sad news that our batchmate
 
 ## The funeral
 
-His remains lie at **his house in Ratmalana**.
+His remains lie at **his residence, Raja Mawatha, Ratmalana**.
 
-The funeral will be held on **Wednesday 25 November at 4.00 p.m.** at the
-**General Cemetery, Mount Lavinia**.
+The cremation will be held on **Wednesday 25 November at 4.00 p.m.** at the
+**Mount Lavinia (Galkissa) Cemetery**.
+
+The Institution of Engineers, Sri Lanka has also announced
+Eng. Carl Fernando's passing to its members.
 
 ## From his group
 
